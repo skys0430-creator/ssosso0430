@@ -1,0 +1,578 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>2027 의왕시 통합지원 지역계획(안) 요약</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#25406d;--navy2:#2f5597;--green:#5a9a3a;--pale:#eef1f6;--line:#c9d1df;--text:#1e2530;--sub:#5b6577}
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);word-break:keep-all;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+#src{display:none}
+/* cover */
+.cover .frame{position:absolute;left:24mm;width:94mm;height:9mm;border:1.2mm solid var(--navy)}
+.cover .f1{top:40mm;border-bottom:0}.cover .f2{top:226mm;border-top:0}
+.cover .ttl{position:absolute;left:31mm;top:58mm}
+.cover .ttl .y{color:var(--green);font-weight:900;font-size:27pt}
+.cover .ttl h1{color:var(--navy);font-weight:900;font-size:31pt;line-height:1.3;letter-spacing:-.5px}
+.cover .ttl .s{color:var(--navy);font-weight:700;font-size:22pt;margin-top:3mm}
+.cover .art{position:absolute;left:0;top:122mm;width:146mm;height:88mm;clip-path:polygon(0 0,100% 0,100% 82%,89% 100%,0 100%)}
+.cover .date{position:absolute;left:36mm;top:133mm;color:#fff;font-size:13pt;font-weight:500}
+.cover .org{position:absolute;left:0;right:0;top:254mm;text-align:center;font-weight:900;font-size:19pt;color:var(--navy);letter-spacing:6px}
+.cover .org small{display:block;font-size:10.5pt;font-weight:500;letter-spacing:1px;color:var(--sub);margin-top:2mm}
+.cover .side{position:absolute;right:20mm;top:124mm;display:flex;flex-direction:column;gap:9mm;align-items:center}
+.cover .side i{width:12mm;height:12mm;border:.5mm solid #b9c0cc;border-radius:3mm;display:block}
+.cover .side i:nth-child(2){border-radius:50%}.cover .side i:nth-child(3){transform:rotate(45deg) scale(.8)}
+/* toc */
+.toc{background:#c9cde0}
+.toc .bg{position:absolute;inset:0}
+.toc .card{position:absolute;left:27mm;top:25mm;width:158mm;height:234mm;background:#fff;border-radius:9mm;padding:22mm 16mm}
+.toc h2{text-align:center;font-size:20pt;font-weight:900;letter-spacing:10px;color:var(--text)}
+.toc h2:before,.toc h2:after{content:"|";color:var(--navy);margin:0 8px;letter-spacing:0}
+.toc hr{border:0;border-top:.4mm solid var(--navy);margin:20mm 0 16mm}
+.toc .r{display:flex;align-items:baseline;font-weight:700;font-size:13pt;margin:5.6mm 0}
+.toc .r.sub{font-weight:400;font-size:10.5pt;margin:3mm 0 3mm 5mm;color:#333}
+.toc .r span.d{flex:1;border-bottom:.5mm dotted #555;margin:0 3mm;transform:translateY(-1.2mm)}
+/* divider */
+.div{background:var(--navy)}
+.div svg{position:absolute;inset:0;width:100%;height:100%}
+.div .in{position:absolute;left:0;right:0;top:98mm;text-align:center;color:#fff}
+.div .no{font-family:'Noto Serif KR',serif;font-size:50pt;font-weight:700}
+.div .ln{width:82mm;border-top:.3mm solid #fff;margin:6mm auto 12mm}
+.div .t{font-size:23pt;font-weight:900;letter-spacing:1px}
+/* content page */
+.rh{position:absolute;top:15mm;font-size:9.5pt;font-weight:700;color:var(--navy)}
+.rh.l{left:25mm}.rh.r{right:25mm;color:#b9c0cc;letter-spacing:3px}
+.pn{position:absolute;bottom:9mm;font-size:11pt;font-weight:500}
+.pn.l{left:25mm}.pn.r{right:25mm}
+.body{position:absolute;left:25mm;right:25mm;top:25mm;height:255mm;overflow:hidden}
+.chead{display:flex;align-items:stretch;margin:2mm 0 7mm;border-top:2.2mm solid #b4b9d6;border-bottom:.4mm solid var(--navy)}
+.chead .n{background:var(--navy);color:#fff;font-family:'Noto Serif KR',serif;font-size:25pt;font-weight:700;width:24mm;height:20mm;display:flex;align-items:center;justify-content:center;border-radius:0 0 0 4mm}
+.chead .t{font-size:19.5pt;font-weight:900;display:flex;align-items:center;padding-left:7mm}
+.lead{background:var(--pale);padding:2.6mm 4mm;font-weight:700;font-size:10.8pt;margin-bottom:6mm}
+.lead:before{content:"◆";color:var(--navy);margin-right:2.5mm}
+h3.sec{display:flex;align-items:center;font-size:14pt;font-weight:700;border-bottom:.5mm solid var(--navy);padding-bottom:1.3mm;margin:6mm 0 4.5mm}
+h3.sec b{background:var(--navy);color:#fff;border-radius:1mm;width:6.4mm;height:6.4mm;display:inline-flex;align-items:center;justify-content:center;font-size:12pt;margin-right:3mm}
+.chead + h3.sec,.lead + h3.sec{margin-top:0}
+h4{font-size:11.5pt;font-weight:700;color:var(--navy);margin:4mm 0 2.5mm}
+h4:before{content:"▍";color:var(--green)}
+p.b1{font-weight:700;font-size:10.6pt;line-height:1.72;padding-left:6.5mm;position:relative;margin:3.2mm 0 1.5mm;text-align:justify}
+p.b1:before{content:"";position:absolute;left:1.2mm;top:2.3mm;width:2.4mm;height:2.4mm;background:var(--green)}
+p.b2{font-size:10.4pt;line-height:1.7;padding-left:11mm;position:relative;margin:1mm 0;text-align:justify}
+p.b2:before{content:"•";position:absolute;left:7mm;color:var(--navy)}
+p.nt{font-size:9pt;line-height:1.55;color:#444;padding-left:11mm;position:relative;margin:.8mm 0}
+p.nt:before{content:"＊";position:absolute;left:6.5mm}
+p.src{font-size:8.3pt;color:var(--sub);margin:1mm 0 2mm;line-height:1.5}
+.cap{text-align:center;margin:4.5mm 0 1.5mm}
+.cap span{display:inline-block;background:#e3edd9;border-radius:5mm;padding:1.2mm 7mm;font-weight:700;font-size:10.3pt}
+.unit{text-align:right;font-size:8.3pt;color:var(--sub);margin-bottom:.8mm}
+table{border-collapse:collapse;width:100%;font-size:9.2pt;line-height:1.45;margin-bottom:3mm;border-top:.5mm solid var(--navy);border-bottom:.5mm solid var(--navy)}
+th{background:var(--navy);color:#fff;font-weight:700;padding:1.4mm 1.5mm;border-left:.2mm solid #6f85ac}
+th:first-child{border-left:0}
+td{border-top:.2mm solid var(--line);border-left:.2mm solid var(--line);padding:1.15mm 1.8mm;vertical-align:middle}
+td:first-child{border-left:0}
+td.c,table.c td{text-align:center}
+td.h{background:var(--pale);font-weight:700;text-align:center;color:var(--navy)}
+td.l{text-align:left !important}
+td.g{color:var(--green);font-weight:700}
+tr.sum td{background:var(--pale);font-weight:700}
+.tag{display:inline-block;font-size:7.8pt;font-weight:700;color:#fff;border-radius:1mm;padding:0 1.6mm;margin-left:1mm;vertical-align:.3mm}
+.tag.n{background:var(--green)}.tag.u{background:var(--navy2)}.tag.i{background:#8a94a8}
+.fig{text-align:center;margin:2mm 0 3mm}
+.fig img{max-width:100%;border:.2mm solid var(--line)}
+.bars{display:grid;border:.3mm solid #333;margin:4mm 0 3mm}
+.bars .c{border-left:.2mm solid #333;display:flex;flex-direction:column}
+.bars .c:first-child{border-left:0}
+.bars .g{height:27mm;display:flex;align-items:flex-end;justify-content:center;gap:3.5mm;padding:5mm 1mm 0}
+.bars .bar{width:6.5mm;position:relative;background:var(--navy)}
+.bars .bar.b{background:var(--green)}
+.bars .bar em{position:absolute;top:-4.4mm;left:50%;transform:translateX(-50%);font-style:normal;font-size:7.6pt;font-weight:700;white-space:nowrap}
+.bars .x{display:flex;justify-content:center;gap:1.5mm;font-size:7.2pt;color:#444;padding:.7mm 0}
+.bars .x span{width:9mm;text-align:center;white-space:nowrap}
+.bars .l{border-top:.2mm solid #333;font-size:8.2pt;text-align:center;padding:1.3mm .5mm;line-height:1.3;flex:1;display:flex;align-items:center;justify-content:center}
+.vis{border:.5mm solid var(--navy);margin:3mm 0}
+.vis .v{background:var(--navy);color:#fff;text-align:center;padding:4mm;font-size:16pt;font-weight:900}
+.vis .v small{display:block;font-size:9pt;font-weight:500;opacity:.85;margin-bottom:1mm;letter-spacing:4px}
+.vis .gl{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm;padding:3mm;background:var(--pale)}
+.vis .gl div{background:#fff;border:.3mm solid var(--navy2);text-align:center;font-weight:700;font-size:9.8pt;padding:3mm 2mm;line-height:1.5;color:var(--navy)}
+.vis .gl div b{display:block;color:var(--green);font-size:8.5pt}
+.vis .tk{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;padding:0 3mm 3mm;background:var(--pale)}
+.vis .tk .k{background:#fff;border:.2mm solid var(--line)}
+.vis .tk .k h5{background:var(--navy2);color:#fff;font-size:9.6pt;text-align:center;padding:1.8mm 1mm;line-height:1.35}
+.vis .tk .k p{font-size:8.9pt;font-weight:500;text-align:center;padding:1.8mm 1mm;border-top:.2mm solid var(--line);line-height:1.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.box{border:.3mm solid var(--navy2);padding:3mm 4mm;margin:2mm 0 3mm;background:#fafbfd}
+.box h5{font-size:10.4pt;color:var(--navy);margin-bottom:1.5mm}
+.box p{font-size:9.6pt;line-height:1.65}
+</style></head><body>
+<div id="src">
+<section class="ch" data-no="Ⅰ" data-title="수립 배경 및 경과" data-lead="「돌봄통합지원법」 제6조에 따라 시장이 매년 수립하고 통합지원협의체가 심의하는 법정 계획">
+<h3 class="sec"><b>1</b>수립 배경 및 필요성</h3>
+<p class="b1">「의료·요양 등 지역 돌봄의 통합지원에 관한 법률」 제6조에 따라 지역 돌봄 수요와 자원을 진단하고 다음 연도 통합지원 추진 방향을 정하는 지역계획을 수립</p>
+<p class="b2">대상자 발굴과 관리, 서비스 확충과 품질 향상, 전문기관·관련기관 협업, 교육과 홍보, 재원 운용 방안을 포함</p>
+<p class="b2">2026년 추진 결과 분석과 국민건강보험공단 통합돌봄 실태조사(’25. 12.) 결과를 반영하여 작성</p>
+<p class="nt">「의왕시 의료·요양 등 지역돌봄의 통합지원에 관한 조례」(’26. 3. 27. 시행)에 따라 통합지원협의체가 지역계획을 심의</p>
+<p class="b1">초고령사회 진입과 재가 의료 공백에 대응하여, 살던 곳에서 계속 생활할 수 있는 지역 돌봄 체계가 필요</p>
+<p class="b2">노인인구 33,930명(고령화율 20.3%, ’26. 10.)으로 초고령사회에 진입했고, ’21. 12. 대비 43.5%(10,286명) 증가</p>
+<p class="b2">실태조사 당시 방문진료·재택의료·방문간호가 관내 무공급이었으며, 본인 신청 중심 접수로 직권·자체발굴이 적음</p>
+<h3 class="sec"><b>2</b>추진 경과</h3>
+<p class="b1">(기반 마련) 법 시행 전 조례·조직·협의체를 먼저 갖추고 사업 개시</p>
+<p class="b2">복지정책과 통합돌봄팀 신설(’26. 2.), 통합지원협의체 구성(’26. 2.), 조례 시행(’26. 3. 27.)</p>
+<p class="b1">(서비스 개시) 지역특화서비스 「의왕살핌」 신설 후 공백 서비스를 추가 도입</p>
+<p class="b2">의왕살핌 3대 패키지 신설(’26. 4.), 제공기관 공모·협약 후 서비스 개시(’26. 5.)</p>
+<p class="b2">퇴원환자 연계 협약병원 3개소 확보(’26. 7.), 특화공모사업 3종 개시(’26. 8.)</p>
+<p class="b1">(현장 의견 반영) 시행 100일 제공기관·관련부서 간담회(’26. 8. 13., 20개소 32명) 개최</p>
+<p class="b1">(인력 확충) 동별 2인 체계(전담인력 1명, 겸직인력(간호) 1명) 배치(’26. 11. 30.)</p>
+<p class="b1">(계획 심의) 통합지원협의체 정기회의에서 2027년도 지역계획(안) 심의(’26. 11. 26.)</p>
+<div class="cap"><span>주요 추진 경과</span></div>
+<table class="c"><tr><th style="width:22%">시기</th><th>내용</th></tr>
+<tr><td class="h">’26. 2.</td><td class="l">통합돌봄팀 신설(복지·간호·통합사례관리사), 통합지원협의체 구성</td></tr>
+<tr><td class="h">’26. 3.</td><td class="l">법 시행, 조례 시행(3. 27.), 6개 동 통합지원창구 운영</td></tr>
+<tr><td class="h">’26. 4.~5.</td><td class="l">「의왕살핌」(일상·건강·내집살핌) 신설, 제공기관 협약, 서비스 개시</td></tr>
+<tr><td class="h">’26. 7.~8.</td><td class="l">퇴원환자 협약병원 3개소, 100일 간담회, 특화공모사업 개시, 운영 매뉴얼 제작</td></tr>
+<tr><td class="h">’26. 9.~10.</td><td class="l">2차 집중홍보, 동별 발굴 목표관리(10월 신청 147명)</td></tr>
+<tr><td class="h">’26. 11.</td><td class="l">협의체 지역계획 심의(11. 26.), 동별 2인 체계 배치(11. 30.)</td></tr></table>
+</section>
+
+<section class="ch" data-no="Ⅱ" data-title="2026년 추진 현황과 성과" data-lead="신청 393명, 통합지원 대상자 276명에게 740건의 서비스를 연계하고 재가 의료 공급 기반을 마련">
+<h3 class="sec"><b>1</b>대상자 발굴 및 서비스 연계</h3>
+<p class="b1">법 시행 첫해 신청 393명 중 276명을 통합지원 대상자로 결정하고, 1인당 2.7건(총 740건)의 서비스를 연계</p>
+<p class="b2">유형별로 재가급여자 103명, 등급외자(기각 포함) 52명, 퇴원환자 43명, 고령장애인 22명, 노인맞춤돌봄 중점군 1명, 그 외 55명</p>
+<p class="b2">연계 분야는 일상돌봄 241건(32.6%), 건강관리·예방 143건(19.3%), 주거 131건, 보건의료 127건, 장기요양 30건, 기타 68건</p>
+<p class="b1">집중홍보와 동별 목표관리로 10월 신청이 크게 증가</p>
+<p class="b2">10월 신청 147명(1~9월 월평균 27명), 노인 1만 명당 신청 74.8명(9월) → 119.4명(10월)</p>
+<p class="b2">동 지역사회보장협의체 160명과 장기요양기관을 대상으로 2차 집중홍보(9~10월), 실적이 낮은 동은 시가 직접 발굴·접수 지원</p>
+<p class="nt">건보공단 빅데이터 발굴 명단 454명을 동별로 나누어 확인·조사</p>
+<div class="bars" style="grid-template-columns:repeat(5,1fr)">
+<div class="c"><div class="g"><div class="bar" style="height:4mm"><em>27</em></div><div class="bar b" style="height:21mm"><em>147</em></div></div><div class="x"><span>1~9월</span><span>10월</span></div><div class="l">월 신청(명)</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:13mm"><em>74.8</em></div><div class="bar b" style="height:21mm"><em>119.4</em></div></div><div class="x"><span>9월</span><span>10월</span></div><div class="l">노인 1만 명당<br>신청(명)</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:21mm"><em>393</em></div><div class="bar b" style="height:15mm"><em>276</em></div></div><div class="x"><span>신청</span><span>대상자</span></div><div class="l">신청·대상자(명)</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:.3mm"><em>0</em></div><div class="bar b" style="height:21mm"><em>14</em></div></div><div class="x"><span>’25</span><span>’26</span></div><div class="l">방문진료 제공<br>의원(개소)</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:21mm"><em>216</em></div><div class="bar b" style="height:12.3mm"><em>127</em></div></div><div class="x"><span>의왕살핌</span><span>특화공모</span></div><div class="l">지역특화서비스<br>이용(명)</div></div>
+</div>
+<p class="b1">퇴원환자는 협약병원 공식 의뢰가 0건이어서 병원 안내 후 동 신청 방식으로 전환</p>
+<p class="b2">상급종합병원은 퇴원일이 전날 확정되어 사전조사 시간이 부족 → 전환 후 퇴원환자 43명 선정</p>
+<p class="b1">통합지원회의 기준 3·6개월 경과자 정기 점검 기준을 마련하고, 변경이 필요하면 회의에 재상정</p>
+<h3 class="sec"><b>2</b>서비스 기반 확보</h3>
+<p class="b1">공적 서비스가 닿지 않는 공백을 메우는 「의왕살핌」 3대 패키지를 신설(’26. 4., 153,000천원)</p>
+<p class="b2">소득과 무관하게 신청하고 중위소득 기준으로 자부담을 차등, 협약 제공기관 18개소</p>
+<p class="b2">의왕살핌 이용 216명: 일상살핌 116명, 건강살핌 51명, 내집살핌 49명</p>
+<div class="cap"><span>「의왕살핌」 및 특화공모사업 구성</span></div>
+<table><tr><th style="width:17%">구분</th><th style="width:33%">서비스</th><th>제공기관</th><th style="width:14%">’26년 이용</th></tr>
+<tr><td class="h">일상살핌</td><td>생활돌봄, 동행돌봄, 식사지원</td><td>(사)한국커뮤니티연구원, 의왕시니어클럽</td><td class="c">116명</td></tr>
+<tr><td class="h">건강살핌</td><td>방문의료, 방문재활, 가정간호</td><td>방문진료 의원 14개소(의과 2·한의 12), 물리치료사협회 경기도회</td><td class="c">51명</td></tr>
+<tr><td class="h">내집살핌</td><td>주거환경개선</td><td>미소나눔</td><td class="c">49명</td></tr>
+<tr><td class="h" rowspan="3">특화공모<br>(’26. 8.)</td><td>맞춤형 영양식</td><td>의왕시니어클럽</td><td class="c">55명</td></tr>
+<tr><td>건강돌봄가</td><td>(사)한국커뮤니티연구원</td><td class="c">50명</td></tr>
+<tr><td>동고동락(방문형 치매프로그램)</td><td>아름채노인복지관</td><td class="c">22명</td></tr></table>
+<p class="b1">등록만 되어 있던 방문진료 의원 14개소가 실제 진료를 시작하고, 재택의료센터를 확보</p>
+<p class="b2">방문진료 본인부담금의 80%를 지원하는 구조로 의원 참여를 유도, 건강살핌으로 51명 연계</p>
+<p class="b2">관내 재택의료센터 1개소(한국한센복지협회 부설의원), 관외(안양) 협약 1개소</p>
+<p class="b1">국가돌봄서비스를 먼저 연계하고 공백만 지역특화서비스로 보완하는 원칙을 통합지원회의 심의 기준으로 적용</p>
+<p class="b2">국가돌봄서비스 연계 80명: 장기요양 23, 방문건강관리 18, 치매안심센터 16, 노인맞춤돌봄 14, 정신건강복지센터 9</p>
+<p class="b2">장기요양 신청과 통합판정을 함께 하는 경우 의뢰 시 표기하여 이중 방문을 줄임</p>
+<h3 class="sec"><b>3</b>전달체계 마련</h3>
+<table><tr><th style="width:21%">구분</th><th>추진 내용 및 성과</th></tr>
+<tr><td class="h">조례</td><td>「의왕시 의료·요양 등 지역돌봄의 통합지원에 관한 조례」 제정(’26. 3. 27. 시행)</td></tr>
+<tr><td class="h">조직·인력</td><td>통합돌봄팀 신설(’26. 2., 복지·간호 직렬 함께 배치), 전담인력 배치율 100%(10명), 동 자체 역량강화 교육 6회, 동별 2인 체계 배치(’26. 11. 30.)</td></tr>
+<tr><td class="h">통합지원협의체</td><td>의료·복지·공단·학계·시의회 20명 이내 구성(보건의료위원 4명), 연 2회 개최</td></tr>
+<tr><td class="h">통합지원회의</td><td>15회 개최, 신규 231건·변경 29건·종결 40건 심의, 보건소 전 회의 참석(100%)<br>신규는 대면, 변경·종결은 서면으로 나누어 심의 속도를 높임</td></tr>
+<tr><td class="h">기관 협업</td><td>건보공단 의왕지사(발굴·판정), 국민연금공단 군포의왕지사(장애인 종합판정), 제공기관 간담회 1회</td></tr></table>
+<h3 class="sec"><b>4</b>보완이 필요한 사항</h3>
+<p class="b1">(발굴) 본인 신청 위주로 접수되어 직권·자체발굴이 17건(4.3%)에 그치고, 발굴 경로별 실적이 집계되지 않음</p>
+<p class="b2">노인 1만 명당 신청이 내손2동 207명인 반면, 노인인구가 많은 오전동 88명·청계동 91명으로 동별 편차</p>
+<p class="b1">(연계 후 관리) 의뢰가 늘면서 서비스 개시 여부 확인이 늦어지는 문제 확인</p>
+<p class="b2">간담회에서 서비스 시작일·진행상황 미전달, 이메일 의뢰 누락, 돌봄인력 역할 범위 인식 차이가 제기됨</p>
+<p class="nt">개선: 제공기관 제공기록 월 1회 제출 → 시가 행복e음 입력, 의뢰 접수 확인 회신 의무화, 이용안내문 교부</p>
+<p class="b1">(서비스) 특화사업이 하반기부터 시작되어 연계 기간이 짧았고, 의왕살핌 집행률은 55.4%(’26. 10.) 수준</p>
+</section>
+
+<section class="ch" data-no="Ⅲ" data-title="지역 돌봄 수요와 대응 수준" data-lead="노인 전체는 비교적 젊으나 핵심군은 초고령 비중이 높고, 재가 의료·장애인 건강 분야 공급이 부족">
+<h3 class="sec"><b>1</b>돌봄 수요 규모와 특성</h3>
+<div class="cap"><span>통합돌봄 수요 규모</span></div>
+<table><tr><th style="width:15%">구분</th><th style="width:10%">대상</th><th style="width:14%">규모</th><th style="width:23%">비율</th><th>특성</th></tr>
+<tr><td class="h" rowspan="2">주요 인구</td><td class="c">노인</td><td class="c">30,801명</td><td class="c">전체 인구의 20.2%</td><td>75세 이상 36.3%(경기 39%), 독거 18.8%, 장기요양 등급자 9.4%</td></tr>
+<tr><td class="c">장애인</td><td class="c">2,641명</td><td class="c">전체 인구의 1.7%</td><td>65세 미만, 평균 45.4세</td></tr>
+<tr><td class="h" rowspan="2">잠재군</td><td class="c">노인</td><td class="c">7,744명</td><td class="c">노인의 25.1%</td><td>고령장애인·치매환자·퇴원환자 비중이 높음</td></tr>
+<tr><td class="c">장애인</td><td class="c">1,305명</td><td class="c">장애인의 49.4%</td><td>평균 38.7세(경기 40.2세)</td></tr>
+<tr><td class="h" rowspan="2">핵심군</td><td class="c">노인</td><td class="c">1,905명</td><td class="c">잠재군의 24.6%</td><td>85세 이상 48.6%(경기 42.8%), 입원위험 재가급여자 68.1%</td></tr>
+<tr><td class="c">장애인</td><td class="c">287명</td><td class="c">잠재군의 22.0%</td><td>독거 15.3%(경기 26.7%)</td></tr>
+<tr class="sum"><td class="c" colspan="2">현재 통합지원 대상자</td><td class="c">276명</td><td class="c">핵심군의 12.6%</td><td>재가급여자 37.3%로 가장 많음</td></tr></table>
+<p class="src">※ 통합돌봄 실태조사(국민건강보험공단, ’25. 12.), 통합지원 대상자는 행복e음 통계(’26. 10.)</p>
+<p class="b1">(빠른 고령화) 6개 동 중 4개 동의 고령화율이 20%를 넘었고, 청계·오전·부곡동에 노인의 64.2%(21,781명)가 거주</p>
+<p class="b2">65세 이상 1인세대 6,607세대, 85세 이상 1인세대 1,046세대(’26. 10.)</p>
+<p class="b1">(초고령 핵심군) 핵심군의 85세 이상 비중이 48.6%로 경기 31개 시군 중 3위</p>
+<p class="b2">독거·의료급여 비중은 낮아, 기존 저소득·독거 중심 발굴로는 찾기 어려운 고령가구가 많음</p>
+<p class="b1">(재가 의료 수요) 노인 핵심군의 68%(1,298명)가 요양병원 입원 위험이 높은 재가급여자</p>
+<p class="b2">지역주민 욕구조사에서 방문의료 필요성이 4.06점(5점 척도)으로 통합돌봄 서비스 중 가장 높음</p>
+<p class="b1">(병원 → 지역 전환) 퇴원환자 999명 중 사회적 입원자 224명과 재입원 고위험 90명은 지역 돌봄 연계가 우선 필요</p>
+<p class="b1">(장기요양 밖 공백) 기각·각하자 385명(잠재군의 5.0%, 경기 4.2%) 등 장기요양 밖 돌봄 공백 대상이 도 평균보다 많음</p>
+<div class="cap"><span>동별 노인 현황(’26. 10.)</span></div>
+<table class="c"><tr><th>동</th><th>65세 이상(명)</th><th>고령화율</th><th>기초연금<br>수급</th><th>노인 기초생활<br>수급</th><th>단독·연립·<br>다세대</th></tr>
+<tr><td class="h">청계동</td><td>8,263</td><td>22.0%</td><td>40.5%</td><td>8.3%</td><td>17.9%</td></tr>
+<tr><td class="h">오전동</td><td>7,279</td><td>22.4%</td><td>55.9%</td><td>3.4%</td><td>9.5%</td></tr>
+<tr><td class="h">부곡동</td><td>6,239</td><td>21.9%</td><td class="g">70.3%</td><td class="g">12.0%</td><td class="g">32.8%</td></tr>
+<tr><td class="h">내손2동</td><td>4,903</td><td>15.6%</td><td>36.5%</td><td>2.8%</td><td>6.9%</td></tr>
+<tr><td class="h">내손1동</td><td>4,161</td><td>21.4%</td><td>42.6%</td><td>7.3%</td><td>5.0%</td></tr>
+<tr><td class="h">고천동</td><td>3,085</td><td>17.1%</td><td>54.8%</td><td>6.9%</td><td>8.8%</td></tr>
+<tr class="sum"><td>계</td><td>33,930</td><td>20.3%</td><td>50.3%</td><td>6.9%</td><td>14.9%</td></tr></table>
+<p class="src">※ 주민등록 인구현황(’26. 10. 31.), 기초연금·기초생활보장 수급 현황(행복e음, ’26. 10.), 통계청 주택총조사(2025)</p>
+<h3 class="sec"><b>2</b>주요 서비스별 대응 수준</h3>
+<p class="b1">방문진료·재택의료·방문간호는 실태조사 당시 무공급이었으나 ’26년에 공급을 시작하여 개선 중</p>
+<p class="b1">장애인 활동지원·지역사회중심재활, 노인맞춤돌봄은 전국 대비 충족률이 낮고, 응급안전안심은 양호</p>
+<div class="bars" style="grid-template-columns:repeat(7,1fr)">
+<div class="c"><div class="g"><div class="bar" style="height:.3mm"><em>0</em></div><div class="bar b" style="height:4.1mm"><em>21.9</em></div></div><div class="l">방문진료</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:.3mm"><em>0</em></div><div class="bar b" style="height:3.3mm"><em>17.7</em></div></div><div class="l">재택의료</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:.3mm"><em>0</em></div><div class="bar b" style="height:4.9mm"><em>25.9</em></div></div><div class="l">방문간호</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:5.4mm"><em>28.7</em></div><div class="bar b" style="height:7.2mm"><em>38.5</em></div></div><div class="l">노인맞춤돌봄</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:5mm"><em>26.8</em></div><div class="bar b" style="height:16.9mm"><em>89.7</em></div></div><div class="l">장애인<br>활동지원</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:2.3mm"><em>12.1</em></div><div class="bar b" style="height:6.3mm"><em>33.7</em></div></div><div class="l">지역사회<br>중심재활</div></div>
+<div class="c"><div class="g"><div class="bar" style="height:21mm"><em>111.7</em></div><div class="bar b" style="height:12mm"><em>64.0</em></div></div><div class="l">응급안전안심</div></div>
+</div>
+<p class="src" style="text-align:center">수요 대비 충족률(%) : <b style="color:#25406d">■</b> 의왕시 &nbsp; <b style="color:#5a9a3a">■</b> 전국 &nbsp;(실태조사, ’25. 12. 기준)</p>
+<div class="cap"><span>서비스별 수요와 대응 수준</span></div>
+<table class="c"><tr><th style="width:13%">영역</th><th style="width:19%">서비스</th><th style="width:11%">수요</th><th>현재 이용·공급</th><th style="width:16%">충족률(전국)</th><th style="width:12%">판단</th></tr>
+<tr><td class="h" rowspan="2">보건의료</td><td>방문진료</td><td>668명</td><td class="l">0개소 → ’26년 참여의원 14개소, 51건</td><td>0%(21.9%)</td><td>부족(개선 중)</td></tr>
+<tr><td>재택의료</td><td>570명</td><td class="l">0개소 → ’26년 센터 2개소(관내 1·관외 1)</td><td>0%(17.7%)</td><td>부족(개선 중)</td></tr>
+<tr><td class="h" rowspan="2">건강관리</td><td>방문건강관리</td><td>1,369명</td><td class="l">988명(담당인력 6명)</td><td>72.2%(75.6%)</td><td>보통</td></tr>
+<tr><td>지역사회중심재활</td><td>365명</td><td class="l">44명(담당인력 1명)</td><td>12.1%(33.7%)</td><td>부족</td></tr>
+<tr><td class="h" rowspan="3">장기요양</td><td>방문요양</td><td>1,340명</td><td class="l">1,090명</td><td>81.3%(96.9%)</td><td>부족</td></tr>
+<tr><td>방문간호</td><td>172명</td><td class="l">0명 → ’26년 관내 1개소</td><td>무공급(25.9%)</td><td>부족(개선 중)</td></tr>
+<tr><td>단기보호</td><td>362명</td><td class="l">0명(관내 시설 없음)</td><td>무공급(1.5%)</td><td>부족</td></tr>
+<tr><td class="h" rowspan="3">일상생활<br>돌봄</td><td>노인맞춤돌봄</td><td>143명</td><td class="l">41명</td><td>28.7%(38.5%)</td><td>부족</td></tr>
+<tr><td>긴급돌봄</td><td>63명</td><td class="l">경기도 누구나돌봄으로 운영(’25년 111명)</td><td>-</td><td>도 사업 운영</td></tr>
+<tr><td>장애인활동지원</td><td>287명</td><td class="l">77명</td><td>26.8%(89.7%)</td><td>부족</td></tr>
+<tr><td class="h">주거·기타</td><td>응급안전안심</td><td>641명</td><td class="l">716명</td><td>111.7%(64.0%)</td><td>양호</td></tr></table>
+<p class="nt">단기보호는 관내 시설이 없어 일상살핌 생활돌봄으로 퇴원·돌봄 공백 초기 단기집중돌봄을 제공하고, 시설 단기보호는 중기 검토 과제로 둠</p>
+<h3 class="sec"><b>3</b>대상군별 공백 진단</h3>
+<table><tr><th style="width:20%">대상군</th><th style="width:27%">현재 제공·연계</th><th style="width:26%">미충족·취약 영역</th><th>우선 고려사항</th></tr>
+<tr><td class="h">거동불편 재가노인<br>(570명)</td><td>방문요양 81.3%, 건강살핌 51명 연계</td><td>공급기관은 확보했으나 이용 저조(수요 668명 대비 51명)</td><td>건강살핌 연계·안내 강화</td></tr>
+<tr><td class="h">퇴원환자<br>(사회적 입원 224명)</td><td>노인맞춤돌봄 퇴원환자 단기집중, 의왕살핌·영양식·건강돌봄가</td><td>퇴원 전 의뢰가 작동하지 않음</td><td>의뢰 경로 이원화</td></tr>
+<tr><td class="h">치매·독거노인<br>(1,059명)</td><td>치매관리 67.9%, 주야간보호 41.1%, 동고동락</td><td>노인맞춤돌봄 28.7%</td><td>노인맞춤돌봄 연계, 방문형 치매프로그램 확대</td></tr>
+<tr><td class="h">65세 미만 중증장애인<br>(287명)</td><td>지역사회중심재활 12.1%, 활동지원 26.8%</td><td>장애인 건강주치의 무공급</td><td>건강주치의 참여 의원 발굴, 재활 연계</td></tr>
+<tr><td class="h">장기요양 등급외·<br>예방군(629명)</td><td>방문건강관리 72.2%, 만성질환관리 79.7%</td><td>공적 돌봄 연계 지연</td><td>건보 빅데이터 발굴, 누구나돌봄 우선 연계 후 공백은 지역특화로</td></tr></table>
+</section>
+<section class="ch" data-no="Ⅳ" data-title="종합진단 및 추진 방향" data-lead="초고령 핵심군 발굴, 퇴원환자 연계, 방문의료 이용, 연계 후 관리가 2027년의 핵심 과제">
+<h3 class="sec"><b>1</b>종합진단 결과</h3>
+<table><tr><th style="width:14%">영역</th><th style="width:31%">주요 한계</th><th style="width:27%">주요 원인</th><th>근거</th></tr>
+<tr><td class="h" rowspan="3">대상자<br>발굴 및<br>관리</td><td>초고령 핵심군 발굴 필요</td><td>기존 발굴체계가 저소득·독거 위주</td><td>핵심군 85세 이상 48.6%, 독거 30.9%(경기 39.2%)</td></tr>
+<tr><td>퇴원환자 연계 미작동</td><td>상급종합병원은 퇴원일이 하루 전 확정</td><td>협약병원 의뢰 0건, 동 경유 43건</td></tr>
+<tr><td>장기요양 등급외자 연결 지연</td><td>본인 신청이 없으면 발굴이 어려움</td><td>등급외·기각 629명</td></tr>
+<tr><td class="h" rowspan="4">서비스<br>확충 및<br>품질향상</td><td>방문의료 이용 저조</td><td>서비스 인지 부족, 본인부담금 부담</td><td>수요 668명 대비 51명(7.6%)</td></tr>
+<tr><td>외래진료 접근 제약</td><td>검사·전문진료를 위한 병원 이동이 어려움</td><td>단독·연립·다세대 부곡 32.8%, 청계 17.9%</td></tr>
+<tr><td>장애인 건강·돌봄 공백</td><td>관내 의원 참여 유인 약함</td><td>건강주치의 무공급, 재활 12.1%</td></tr>
+<tr><td>재가 돌봄 공급 부족</td><td>수요 규모가 작아 민간 참여 유인 약함</td><td>방문요양 81.3%, 노인맞춤돌봄 28.7%</td></tr>
+<tr><td class="h" rowspan="2">운영기반·<br>민관협력</td><td>관내 부족서비스의 관외 기관 연계 미흡</td><td>단독 확충의 효율성 낮음</td><td>가정간호 등 관외 협력기관</td></tr>
+<tr><td>주민 인지도 낮음</td><td>홍보·안내 부족</td><td>노인 돌봄 인지 52.9% → 이용 6.4%</td></tr></table>
+<p class="src">※ 통합돌봄 실태조사(’25. 12.), 제6기 지역사회보장계획 지역주민욕구조사(’25. 5.~12., 875가구), 통계청 주택총조사(2025)</p>
+<p class="nt">양호 영역: 응급안전안심 111.7%, 치매관리 67.9%, 주야간보호 41.1%</p>
+<h3 class="sec"><b>2</b>중기 추진 방향(~2030년)</h3>
+<table><tr><th style="width:42%">추진 방향</th><th>핵심 목표</th></tr>
+<tr><td class="h l">발굴과 모니터링 강화로 대상자 관리를 촘촘하게</td><td>대상자 발굴률 ’27년 20% 이상<br>동 전담·간호 협업 모니터링 체계 구축</td></tr>
+<tr><td class="h l">방문진료·재택의료 이용 확대</td><td>방문진료 참여의원 14개소, 재택의료센터(관내 1·관외 협약 1) 이용 활성화</td></tr>
+<tr><td class="h l">병원-지역 간 전환 지원 강화</td><td>퇴원환자 의뢰 경로 이원화<br>협약병원 공식 의뢰 ’27년 10명 → ’30년 50명</td></tr>
+<tr><td class="h l">의왕살핌 고도화로 재가돌봄 공백 해소</td><td>지역특화서비스 패키지 보완, 퇴원·급성기 회복지원 확대</td></tr>
+<tr><td class="h l">보건소 협업과 장애인 건강관리·재활 연계</td><td>보건소 통합돌봄 서비스 이용률 ’27년 25% → ’30년 30%<br>’27년 장애인 건강주치의 관내 1개소 확보</td></tr>
+<tr><td class="h l">민관 인력 역량 강화와 통합지원회의 고도화</td><td>동 전담인력 사례 중심 교육, 통합지원회의 정례화</td></tr></table>
+<h3 class="sec"><b>3</b>2027년도 중점 추진 방향</h3>
+<table><tr><th style="width:12%">구분</th><th style="width:24%">지역의 핵심 문제</th><th style="width:19%">우선 대상</th><th style="width:23%">중점 추진 방향</th><th>핵심사업</th></tr>
+<tr><td class="h" rowspan="3">대상자<br>발굴 및<br>관리</td><td>초고령 핵심군 발굴 미흡</td><td>85세 이상 독거·노부부(청계·오전·부곡)</td><td>빅데이터 기반 발굴, 직권신청</td><td>초고령 위험군 발굴</td></tr>
+<tr><td>협약병원 의뢰 0건</td><td>퇴원환자(재입원 고위험군)</td><td>병원 유형별 의뢰 경로 구분</td><td>퇴원환자 의뢰 경로 이원화</td></tr>
+<tr><td>서비스 개시 확인 지연</td><td>서비스 의뢰가 끝난 대상자 전체</td><td>개시 확인·정기 점검 전담</td><td>동 전담·간호 협업 모니터링</td></tr>
+<tr><td class="h" rowspan="4">서비스<br>확충 및<br>품질향상</td><td>방문의료 이용 저조</td><td>와상·거동불편 노인, 퇴원환자</td><td>방문의료 대상자 집중 발굴·연계</td><td>의왕살핌 서비스 고도화</td></tr>
+<tr><td>외래진료 접근 제약</td><td>승강기 없는 주택의 거동불편자</td><td>검사·전문진료 병원 이동 지원</td><td>돌봄공백 신규서비스(이동살핌)</td></tr>
+<tr><td>퇴원 직후·독거노인 돌봄 공백</td><td>퇴원·급성기 환자, 독거노인</td><td>퇴원 초기 단기돌봄, AI 안부확인</td><td>돌봄공백 신규서비스(회복살핌·AI 돌봄로봇)</td></tr>
+<tr><td>장애인 건강주치의 무공급</td><td>65세 미만 중증장애인</td><td>참여 의원 발굴</td><td>장애인 건강주치의 의원 발굴</td></tr>
+<tr><td class="h">운영기반·<br>민관협력</td><td>복합욕구 대상자의 분절적 지원</td><td>복합욕구 핵심군</td><td>사람 중심 사례관리 강화</td><td>의뢰·회신 표준체계, 통합지원회의·사례관리 고도화, 관외 협력기관 연계</td></tr>
+<tr><td class="h">교육 및<br>홍보</td><td>주민·제공기관 인지도 낮음</td><td>주민, 제공기관</td><td>현장 역량·인지도 제고</td><td>의왕돌봄마당, 찾아가는 설명회, 생활 밀착 홍보</td></tr></table>
+</section>
+
+<section class="ch" data-no="Ⅴ" data-title="2027년 비전과 추진 체계" data-lead="비전 「살던 곳에서 건강하게, 함께 살피는 의왕」 아래 3대 목표, 4대 추진과업, 12개 핵심사업을 추진">
+<h3 class="sec"><b>1</b>비전 및 목표</h3>
+<div class="vis">
+<div class="v"><small>비전</small>살던 곳에서 건강하게, 함께 살피는 의왕</div>
+<div class="gl"><div><b>목표 1</b>더 많이 찾고 끝까지 살피는<br>대상자 관리체계 확립</div><div><b>목표 2</b>재가 의료 확충과 의왕살핌 고도화로<br>재가돌봄 공백 해소</div><div><b>목표 3</b>보건·복지·민간이 함께하는<br>수요자 중심 운영기반 강화</div></div>
+<div class="tk">
+<div class="k"><h5>대상자 발굴 및 관리</h5><p>초고령 위험군 발굴<span class="tag u">확대</span></p><p>퇴원환자 의뢰 경로 이원화<span class="tag i">개선</span></p><p>동 전담·간호 협업<br>모니터링 체계 구축<span class="tag n">신규</span></p></div>
+<div class="k"><h5>서비스 확충 및 품질향상</h5><p>의왕살핌 서비스 고도화<span class="tag u">확대</span></p><p>돌봄공백 신규서비스 도입<span class="tag n">신규</span></p><p>장애인 건강주치의<br>참여 의원 발굴<span class="tag n">신규</span></p></div>
+<div class="k"><h5>운영기반 및 민관협력</h5><p>서비스 의뢰·회신<br>표준체계 구축<span class="tag n">신규</span></p><p>관외 협력기관 연계 확대<span class="tag n">신규</span></p><p>통합지원회의·사례관리<br>고도화<span class="tag i">개선</span></p></div>
+<div class="k"><h5>교육 및 홍보</h5><p>「의왕돌봄마당」<br>민관 역량강화<span class="tag u">확대</span></p><p>찾아가는 통합돌봄 설명회<span class="tag n">신규</span></p><p>주민 생활 밀착 홍보<span class="tag n">신규</span></p></div>
+</div></div>
+<p class="b1">2027년 목표 대상자는 541명(우선발굴필요군 421명, 기타 120명)</p>
+<p class="b2">우선발굴필요군 6,506명 = 건보공단 산출 6,208명(유형 간 중복 제거) + 65세 미만 중증장애인 298명(행복e음)</p>
+<h3 class="sec"><b>2</b>추진 체계</h3>
+<p class="b1">복지정책과 통합돌봄팀이 컨트롤타워를 맡고, 6개 동 주민센터가 통합지원창구로 발굴부터 모니터링까지 수행</p>
+<p class="b2">통합돌봄 인력 16명(전담 10명, 겸직 6명), 전담인력 실제 배치율 100%, 본청 2개 직렬(복지·간호)</p>
+<p class="b2">동별 2인 체계: 전담인력 1명(발굴·조사·지원계획·연계), 겸직인력(간호) 1명(모니터링)</p>
+<div class="fig"><img src="의왕시_통합돌봄_추진체계도.png" style="width:100%"></div>
+<p class="b1">서비스 제공 절차는 신청·접수 → 사전조사 → 통합판정조사 → 개인별 지원계획 수립(통합지원회의) → 서비스 제공·모니터링 → 종결의 6단계</p>
+<div class="fig"><img src="의왕시_서비스제공절차.png" style="width:74%"></div>
+<h3 class="sec"><b>3</b>통합지원협의체 및 통합지원회의</h3>
+<p class="b1">(통합지원협의체) 시장을 위원장으로 20명 이내로 구성하고 연 2회(상·하반기) 정례 개최</p>
+<p class="b2">지역계획 수립·평가, 통합지원 시책, 기관 간 연계·협력에 관한 사항을 심의·자문</p>
+<p class="b2">공공·민간, 복지·보건의료 등 4개 분야 이상 참여, 위촉직 임기 2년</p>
+<p class="b1">(통합지원회의) 월 2회 이상 개최하여 개인별 지원계획을 심의·확정</p>
+<p class="b2">동·보건소·건보공단·연금공단·제공기관이 참여, 신규 안건은 대면·변경과 종결은 서면 또는 영상</p>
+<p class="b2">외부 참석자는 보안서약서를 작성하고, 제공기관에는 필요한 최소 정보만 공유</p>
+<div class="fig"><img src="의왕시_통합지원회의_진행절차.png" style="width:100%"></div>
+<h3 class="sec"><b>4</b>성과지표</h3>
+<div class="cap"><span>중앙정부 평가 기반 지표</span></div>
+<table><tr><th style="width:31%">지표</th><th>정의(산식)</th><th style="width:14%">’27년 목표</th><th style="width:16%">근거</th></tr>
+<tr><td class="h l">통합돌봄 대상자 발굴률</td><td>직권·자체발굴 대상자 ÷ 신청자 × 100</td><td class="c">20% 이상</td><td class="c">정부합동평가</td></tr>
+<tr><td class="h l">우선발굴필요군 중 통합지원 대상자</td><td>우선발굴필요군(6,506명) 중 대상자로 결정된 인원</td><td class="c">421명 이상(6%)</td><td class="c">수립 안내서</td></tr>
+<tr><td class="h l">통합지원 대상자 중 우선발굴필요군 비중</td><td>우선발굴필요군 대상자 ÷ 전체 대상자 × 100</td><td class="c">70% 이상</td><td class="c">수립 안내서</td></tr>
+<tr><td class="h l">개인별 지원계획 수립률</td><td>지원계획 수립자 ÷ 우선발굴필요군 × 100</td><td class="c">6% 이상</td><td class="c">지역복지사업 평가</td></tr>
+<tr><td class="h l">모니터링 수행률</td><td>3개월 단위 모니터링 수행 대상자 ÷ 전체 대상자 × 100</td><td class="c">80% 이상</td><td class="c">수립 안내서</td></tr>
+<tr><td class="h l">전담인력 실제 배치율</td><td>실제 배치 전담인력 ÷ 기준인건비 인원 × 100</td><td class="c">100%</td><td class="c">정부합동평가</td></tr>
+<tr><td class="h l">본청 다직렬 인력 배치</td><td>본청 전담부서에 배치된 직렬 수</td><td class="c">2개 직렬 이상</td><td class="c">지역복지사업 평가</td></tr>
+<tr><td class="h l">보건소 통합지원회의 참석률</td><td>보건소 참여 회의 ÷ 연간 회의 × 100</td><td class="c">90% 이상</td><td class="c">정부합동평가</td></tr>
+<tr><td class="h l">보건소 통합돌봄 서비스 이용률</td><td>보건소로 의뢰되어 2가지 이상 연계·제공한 건수 ÷ 연계·제공 건수 × 100</td><td class="c">25% 이상</td><td class="c">정부합동평가</td></tr></table>
+<p class="src">※ 행정안전부 「2028년(’27년 실적) 지방자치단체 합동평가 지표매뉴얼」(’26. 10. 20.), 보건복지부 「2026년 지역복지사업 평가계획」 준용</p>
+<div class="cap"><span>자체 성과지표</span></div>
+<table><tr><th style="width:17%">구분</th><th>지표</th><th style="width:24%">’27년 목표</th></tr>
+<tr><td class="h">모니터링</td><td>모니터링 후 계획 변경·종결 비중</td><td class="c">90% 이상</td></tr>
+<tr><td class="h" rowspan="2">인력양성</td><td>통합돌봄 인력 교육 이수 인원</td><td class="c">16명 전원</td></tr>
+<tr><td>민관 관계자 자체교육 운영 횟수</td><td class="c">연 6회</td></tr>
+<tr><td class="h" rowspan="2">정책 홍보</td><td>찾아가는 통합돌봄 설명회 개최 횟수</td><td class="c">연 6회</td></tr>
+<tr><td>홍보자료 배포 건수</td><td class="c">연 1,000건</td></tr>
+<tr><td class="h" rowspan="2">주민 소통</td><td>지역특화서비스 종결 시 만족도 조사 인원</td><td class="c">연 300명</td></tr>
+<tr><td>주민 의견 반영 건수</td><td class="c">연 1건</td></tr>
+<tr><td class="h" rowspan="3">사업 운영</td><td>통합지원협의체 구성 적절성</td><td class="c">4개 분야 이상 참여</td></tr>
+<tr><td>통합지원회의 운영 적절성(회의 심의로 계획을 확정한 신규 대상자)</td><td class="c">100%</td></tr>
+<tr><td>통합지원회의 개최 횟수</td><td class="c">월 2회 이상</td></tr></table>
+</section>
+<section class="ch" data-no="Ⅵ" data-title="세부 추진 내용" data-lead="찾는 일(발굴), 잇는 일(서비스), 살피는 일(모니터링)을 동 2인 체계와 민관 협업으로 추진">
+<h3 class="sec"><b>1</b>대상자 발굴 및 관리</h3>
+<h4>목표 대상자</h4>
+<div class="unit">(단위: 명)</div>
+<table class="c"><tr><th style="width:8%">연번</th><th>대상자 유형</th><th style="width:24%">우선발굴필요군 규모</th><th style="width:22%">’27년 목표 대상자</th></tr>
+<tr><td>1</td><td class="l">장기요양 재가급여자</td><td>2,151</td><td>145</td></tr>
+<tr><td>2</td><td class="l">등급외자(A, B) 및 노인맞춤돌봄 중점관리군</td><td>235</td><td>50</td></tr>
+<tr><td>3</td><td class="l">의료기관 퇴원환자</td><td>840</td><td>60</td></tr>
+<tr><td>4</td><td class="l">장기요양 기각·각하자</td><td>361</td><td>40</td></tr>
+<tr><td>5</td><td class="l">장기요양시설 퇴소자</td><td>12</td><td>2</td></tr>
+<tr><td>6</td><td class="l">고령장애인</td><td>2,871</td><td>107</td></tr>
+<tr><td>7</td><td class="l">65세 미만 뇌병변·지체 등 중증장애인</td><td>298</td><td>17</td></tr>
+<tr class="sum"><td colspan="2">우선발굴필요군 소계</td><td>6,506</td><td>421</td></tr>
+<tr><td colspan="2">기타(우선발굴필요군 외 돌봄 필요 대상)</td><td>-</td><td>120</td></tr>
+<tr class="sum"><td colspan="2">합계</td><td>-</td><td>541</td></tr></table>
+<p class="src">※ 1~6번은 건보공단 우선관리대상자 산출 자료(’25. 12. 말), 소계는 유형 간 중복을 제거한 인원으로 유형별 단순 합과 다름. 7번은 행복e음 장애인 통계(’26. 10.)</p>
+<h4>대상자 발굴 및 조사</h4>
+<p class="b1">(초고령 위험군 조사) 85세 이상 1인세대(1,046세대) 중 통합돌봄 미신청자를 연중 방문 조사</p>
+<p class="b2">청계·오전·부곡동을 상반기에 우선 착수하고, 3~11월에 동별로 나누어 조사, 분기별 실적 점검</p>
+<p class="b2">동 전담인력과 겸직인력(간호) 2인이 가정을 방문하여 건강·돌봄 욕구를 확인하고 필요하면 직권신청</p>
+<p class="nt">부곡동: 노인 기초생활 수급 12.0%, 기초연금 수급 70.3%로 시 최고 / 오전동: 기초생활 3.4%, 기초연금 55.9%로 제도 밖 경계층 다수 / 청계동: 노인 8,263명으로 최다</p>
+<p class="b1">(공공데이터 기반 발굴) 건보공단 빅데이터 리스트를 반기 1회 받아 동별로 배분하고 동 전담인력이 상담·직권신청</p>
+<p class="b2">입원위험 재가급여자, 등급외·기각자 대상, 행복e음 복지사각지대 위기정보는 매월 확인</p>
+<p class="b1">(발굴 실적 관리) 신청 시 발굴 경로(본인신청·직권·빅데이터·주민의뢰·퇴원 등)를 기록하고 동별 발굴률을 월별로 관리</p>
+<div class="fig"><img src="의왕시_연간발굴로드맵.png" style="width:100%"></div>
+<p class="b1">(관계기관 협업) 관계기관이 업무 중 발견한 돌봄 대상자를 동 주민센터에 의뢰하면 동 전담인력이 확인 후 직권신청</p>
+<table><tr><th style="width:34%">기관</th><th>발굴 협업 내용</th></tr>
+<tr><td class="h l">국민건강보험공단 의왕지사</td><td>입원위험 재가급여자, 등급외·기각자 빅데이터 리스트 제공(반기 1회)</td></tr>
+<tr><td class="h l">보건소·치매안심센터·정신건강복지센터</td><td>방문건강관리·치매관리·정신건강 대상자 중 복합 돌봄 필요자 의뢰</td></tr>
+<tr><td class="h l">재가장기요양기관·요양시설</td><td>복합 돌봄 욕구 이용자, 퇴소 후 지역 돌봄이 필요한 대상자 의뢰</td></tr>
+<tr><td class="h l">노인·장애인복지관, 노인맞춤돌봄 수행기관</td><td>건강 악화·돌봄 공백 대상자, 의료·돌봄 연계가 필요한 중증장애인 의뢰</td></tr>
+<tr><td class="h l">지역사회보장협의체·통장협의회</td><td>복지사각지대·사회적 고립 가구, 돌봄 필요 주민 발굴·연계</td></tr>
+<tr><td class="h l">지역 의료기관</td><td>진료 과정에서 복합 돌봄 욕구가 확인된 대상자 발굴·연계</td></tr></table>
+<h4>퇴원환자 의뢰 경로 이원화</h4>
+<p class="b1">병원 유형에 따라 의뢰 경로를 둘로 나누어 퇴원환자가 빠짐없이 연계되도록 함</p>
+<p class="b2">(상급종합병원) 퇴원 예정자에게 통합돌봄 안내문 교부 → 퇴원 후 동 주민센터 신청 → 동 확인 방문</p>
+<p class="b2">(종합병원) 협약병원 퇴원지원 담당자가 선별·환자평가 후 시 전담조직에 직접 의뢰 → 서류가 완비되면 자체조사 생략</p>
+<p class="b2">(연계수당) 공식 의뢰 실적에 따라 건당 5만원 이내 지급, ’27년 목표 10건</p>
+<div class="fig"><img src="의왕시_퇴원환자_의뢰경로이원화.png" style="width:100%"></div>
+<div class="fig"><img src="의왕시_퇴원후_돌봄연계흐름.png" style="width:92%"></div>
+<h4>모니터링 수행 계획</h4>
+<p class="b1">동 겸직인력(간호)이 모니터링을 전담하고, 결과는 행복e음에 기록</p>
+<p class="b2">(총괄) 통합돌봄팀이 동별 수행 실적을 월 1회 관리하고, 제공기관 제공기록을 월 1회 취합하여 행복e음에 입력</p>
+<p class="b2">(제공기관) 대상자별 제공 주기, 최초 제공일, 상태 변화를 시에 제출하고 추가 욕구는 동에 수시 공유</p>
+<div class="cap"><span>모니터링 주기와 방법</span></div>
+<table class="c"><tr><th style="width:12%">구분</th><th>대상</th><th style="width:27%">주기</th><th style="width:30%">방법</th></tr>
+<tr><td class="h">최초</td><td class="l">신규 서비스 연계 대상자</td><td>서비스 개시 후 1개월 이내</td><td>대면 방문</td></tr>
+<tr><td class="h" rowspan="2">집중</td><td class="l">퇴원환자</td><td>퇴원 초기 30일간 주 1~2회</td><td>대면·유선</td></tr>
+<tr><td class="l">고위험 대상자(건강 악화, 와상, 독거 초고령 등)</td><td>월 1회 이상 또는 수시</td><td>대면 우선</td></tr>
+<tr><td class="h">정기</td><td class="l">일반 대상자</td><td>3개월마다 1회 이상</td><td>제공기록 확인 후 유선, 필요 시 대면</td></tr></table>
+<p class="b1">서비스 변경이 필요하면 통합지원회의에 재상정하여 계획을 변경</p>
+<p class="b2">간호직 변경 제안 → 전담인력 변경(안) 작성 → 통합지원회의 재상정 → 시 전담조직이 제공기관에 의뢰</p>
+<p class="b2">의료 필요가 큰 대상자(건강살핌 대상자, 퇴원환자)는 간호직이 조사에 동행하고 계획 초안에 의견 제시</p>
+<p class="b2">동 내 월 1회 사례 공유, 통합돌봄팀이 동별 수행률을 매월 점검하고 분기별 동 담당자 회의에서 사례 공유</p>
+
+<h3 class="sec"><b>2</b>서비스 확충 및 품질향상</h3>
+<h4>맞춤형 서비스 확대</h4>
+<p class="b1">(방문의료 이용 활성화) 방문진료 참여의원 14개소를 활용하여 입원위험 재가급여자·퇴원환자를 집중 발굴·연계</p>
+<p class="b2">참여 의원과 재택의료센터를 더 늘리기보다, 동 간호직의 의료 필요 확인을 통해 건강살핌 연계를 확대</p>
+<p class="b1">(의왕살핌 고도화) 일상·건강·내집살핌 이용자를 전년 대비 30% 확대</p>
+<p class="b2">일상살핌 식사지원은 일반식을 기존 식사 서비스로 연계하고, 퇴원·급성기 등 치료식이 필요한 대상의 맞춤형 영양식으로 개편</p>
+<p class="b1">(장애인 건강) 장애인 건강주치의 참여 의원 1개소 이상 발굴, 보건소 지역사회중심재활과 연계</p>
+<h4>신규 서비스 도입</h4>
+<table><tr><th style="width:20%">서비스</th><th style="width:27%">우선 대상</th><th>내용</th><th style="width:13%">’27년 목표</th><th style="width:15%">예산(천원)</th></tr>
+<tr><td class="h">이동살핌</td><td>승강기 없는 주택에 사는 거동불편자</td><td>검사·전문진료를 위한 병원 이동 지원</td><td class="c">34명</td><td class="c">20,000</td></tr>
+<tr><td class="h">회복살핌 패키지</td><td>퇴원 후 1개월 이내 대상자 등</td><td>건강관리용품 꾸러미 지원, 노인맞춤돌봄 퇴원환자 단기집중과 함께 제공</td><td class="c">100명</td><td class="c">10,000</td></tr>
+<tr><td class="h">AI 돌봄로봇</td><td>독거·안전확인 필요 대상</td><td>AI 로봇을 통한 안부 확인</td><td class="c">100명</td><td class="c">80,000</td></tr></table>
+<p class="nt">신규 서비스는 세부 운영 기준을 마련하는 단계로, 제공기관 선정 후 시행</p>
+<div class="cap"><span>2027년 지역특화서비스 확충 계획</span></div>
+<table><tr><th style="width:23%">서비스</th><th style="width:27%">우선 대상</th><th>’27년 목표</th><th style="width:24%">추진 방식</th></tr>
+<tr><td class="h l">일상살핌(생활·동행)</td><td>기존 공적서비스 미수혜자</td><td>이용자 30% 확대(125명)</td><td>신체·가사활동, 병원 동행</td></tr>
+<tr><td class="h l">맞춤형 영양식(개편)</td><td>만성질환자, 저영양 위험자</td><td>이용자 30% 확대</td><td>치료식 배달, 안부 확인</td></tr>
+<tr><td class="h l">건강살핌</td><td>거동불편 건강취약자</td><td>이용자 30% 확대(110명)</td><td>방문의료·재활·가정간호</td></tr>
+<tr><td class="h l">내집살핌</td><td>기존 공적서비스 미수혜자</td><td>이용자 30% 확대(95명)</td><td>주거환경개선</td></tr>
+<tr><td class="h l">동고동락</td><td>치매환자·인지저하자</td><td>이용자 30% 확대</td><td>방문형 치매프로그램</td></tr>
+<tr><td class="h l">건강돌봄가</td><td>건강 모니터링이 필요한 자</td><td>이용자 30% 확대</td><td>방문 건강 모니터링</td></tr>
+<tr><td class="h l">퇴원환자 연계</td><td>퇴원환자</td><td>10명</td><td>협약병원 의뢰, 연계수당</td></tr></table>
+<p class="b1">국가돌봄서비스와 도·시 사업은 전년 대비 이용자 5~10% 확대를 목표로 연계</p>
+<p class="b2">재택의료센터, 일차의료 방문진료, 다제약물관리, 방문건강관리, 치매관리, 노인맞춤돌봄, 장애인활동지원, 누구나돌봄, 주거환경개선 사업 등</p>
+<h4>서비스 품질 향상</h4>
+<p class="b1">(제공기관 선정·관리) 표준심사표(5개 영역 100점)와 적격 요건으로 공모·심사하고, 신규 서비스에도 같은 기준 적용</p>
+<p class="b2">선정 후 배상책임보험 가입, 보안·사고예방 서약서 제출을 확인하고 교육·회의·모니터링 참여 의무를 협약에 명시</p>
+<p class="b1">(표준 가이드라인) 운영 매뉴얼, 서비스 메뉴판, 표준서식(의뢰서·계약서·조정신청서·결과보고서)을 개정·배포</p>
+<p class="b2">’26년 간담회 개선사항을 표준 절차로 정착: 의뢰 접수 확인 회신, 이용안내문 교부와 서면 확인, 지원 불가사항 사전 안내</p>
+<p class="b1">(만족도 조사) 서비스 종결 시 시간 준수·전문성·만족도·재이용 의향을 5점 척도로 조사하고, 연 1회 간담회에서 결과 공유</p>
+<p class="b1">(운영 점검) 제공기관이 제출한 제공기록을 시가 월 1회 행복e음에 입력하고, 동 담당자가 진행상황을 직접 확인</p>
+<p class="b2">민원·제공 지연·누락 발생 시 수시 점검 및 개선 조치</p>
+
+<h3 class="sec"><b>3</b>전문기관 및 관련기관 협업</h3>
+<div class="cap"><span>전문기관별 협업 내용</span></div>
+<table><tr><th style="width:27%">기관</th><th>협업 내용</th></tr>
+<tr><td class="h l">국민건강보험공단 의왕지사<br>(돌봄통합TF팀)</td><td>(발굴) 빅데이터 대상자 리스트 반기 1회 제공 → 시가 동별 배분<br>(조사) 장기요양 조사와 통합판정 조사를 한 번의 방문으로 시행(’26. 8. 간담회 합의)<br>(계획) 통합지원회의에 참석하여 개인별 지원계획 수립 협의</td></tr>
+<tr><td class="h l">국민연금공단 군포의왕지사<br>(장애인지원센터)</td><td>(조사) 65세 미만 장애인 종합판정조사 시행·회신<br>(계획) 통합지원회의에 참석하여 장애인 서비스 연계 협의</td></tr>
+<tr><td class="h l">경기복지재단<br>(돌봄통합지원단)</td><td>(교육) 신규 동 전담인력 기초교육, 시군 맞춤형 교육 공동 구성<br>(컨설팅) 시군 통합돌봄 컨설팅, 지역계획 수립 컨설팅</td></tr>
+<tr><td class="h l">한국장애인개발원<br>(통합돌봄지원팀)</td><td>(교육) 장애인 통합돌봄 담당자 교육<br>(기술지원) 지원계획 수립이 어려운 복합 사례 자문<br>(자료) 서비스·기관 목록과 홍보물 활용</td></tr>
+<tr><td class="h l">한국보건복지인재원</td><td>(교육) 동 전담·겸직인력 기본과정, 본청 심화과정, 팀장·리더과정<br>(지역계획) 지역계획 작성 교육</td></tr></table>
+<p class="b1">통합지원 관련기관은 공공과 민간, 보건의료·건강관리·복지·주거 분야로 구성</p>
+<p class="b2">(공공) 건보공단, 국민연금공단, 보건소(방문건강관리), 치매안심센터</p>
+<p class="b2">(보건의료) 방문진료 의원 14개소(의과 2·한의 12), 재택의료센터, 가정간호 의원, 지역책임의료기관(한림대학교성심병원), 퇴원환자 협약병원 3개소</p>
+<p class="b2">(복지·주거) (사)한국커뮤니티연구원, 의왕시니어클럽, 미소나눔, 아름채·사랑채노인복지관, 희망나래장애인복지관, 정신건강복지센터</p>
+<p class="b1">운영기반 핵심사업으로 의뢰·회신 표준체계를 구축하고 관외 협력기관 연계를 확대</p>
+<p class="b2">(의뢰·회신 표준체계) 서비스마다 다른 의뢰 양식을 통일하고, 제공기관의 접수 확인 회신과 제공기록 월 1회 제출을 표준 절차로 운영</p>
+<p class="b2">(관외 협력기관 연계) 가정간호·재택의료 등 관내 공급이 적은 서비스는 관외 협약기관과 연계</p>
+<p class="b2">(통합지원회의·사례관리 고도화) 국가돌봄서비스 우선, 공백은 지역특화서비스로 보완하고 중복 서비스를 조정</p>
+</section>
+
+<section class="ch" data-no="Ⅶ" data-title="교육 및 홍보" data-lead="신규 동 인력의 조기 정착과 민관 공동교육, 찾아가는 설명회로 현장 역량과 주민 인지도를 높임">
+<h3 class="sec"><b>1</b>통합돌봄 인력양성 및 역량강화</h3>
+<p class="b1">(추진 방향) 동별 2인 체계로 새로 배치된 동 인력 12명이 신청부터 모니터링까지 전 과정을 조기에 익히도록 직무교육을 집중 실시</p>
+<p class="b2">제공기관과 동 담당자가 같은 절차와 기준으로 일하도록 민관 공동교육 실시</p>
+<p class="b1">(목표) 통합돌봄 인력 16명(전담 10, 겸직 6) 전원이 중앙·전문기관 교육 1과정 이상 이수</p>
+<p class="b2">민관 자체교육 연 6회 운영(「의왕돌봄마당」 5회, 경기복지재단 시군 맞춤형 교육 1회)</p>
+<p class="b2">동 담당자용 업무 매뉴얼 개정·배포 1회</p>
+<div class="cap"><span>2027년 교육 운영 계획</span></div>
+<table><tr><th style="width:13%">구분</th><th>과정</th><th style="width:22%">대상</th><th style="width:14%">시기</th><th style="width:24%">기관</th></tr>
+<tr><td class="h" rowspan="4">중앙·<br>전문기관</td><td>담당자 기본과정</td><td>신규 배치자</td><td class="c">연간</td><td rowspan="3">한국보건복지인재원, 경기복지재단</td></tr>
+<tr><td>담당자 심화과정</td><td>본청 전담 4명</td><td class="c">연간</td></tr>
+<tr><td>팀장·리더과정</td><td>동 팀장 6명, 관리자</td><td class="c">연간</td></tr>
+<tr><td>장애인 통합돌봄 교육</td><td>동 12명</td><td class="c">개설 시</td><td>한국장애인개발원</td></tr>
+<tr><td class="h" rowspan="6">자체<br>「의왕<br>돌봄마당」</td><td>① 신규 동 인력 직무교육</td><td>동 6명</td><td class="c">’27. 1.</td><td rowspan="5">시 통합돌봄팀</td></tr>
+<tr><td>② 의왕살핌 매뉴얼 개정 교육</td><td>동 12명</td><td class="c">’27. 1.</td></tr>
+<tr><td>③ 동 전담·간호 협업 모니터링 교육</td><td>동 12명</td><td class="c">’27. 1.</td></tr>
+<tr><td>④ 제공기관 운영 교육(매뉴얼·서식·의뢰절차)</td><td>제공기관 담당자</td><td class="c">연 1회</td></tr>
+<tr><td>⑤ 신규·개편 지역특화사업 교육</td><td>동 12명</td><td class="c">상반기</td></tr>
+<tr><td>⑥ 시군 맞춤형 교육</td><td>민관 50명 이상</td><td class="c">하반기</td><td>경기복지재단 공동 구성</td></tr></table>
+<h3 class="sec"><b>2</b>통합돌봄 인식 확대 및 소통 강화</h3>
+<p class="b1">(홍보 매체 다각화) 신청 방법과 받을 수 있는 서비스를 구체적으로 안내하여 실제 신청·이용으로 이어지도록 홍보</p>
+<p class="b2">서비스 메뉴판·리플릿 연중 배포, 보도자료·카드뉴스, 시 홈페이지·SNS 게시</p>
+<p class="b2">고령층·장애인은 동 창구와 경로당 등 대면 채널, 보호자(가족)는 온라인 채널 중심으로 안내</p>
+<p class="b1">(생활 밀착 홍보) 경로당·약국·의원·장기요양기관·동 주민센터 등 주민이 자주 찾는 곳에 홍보물 비치</p>
+<p class="b2">퇴원 예정자에게 병원을 통해 통합돌봄 안내문 배부(퇴원환자 의뢰 경로 이원화와 연계)</p>
+<p class="b1">(찾아가는 통합돌봄 설명회) 통장협의회·동 지역사회보장협의체·경로당 등 주민 정례 회의를 찾아가 설명과 질의응답 실시</p>
+<p class="b2">동별 연 1회 이상(총 6회), 주민이 의뢰한 돌봄 필요 대상은 동에서 확인 후 직권신청으로 연계</p>
+<p class="b1">(이용자 의견 수렴) 지역특화서비스 종결 시 이용자(보호자) 만족도와 불편사항을 전화·방문으로 조사(연 300명)</p>
+<p class="b2">만족도 조사와 설명회 건의사항을 기록·관리하고, 개선이 필요한 사항은 사업 운영에 반영(연 1건 이상)</p>
+</section>
+
+<section class="ch" data-no="Ⅷ" data-title="재원 계획 및 향후 일정" data-lead="2027년 통합돌봄 예산(안) 706,636천원, 국비 50%·도비 5%·시비 45%">
+<h3 class="sec"><b>1</b>재원 운용 원칙</h3>
+<p class="b1">(국가서비스 우선) 장기요양·노인맞춤돌봄 등 국가돌봄서비스를 먼저 연계하고, 통합돌봄 예산은 공백 영역에만 투입하여 중복 지원을 방지</p>
+<p class="b1">(형평성) 지역특화서비스의 단가와 부담은 기존 제도 기준을 준용하고 소득 수준별로 차등 적용</p>
+<p class="b1">(집행 원칙) 통합돌봄 대상자에 한해 지원하며, 현금성 급여와 국가서비스 본인부담금 전액 지원은 배제</p>
+<h3 class="sec"><b>2</b>2027년 예산(안)</h3>
+<div class="unit">(단위: 천원)</div>
+<table><tr><th style="width:12%">구분</th><th>사업</th><th style="width:17%">예산액</th><th style="width:34%">비고</th></tr>
+<tr><td class="h" rowspan="7">사업비</td><td>의왕살핌(일상·건강·내집살핌)</td><td class="c">514,136</td><td>일상 125명, 내집 95명, 건강 110명</td></tr>
+<tr><td>이동살핌<span class="tag n">신규</span></td><td class="c">20,000</td><td>왕복 143천원 × 4회 × 34명</td></tr>
+<tr><td>회복살핌 패키지<span class="tag n">신규</span></td><td class="c">10,000</td><td>100명</td></tr>
+<tr><td>AI 돌봄로봇<span class="tag n">신규</span></td><td class="c">80,000</td><td>100명</td></tr>
+<tr><td>퇴원환자 연계수당</td><td class="c">500</td><td>50천원 × 10건</td></tr>
+<tr><td>재택의료센터 운영지원</td><td class="c">5,000</td><td>1개소</td></tr>
+<tr><td>의왕형 통합돌봄(보조금사업)</td><td class="c">60,000</td><td>공모</td></tr>
+<tr class="sum"><td colspan="2" class="c">사업비 계</td><td class="c">689,636</td><td>국비 344,818 / 도비 34,482 / 시비 310,336</td></tr>
+<tr><td class="h">운영비</td><td>회의수당, 홍보물 제작, 행사 운영</td><td class="c">17,000</td><td>3,000 / 11,000 / 3,000</td></tr>
+<tr class="sum"><td colspan="2" class="c">총계</td><td class="c">706,636</td><td>국비 353,318 / 도비 35,332 / 시비 317,986</td></tr></table>
+<p class="nt">예산은 시의회 심의 결과에 따라 변동될 수 있음</p>
+<h3 class="sec"><b>3</b>향후 일정</h3>
+<table class="c"><tr><th style="width:24%">시기</th><th>내용</th></tr>
+<tr><td class="h">’26. 11. 26.</td><td class="l">통합지원협의체 정기회의, 2027년도 지역계획(안) 심의</td></tr>
+<tr><td class="h">’26. 11. 30.</td><td class="l">동별 2인 체계(전담인력·겸직인력) 배치</td></tr>
+<tr><td class="h">’26. 12.</td><td class="l">위원 의견 반영, 지역계획 확정·제출</td></tr>
+<tr><td class="h">’27. 1.</td><td class="l">신규 동 인력 직무교육, 의왕살핌 매뉴얼 개정, 모니터링 체계 시행</td></tr>
+<tr><td class="h">’27. 1.~2.</td><td class="l">제공기관 공모·협약, 신규 서비스 운영 기준 마련</td></tr>
+<tr><td class="h">’27. 3.~11.</td><td class="l">초고령 위험군 조사(청계·오전·부곡동 우선), 찾아가는 통합돌봄 설명회</td></tr>
+<tr><td class="h">’27. 상·하반기</td><td class="l">통합지원협의체 개최, 건보공단 빅데이터 리스트 동별 배분</td></tr></table>
+<h3 class="sec"><b>4</b>심의 요청 사항</h3>
+<p class="b1">2027년도 통합지원 지역계획(안)의 목표와 핵심사업의 적정성</p>
+<p class="b1">대상자 발굴, 퇴원환자 연계, 서비스 제공에 대한 기관별 협력 방안</p>
+</section>
+</div>
+<div id="out"></div>
+<script>
+const PAT=`<svg viewBox="0 0 210 297" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><g fill="#2f5597" opacity=".55">
+<path d="M28 60a40 40 0 0 1 40 40H28z"/><path d="M68 28h40a40 40 0 0 1-40 40z" opacity=".7"/><rect x="68" y="68" width="40" height="40" transform="rotate(45 88 88) scale(.5) translate(88 88)" />
+<path d="M108 100a40 40 0 0 1 40-40v80h-40z" opacity=".6"/><circle cx="168" cy="48" r="16" opacity=".5"/><path d="M148 100h40v40a40 40 0 0 1-40-40z"/>
+<path d="M28 140h40l-40 40z" opacity=".8"/><path d="M68 180a40 40 0 0 1 40-40v40z"/><path d="M108 180h40v40h-40z" opacity=".35"/><path d="M148 180l40 40h-40z" opacity=".8"/>
+<path d="M28 220a40 40 0 0 0 40 40H28z" opacity=".6"/><path d="M68 220h40v40z" opacity=".8"/><path d="M108 260a40 40 0 0 1 40-40v40z" opacity=".6"/><path d="M148 220h40v40a40 40 0 0 1-40-40z" opacity=".4"/>
+<path d="M150 150c0-14 8-20 18-20 0 14-8 20-18 20zm36 0c0-14-8-20-18-20 0 14 8 20 18 20z" opacity=".9"/></g>
+<path d="M36 28H184V236L172 248H26V38z" fill="none" stroke="#5271a5" stroke-width="1.2" opacity=".7" transform="translate(0 10)"/></svg>`;
+window.addEventListener('load',async()=>{await document.fonts.ready;await document.fonts.load('700 12px "Noto Sans KR"');await document.fonts.load('400 12px "Noto Sans KR"');
+const out=document.getElementById('out');
+const DOC='2027년도 의왕시 통합지원 지역계획(안) 요약';
+function page(cls){const p=document.createElement('div');p.className='page '+cls;out.appendChild(p);return p}
+// cover
+const cv=page('cover');cv.innerHTML=`<div class="frame f1"></div><div class="ttl"><div class="y">2027년도</div><h1>의왕시 통합지원<br>지역계획(안)</h1><div class="s">[ 요 약 ]</div></div>
+<div class="art" style="background:#25406d">${PAT.replace('viewBox="0 0 210 297"','viewBox="20 40 170 110"')}</div><div class="date">2026. 11.</div>
+<div class="side"><i></i><i></i><i></i><i></i></div><div class="frame f2"></div><div class="org">의 왕 시<small>복지정책과 통합돌봄팀</small></div>`;
+const toc=page('toc');
+const chs=[...document.querySelectorAll('#src section.ch')];
+let pn=0;const tocRows=[];
+function newContent(){pn++;const p=page('cont');const odd=pn%2===1;
+ p.innerHTML=odd?`<div class="rh r">■ ■ ■ ■</div><div class="body"></div><div class="pn r">${pn}</div>`:`<div class="rh l">${DOC}</div><div class="body"></div><div class="pn l">${pn}</div>`;
+ return p.querySelector('.body')}
+for(const ch of chs){
+ const d=page('div');pn++;
+ d.innerHTML=PAT+`<div class="in"><div class="no">${ch.dataset.no}</div><div class="ln"></div><div class="t">${ch.dataset.title}</div></div>`;
+ let body=newContent();
+ tocRows.push({t:`${ch.dataset.no}. ${ch.dataset.title}`,p:pn-1,sub:false});
+ body.insertAdjacentHTML('beforeend',`<div class="chead"><div class="n">${ch.dataset.no}</div><div class="t">${ch.dataset.title}</div></div><div class="lead">${ch.dataset.lead}</div>`);
+ const blocks=[...ch.children];
+ for(const b of blocks){
+  body.appendChild(b);
+  if(body.scrollHeight>body.clientHeight+1){
+   body.removeChild(b);
+   if(b.tagName==='TABLE'){
+    const rows=[...b.rows];const head=rows[0];const groups=[];let span=0;
+    for(const r of rows.slice(1)){ if(span<=0){groups.push([]);span=1;[...r.cells].forEach(c=>{span=Math.max(span,c.rowSpan)})} groups[groups.length-1].push(r);span--; }
+    const mk=()=>{const t=b.cloneNode(false);const tb=document.createElement('tbody');tb.appendChild(head.cloneNode(true));t.appendChild(tb);return t};
+    let t=mk();body.appendChild(t);let placed=[];
+    while(groups.length){const g=groups[0];g.forEach(r=>t.tBodies[0].appendChild(r));
+      if(body.scrollHeight>body.clientHeight+1){ g.forEach(r=>r.remove());
+        if(placed.length<2){
+          placed.forEach(pg=>pg.forEach(r=>r.remove()));groups.unshift(...placed);
+          t.remove();
+          const carry=[];while(body.lastElementChild&&(/^(H3|H4)$/.test(body.lastElementChild.tagName)||body.lastElementChild.classList.contains('cap')||body.lastElementChild.classList.contains('unit'))){carry.unshift(body.lastElementChild);body.lastElementChild.remove()}
+          body=newContent();carry.forEach(c=>body.appendChild(c));
+        } else body=newContent();
+        t=mk();body.appendChild(t);placed=[];
+        continue;
+      }
+      placed.push(groups.shift());
+    }
+    continue;
+   }
+   const carry=[];
+   while(body.lastElementChild&&/^(H3|H4)$/.test(body.lastElementChild.tagName)||body.lastElementChild&&(body.lastElementChild.classList.contains('cap')||body.lastElementChild.classList.contains('unit'))){carry.unshift(body.lastElementChild);body.removeChild(body.lastElementChild)}
+   body=newContent();carry.forEach(c=>body.appendChild(c));body.appendChild(b);
+   if(body.scrollHeight>body.clientHeight+1)console.log('OVERFLOW p'+pn,b.tagName,b.className,(b.textContent||'').slice(0,30));
+  }
+  if(b.tagName==='H3'&&ch.dataset.no==='Ⅵ')tocRows.push({t:b.textContent.replace(/^(\d)/,'$1. '),p:pn,sub:true});
+ }
+}
+toc.innerHTML=`<div class="bg">${PAT.replace('#2f5597','#b4b9d6').replace('stroke="#5271a5"','stroke="none"')}</div><div class="card"><h2>목 차</h2><hr>`+tocRows.map(r=>`<div class="r${r.sub?' sub':''}"><span>${r.t}</span><span class="d"></span><span>${r.p}</span></div>`).join('')+`</div>`;
+document.getElementById('src').remove();
+window.PAGES=out.children.length;});
+</script></body></html>
