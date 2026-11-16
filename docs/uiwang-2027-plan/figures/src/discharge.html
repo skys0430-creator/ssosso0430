@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#24507d;--sky:#d9e8f5;--sky2:#eef5fb;--line:#9fb6cc;--accent:#e58a1f;--text:#1d2b3a;--sub:#4d6680}
+*{box-sizing:border-box;margin:0;padding:0}
+body{word-break:keep-all;font-family:'Noto Sans KR',sans-serif;color:var(--text);background:#fff;padding:18px;width:1240px}
+.lane{display:grid;grid-template-columns:190px repeat(4,1fr);gap:0;align-items:stretch;margin-bottom:14px}.lane:last-of-type{margin-bottom:0}
+.who{border-radius:12px 0 0 12px;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:12px;text-align:center}
+.who b{font-size:19px}
+.who small{font-size:13px;opacity:.9;margin-top:4px;line-height:1.4}
+.a .who{background:var(--navy2)} .b .who{background:var(--navy)}
+.step{position:relative;background:var(--sky2);border:1.5px solid var(--line);border-left:none;padding:12px 26px 12px 18px;display:flex;flex-direction:column;justify-content:center}
+.step:last-child{border-radius:0 12px 12px 0}
+.step:not(:last-child):after{content:"";position:absolute;right:-13px;top:50%;transform:translateY(-50%);border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:13px solid var(--navy2);z-index:2}
+.step h4{font-size:16px;color:var(--navy);margin-bottom:4px}
+.step p{font-size:14px;color:var(--sub);line-height:1.45}
+.step .k{align-self:flex-start;display:inline-block;background:#fff;border:1.5px solid var(--navy2);color:var(--navy);border-radius:5px;padding:0 6px;font-size:12.5px;font-weight:700;margin-bottom:5px}
+.inc{background:var(--accent);color:#fff;border-radius:8px;padding:6px 10px;font-size:14px;font-weight:700;margin-top:6px;text-align:center}
+.merge{display:grid;grid-template-columns:190px 1fr;margin-top:4px}
+.mbox{grid-column:2;background:var(--navy);color:#fff;border-radius:12px;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;font-size:15.5px}
+.mbox b{font-size:17px}
+.why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.why div{border:1.5px dashed var(--line);border-radius:10px;padding:9px 12px;font-size:14px;line-height:1.5;color:var(--sub)}
+.why b{color:var(--navy);display:block;font-size:14.5px}
+</style></head><body>
+<div class="lane a">
+  <div class="who"><b>상급종합병원</b><small>퇴원일이 전날 확정되어<br>퇴원 전 사전조사 어려움</small></div>
+  <div class="step"><span class="k">병원</span><h4>안내문 배부</h4><p>퇴원 예정자·보호자에게 통합돌봄 안내문 전달</p></div>
+  <div class="step"><span class="k">환자·보호자</span><h4>퇴원 후 동 신청</h4><p>거주지 동 주민센터에 통합돌봄 신청</p></div>
+  <div class="step"><span class="k">동</span><h4>확인 방문</h4><p>동 2인(복지·간호) 방문하여 사전조사</p></div>
+  <div class="step"><span class="k">시</span><h4>통합지원회의</h4><p>개인별지원계획 수립·서비스 연계</p></div>
+</div>
+<div class="lane b">
+  <div class="who"><b>종합병원</b><small>퇴원환자 연계 협약기관<br>(’26. 3개소 → ’27. 확대)</small></div>
+  <div class="step"><span class="k">병원 퇴원지원 담당자</span><h4>선별·환자평가</h4><p>선별평가표, 통합지원 신청서, 동의서, 환자평가표 작성</p></div>
+  <div class="step"><span class="k">병원 → 시</span><h4>퇴원 전 직접 의뢰</h4><p>시 통합돌봄 전담조직에 서류 제출(공문·이메일)</p></div>
+  <div class="step"><span class="k">시</span><h4>서류 검토</h4><p>서류 완비 시 자체조사 생략, 부족 시 신속 자체조사</p></div>
+  <div class="step"><span class="k">시</span><h4>통합지원회의</h4><p>개인별지원계획 수립·서비스 연계</p><div class="inc">연계수당 지급(건당 5만원 이내)</div></div>
+</div>
+</body></html>

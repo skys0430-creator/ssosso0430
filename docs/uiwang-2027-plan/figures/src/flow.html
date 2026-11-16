@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#24507d;--sky:#d9e8f5;--sky2:#eef5fb;--line:#9fb6cc;--text:#1d2b3a;--sub:#4d6680}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:#fff;padding:24px;width:1140px}
+.head{display:grid;grid-template-columns:200px 190px 1fr;gap:14px;margin-bottom:10px}
+.head div{background:var(--navy);color:#fff;font-weight:700;font-size:17px;text-align:center;padding:9px;border-radius:8px}
+.step{display:grid;grid-template-columns:200px 190px 1fr;gap:14px;align-items:stretch}
+.badge{background:var(--navy);color:#fff;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px 10px}
+.badge .n{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--navy);font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.badge .t{font-weight:700;font-size:18px;line-height:1.35}
+.badge .s{font-size:13px;opacity:.85;margin-top:3px}
+.who{background:var(--sky2);border:1.5px solid var(--line);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:10px}
+.who span{background:#fff;border:1.5px solid var(--navy2);color:var(--navy);font-weight:700;font-size:14.5px;border-radius:20px;padding:4px 12px;text-align:center;line-height:1.35}
+.body{border:1.5px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.body ul{list-style:none;padding:11px 16px;font-size:15px;line-height:1.6;flex:1}
+.body li{padding-left:13px;position:relative}
+.body li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--navy2)}
+.body li.sub{padding-left:26px;color:var(--sub);font-size:14px}
+.body li.sub:before{left:13px;background:#9fb6cc}
+.forms{background:var(--sky);padding:8px 14px;display:flex;flex-wrap:wrap;gap:6px}
+.forms em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--navy);margin-right:2px;align-self:center}
+.forms span{background:#fff;border-radius:5px;padding:2px 8px;font-size:13px;color:var(--text)}
+.arrow{height:26px;display:grid;grid-template-columns:200px 1fr}
+.arrow div{display:flex;justify-content:center;align-items:center}
+.arrow div:after{content:"";border-left:13px solid transparent;border-right:13px solid transparent;border-top:13px solid var(--navy2)}
+.hl{color:#c96f0c;font-weight:700}
+.mt{margin:0 16px 4px;border-collapse:collapse;font-size:13.5px;width:calc(100% - 32px)}
+.mt th{background:var(--navy2);color:#fff;font-weight:700;padding:5px 8px}
+.mt td{border:1px solid var(--line);padding:5px 8px;line-height:1.4}
+.mt td.g{text-align:center;font-weight:700;color:var(--navy);background:var(--sky2)}
+</style></head><body>
+<div class="head"><div>절차</div><div>담당주체</div><div>내용 및 서식</div></div>
+
+<div class="step">
+  <div class="badge"><div class="n">1</div><div class="t">대상자 발굴<br>신청·접수</div></div>
+  <div class="who"><span>동 주민센터</span><span>건강보험공단<br>의왕지사</span></div>
+  <div class="body"><ul>
+    <li>동 주민센터·건보공단 지사에서 대상자 발굴 및 신청서 접수</li>
+    <li>시 전담부서에서 대상자 신청정보 확인</li>
+  </ul><div class="forms"><em>서식</em><span>통합지원 신청서</span><span>개인정보수집이용동의서</span></div></div>
+</div>
+<div class="arrow"><div></div></div>
+
+<div class="step">
+  <div class="badge"><div class="n">2</div><div class="t">사전조사</div></div>
+  <div class="who"><span>동 주민센터</span></div>
+  <div class="body"><ul>
+    <li>동 담당자가 사전조사 실시 후 결과를 신청자에게 안내</li>
+    <li>긴급돌봄이 필요하면 긴급돌봄 담당자에게 지원사업 의뢰</li>
+  </ul><div class="forms"><em>서식</em><span>사전조사지</span><span>사전조사결과 안내서</span><span>긴급돌봄지원사업 대상자 추천서</span></div></div>
+</div>
+<div class="arrow"><div></div></div>
+
+<div class="step">
+  <div class="badge"><div class="n">3</div><div class="t">통합(종합)판정<br>조사</div></div>
+  <div class="who"><span>건강보험공단<br>의왕지사</span><span>국민연금공단<br>군포의왕지사</span><span>동 주민센터</span></div>
+  <div class="body"><ul>
+    <li>사전조사 결과 ‘통합판정조사군’은 건보공단(노인)·연금공단(장애인) 지사로 판정 의뢰</li>
+    <li>판정조사 시 지자체 담당자 동행 또는 단독 방문조사</li>
+    <li>지자체 자체조사 실시(동 담당자)</li>
+  </ul><div class="forms"><em>서식</em><span>조사 등 의뢰서</span><span>통합판정조사표</span><span>통합판정서</span><span>동행·단독 방문조사 서식</span><span>지자체 자체조사 서식</span></div></div>
+</div>
+<div class="arrow"><div></div></div>
+
+<div class="step">
+  <div class="badge"><div class="n">4</div><div class="t">개인별<br>지원계획 수립</div><div class="s">(통합지원회의 운영)</div></div>
+  <div class="who"><span>동 주민센터</span><span>시 전담부서</span></div>
+  <div class="body"><ul>
+    <li>동 담당자가 조사결과를 토대로 개인별지원계획(초안) 수립</li>
+    <li class="sub">시 담당자 계획 확정 → 통합지원회의 안건 상정</li>
+    <li>통합지원회의에서 서비스 조정, 계획 승인·변경, 종결 여부 심의·결정</li>
+  </ul><div class="forms"><em>서식</em><span>개인별지원계획서</span><span>시군구 통합지원회의</span></div></div>
+</div>
+<div class="arrow"><div></div></div>
+
+<div class="step">
+  <div class="badge"><div class="n">5</div><div class="t">서비스 제공<br>및 모니터링</div></div>
+  <div class="who"><span>시 전담부서</span><span>동 겸직인력<br>(간호)</span><span>동 전담인력<br>(복지)</span><span>제공기관</span></div>
+  <div class="body"><ul>
+    <li><b>(서비스 제공)</b> 시 전담부서가 제공기관에 정보 공유 및 서비스 의뢰</li>
+    <li class="sub">제공기관이 제공주기·최초 제공일·상태변화를 매월 시에 제출 → 시가 행복e음 입력</li>
+    <li><b>(모니터링)</b> 동 겸직인력(간호)이 수행하고 결과를 행복e음에 입력</li>
+  </ul>
+  <table class="mt"><colgroup><col style="width:9%"><col style="width:37%"><col style="width:27%"><col style="width:27%"></colgroup>
+    <tr><th>구분</th><th>대상</th><th>주기</th><th>방법</th></tr>
+    <tr><td class="g">최초</td><td>신규 서비스 연계 대상자</td><td>서비스 개시 후 1개월 이내</td><td>대면 방문</td></tr>
+    <tr><td class="g" rowspan="2">집중</td><td>퇴원환자</td><td>퇴원 초기 30일간 주 1~2회</td><td>대면·유선</td></tr>
+    <tr><td>고위험 대상자(건강악화·와상·독거 초고령)</td><td>월 1회 이상 또는 수시</td><td>대면 우선</td></tr>
+    <tr><td class="g">정기</td><td>일반 대상자</td><td>3개월마다 1회 이상</td><td>제공기록 확인 후 유선, 필요 시 대면</td></tr>
+  </table>
+  <ul style="flex:0;padding-top:6px">
+    <li><b>(계획 변경)</b> 간호직 변경 제안 → 전담인력(복지) 변경안 작성 → 통합지원회의 재상정 → 시 전담부서가 제공기관에 의뢰</li>
+  </ul><div class="forms"><em>서식</em><span>개인지원계획 확정 통보 서식</span><span>서비스 제공(변경) 의뢰서</span><span>모니터링 서식</span><span>모니터링-제공기관 기록지</span></div></div>
+</div>
+<div class="arrow"><div></div></div>
+
+<div class="step">
+  <div class="badge"><div class="n">6</div><div class="t">종결</div></div>
+  <div class="who"><span>시 전담부서</span><span>동 주민센터</span></div>
+  <div class="body"><ul>
+    <li>사망·입원·입소, 사업참여 중단·목표 달성 시 통합지원회의를 거쳐 종결</li>
+  </ul></div>
+</div>
+</body></html>

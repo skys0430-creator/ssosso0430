@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#24507d;--sky:#d9e8f5;--sky2:#eef5fb;--line:#9fb6cc;--accent:#e58a1f;--text:#1d2b3a;--sub:#4d6680}
+*{box-sizing:border-box;margin:0;padding:0}
+body{word-break:keep-all;font-family:'Noto Sans KR',sans-serif;color:var(--text);background:#fff;padding:18px;width:1240px}
+.rule{background:var(--navy);color:#fff;border-radius:12px;padding:11px 18px;font-size:17px;font-weight:700;text-align:center}
+.rule span{color:#ffd29b}
+.main{display:grid;grid-template-columns:170px 46px 1fr 46px 1fr;margin-top:14px;align-items:stretch}
+.arrow{display:flex;align-items:center;justify-content:center}
+.arrow:after{content:"";border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:18px solid var(--navy2)}
+.start{background:var(--sky);border:2px solid var(--navy2);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:8px}
+.start b{font-size:19px;color:var(--navy)}
+.start small{font-size:13.5px;color:var(--sub);line-height:1.45}
+.box{border:1.5px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.box .h{padding:9px 14px;font-weight:700;font-size:17px;color:#fff}
+.box .h small{font-weight:500;font-size:13px;opacity:.9;margin-left:6px}
+.nat .h{background:var(--navy2)} .loc .h{background:var(--accent)}
+.items{padding:10px 12px;display:flex;flex-direction:column;gap:7px;flex:1}
+.it{display:grid;grid-template-columns:86px 1fr;gap:8px;align-items:center;background:var(--sky2);border-radius:8px;padding:7px 10px;font-size:14.5px;line-height:1.4}
+.loc .it{background:#fdf2e6}
+.it b{color:var(--navy);font-size:13.5px}
+.loc .it b{color:#b4620c}
+.new{display:inline-block;background:var(--accent);color:#fff;font-size:11.5px;font-weight:700;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:1px}
+.time{margin-top:16px;border:1.5px solid var(--line);border-radius:12px;overflow:hidden}
+.time .hd{background:var(--sky);color:var(--navy);font-weight:700;font-size:16px;padding:7px 14px}
+.tl{display:grid;grid-template-columns:150px 1fr 1fr 1fr;font-size:14px}
+.tl div{border-top:1px solid #e3ecf5;padding:8px 10px;line-height:1.45}
+.tl .m{background:var(--sky2);font-weight:700;color:var(--navy);text-align:center}
+.tl .lab{font-weight:700;color:var(--navy);display:flex;align-items:center}
+.bar{border-radius:6px;color:#fff;font-weight:700;padding:6px 10px;text-align:center;font-size:13.5px}
+.b1{background:var(--navy2)} .b2{background:var(--accent)} .b3{background:#7fa1c4}
+</style></head><body>
+<div class="rule">연계 원칙: <span>국가돌봄서비스를 먼저 연계</span>하고, 남는 공백만 <span>지역특화서비스(의왕살핌)</span>로 보완하여 중복지원 방지</div>
+<div class="main">
+  <div class="start"><b>퇴원(예정)자</b><small>통합지원회의에서<br>개인별지원계획 수립</small></div>
+  <div class="arrow"></div>
+  <div class="box nat"><div class="h">① 국가돌봄서비스 우선<small>해당 여부 먼저 확인</small></div>
+    <div class="items">
+      <div class="it"><b>단기 돌봄</b><span>노인맞춤돌봄 퇴원환자 단기집중(퇴원 2주 이내, 요건 해당 시)</span></div>
+      <div class="it"><b>재가 의료</b><span>장기요양 재택의료센터, 일차의료 방문진료</span></div>
+      <div class="it"><b>장기요양</b><span>등급 신청 안내 → 재가급여(방문요양 등)</span></div>
+      <div class="it"><b>의료급여</b><span>재가의료급여(의료·돌봄·이동·식사)</span></div>
+    </div></div>
+  <div class="arrow"></div>
+  <div class="box loc"><div class="h">② 공백은 의왕살핌으로 보완<small>대상 아님·서비스 공백 시</small></div>
+    <div class="items">
+      <div class="it"><b>회복 지원</b><span>회복살핌 꾸러미<span class="new">신규</span> (퇴원 후 1개월 이내)</span></div>
+      <div class="it"><b>일상 돌봄</b><span>일상살핌(생활·동행·식사지원)</span></div>
+      <div class="it"><b>의료·재활</b><span>건강살핌(방문의료·방문재활·가정간호)</span></div>
+      <div class="it"><b>영양</b><span>맞춤형 영양식(치료식) 주 2회</span></div>
+    </div></div>
+</div>
+<div class="time">
+  <div class="hd">퇴원 후 시기별 지원</div>
+  <div class="tl">
+    <div class="m">구분</div><div class="m">퇴원 직후 ~ 30일</div><div class="m">30일 이후</div><div class="m">안정기</div>
+    <div class="lab">돌봄</div>
+    <div><div class="bar b2">회복살핌 꾸러미 + 노인맞춤돌봄 단기집중 / 미해당 시 일상살핌</div></div>
+    <div><div class="bar b1">장기요양·노인맞춤돌봄 등 국가서비스 전환</div></div>
+    <div><div class="bar b3">공백 시 의왕살핌 지속</div></div>
+    <div class="lab">모니터링</div>
+    <div><div class="bar b2">동 간호직 집중 모니터링 주 1~2회</div></div>
+    <div style="grid-column:span 2"><div class="bar b3">정기 모니터링 3개월마다 1회 이상 · 변경 필요 시 통합지원회의 재상정</div></div>
+  </div>
+</div>
+</body></html>

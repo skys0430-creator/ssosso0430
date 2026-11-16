@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#24507d;--sky:#d9e8f5;--sky2:#eef5fb;--line:#9fb6cc;--accent:#e58a1f;--text:#1d2b3a;--sub:#4d6680}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:#fff;padding:18px;width:1440px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:30px;position:relative}
+.card{border:1.5px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;position:relative;background:#fff}
+.card:not(:last-child):after{content:"";position:absolute;right:-24px;top:42px;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:14px solid var(--navy2)}
+.top{background:var(--navy);color:#fff;text-align:center;padding:10px 6px;font-weight:700;font-size:20px}
+.top .n{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#fff;color:var(--navy);font-weight:900;font-size:16px;align-items:center;justify-content:center;margin-right:6px;vertical-align:2px}
+.who{background:var(--sky);color:var(--navy);text-align:center;font-weight:700;font-size:15.5px;padding:7px 4px}
+ul{list-style:none;padding:11px 14px 13px;font-size:15px;line-height:1.55;flex:1}
+li{padding-left:12px;position:relative}
+li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--navy2)}
+li.s{color:var(--sub);font-size:14px}
+li.s:before{background:#9fb6cc}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 10px 12px}
+.mode div{border-radius:7px;text-align:center;font-size:13.5px;padding:5px 2px;line-height:1.35}
+.mode .a{background:var(--navy2);color:#fff}
+.mode .b{background:var(--sky2);border:1.5px solid var(--navy2);color:var(--navy)}
+.mode b{display:block;font-size:14.5px}
+.loop{margin:14px 0 0;display:flex;align-items:center;gap:12px;justify-content:center;background:var(--sky2);border:1.5px dashed var(--navy2);border-radius:10px;padding:9px;font-size:15px;color:var(--navy)}
+.loop b{background:var(--accent);color:#fff;border-radius:5px;padding:1px 8px;font-size:14px}
+</style></head><body>
+<div class="flow">
+  <div class="card"><div class="top"><span class="n">1</span>안건 준비</div><div class="who">동 전담인력(복지)</div>
+    <ul><li>통합판정·자체조사 결과 확인</li><li>개인별지원계획(초안) 작성·제출</li><li class="s">변경 안건은 간호직 제안 반영</li></ul></div>
+  <div class="card"><div class="top"><span class="n">2</span>검토·상정</div><div class="who">통합돌봄팀</div>
+    <ul><li>계획 초안 검토·보완</li><li>안건 확정, 회의 형태 결정</li></ul>
+    <div class="mode"><div class="a"><b>대면</b>신규 안건</div><div class="b"><b>서면·영상</b>변경·종결</div></div></div>
+  <div class="card"><div class="top"><span class="n">3</span>회의 개최</div><div class="who">참석기관 전체</div>
+    <ul><li>사례 발제 → 기관별 의견</li><li>국가서비스 우선, 공백은 지역특화서비스로 조정</li><li>중복·누락 점검</li><li>승인·변경·종결 결정</li></ul></div>
+  <div class="card"><div class="top"><span class="n">4</span>결과 통보</div><div class="who">통합돌봄팀</div>
+    <ul><li>행복e음 결과 등록</li><li>확정 계획 통보(동·제공기관)</li><li class="s">제공기관엔 최소 정보만 공유</li></ul></div>
+  <div class="card"><div class="top"><span class="n">5</span>의뢰·모니터링</div><div class="who">시·동·제공기관</div>
+    <ul><li>제공기관 서비스 의뢰</li><li>제공기록 월 1회 → 행복e음</li><li>동 간호직 모니터링<br>(최초 1개월·정기 3개월·집중)</li></ul></div>
+</div>
+<div class="loop"><b>재상정</b> 상태 변화 시 간호직 변경 제안 → 전담인력(복지) 변경안 작성 → ① 안건 준비로 다시 진행</div>
+</body></html>

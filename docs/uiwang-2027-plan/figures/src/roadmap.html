@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#24507d;--sky:#d9e8f5;--sky2:#eef5fb;--line:#9fb6cc;--accent:#e58a1f;--text:#1d2b3a;--sub:#4d6680}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:#fff;padding:18px;width:1240px}
+.flow{display:grid;grid-template-columns:1.45fr 46px 1fr 46px 0.9fr;align-items:stretch}
+.arrow{display:flex;align-items:center;justify-content:center}
+.arrow:after{content:"";border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:18px solid var(--navy2)}
+.col{display:flex;flex-direction:column;gap:12px}
+.card{border:1.5px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.top{background:var(--navy);color:#fff;padding:9px 14px;font-weight:700;font-size:18px;display:flex;align-items:center;gap:8px}
+.top .n{width:26px;height:26px;border-radius:50%;background:#fff;color:var(--navy);font-weight:900;font-size:15px;display:inline-flex;align-items:center;justify-content:center}
+.body{padding:10px 14px 12px;font-size:15px;line-height:1.55;flex:1}
+.row{display:flex;gap:8px;margin-top:4px}
+.row b{flex:0 0 62px;color:var(--navy2);font-size:14px}
+.tag{display:inline-block;background:var(--sky);color:var(--navy);border-radius:5px;padding:0 7px;font-size:13.5px;font-weight:700;margin:2px 4px 0 0}
+.mid{background:var(--sky2);border:2px solid var(--navy2);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px 12px;gap:10px}
+.mid h3{color:var(--navy);font-size:20px}
+.pill{background:#fff;border:1.5px solid var(--navy2);border-radius:20px;padding:5px 14px;font-size:15px;font-weight:700;color:var(--navy)}
+.down{width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:12px solid var(--navy2)}
+.small{font-size:13.5px;color:var(--sub);line-height:1.45}
+.goal{background:var(--navy);color:#fff;border-radius:14px;display:flex;flex-direction:column;justify-content:center;padding:16px;gap:10px}
+.goal h3{font-size:20px}
+.goal li{list-style:none;font-size:15px;line-height:1.5;padding-left:12px;position:relative}
+.goal li:before{content:"·";position:absolute;left:0;font-weight:900}
+.big{background:var(--accent);border-radius:10px;text-align:center;padding:10px;font-weight:900;font-size:22px}
+.big small{display:block;font-size:13px;font-weight:500}
+.time{margin-top:16px;border:1.5px solid var(--line);border-radius:12px;overflow:hidden}
+.time .h{background:var(--sky);color:var(--navy);font-weight:700;font-size:16px;padding:7px 14px}
+.grid{display:grid;grid-template-columns:150px repeat(12,1fr);font-size:13px}
+.grid div{border-top:1px solid #e3ecf5;padding:5px 2px;text-align:center}
+.grid .lab{text-align:left;padding-left:12px;display:flex;align-items:center;font-weight:700;color:var(--navy)}
+.grid .m{color:var(--sub);font-weight:700;background:var(--sky2)}
+.bar{position:relative}
+.b{background:var(--navy2);color:#fff;border-radius:4px;font-size:12.5px;padding:2px 0;margin:0 2px}
+.b2{background:var(--accent)}
+.b3{background:#7fa1c4}
+</style></head><body>
+<div class="time" style="margin-top:0">
+  <div class="h">연간 발굴 로드맵</div>
+  <div class="grid">
+    <div class="lab m">구분</div><div class="m">1월</div><div class="m">2월</div><div class="m">3월</div><div class="m">4월</div><div class="m">5월</div><div class="m">6월</div><div class="m">7월</div><div class="m">8월</div><div class="m">9월</div><div class="m">10월</div><div class="m">11월</div><div class="m">12월</div>
+    <div class="lab">조사 대상 명단 정리</div><div style="grid-column:span 2"><div class="b b3">미신청자 추출</div></div><div style="grid-column:span 10"></div>
+    <div class="lab">초고령 위험군 조사</div><div style="grid-column:span 2"></div><div style="grid-column:span 9"><div class="b">동별 연중 조사 (청계·오전·부곡동 상반기 우선 착수)</div></div><div></div>
+    <div class="lab">건보 빅데이터</div><div style="grid-column:span 2"></div><div style="grid-column:span 3"><div class="b b2">상반기 수신·동별 배분</div></div><div style="grid-column:span 3"></div><div style="grid-column:span 2"><div class="b b2">하반기 수신·배분</div></div><div style="grid-column:span 2"></div>
+    <div class="lab">위기정보·실적 점검</div><div style="grid-column:span 12"><div class="b b3">매월 행복e음 위기정보 확인 · 발굴경로별 실적 점검 (분기 말 자체조사 실적 점검)</div></div>
+  </div>
+</div>
+</body></html>

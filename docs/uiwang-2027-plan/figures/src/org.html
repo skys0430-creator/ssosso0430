@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b3a5c;--navy2:#24507d;--sky:#d9e8f5;--sky2:#eef5fb;--line:#5b7ea3;--accent:#e58a1f;--text:#1d2b3a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:auto;font-family:'Noto Sans KR','WenQuanYi Zen Hei',sans-serif;color:var(--text);background:#fff;padding:28px}
+.wrap{position:relative;width:1560px;display:grid;grid-template-columns:400px 1fr 470px;gap:0 60px;border:2px solid #9fb6cc;border-radius:14px;padding:26px}
+.col{display:flex;flex-direction:column;gap:14px}
+.hd{background:var(--navy);color:#fff;font-weight:700;font-size:21px;padding:11px 16px;border-radius:10px;text-align:center;line-height:1.3}
+.hd small{display:block;font-size:14px;font-weight:500;opacity:.85}
+.bx{background:var(--sky);border-radius:10px;padding:12px 16px;font-size:15.5px;line-height:1.55}
+.bx b{color:var(--navy)}
+.bx ul{list-style:none}
+.bx li{padding-left:12px;position:relative}
+.bx li:before{content:"·";position:absolute;left:0;font-weight:900}
+.grp{font-weight:700;color:var(--navy2);font-size:15px;margin-top:6px}
+.grp:first-child{margin-top:0}
+.center{display:flex;flex-direction:column;align-items:center;gap:16px}
+.toprow{display:flex;gap:12px;width:100%}
+.toprow div{flex:1;background:var(--sky);border:2px solid var(--line);border-radius:10px;text-align:center;padding:10px 6px;font-weight:700;font-size:18px;color:var(--navy)}
+.toprow small{display:block;font-weight:500;font-size:13.5px;color:#43607e}
+.tower{background:var(--navy);color:#fff;border-radius:22px;width:100%;padding:22px 14px 20px;text-align:center;box-shadow:0 4px 0 #0f2740}
+.tower .tag{display:inline-block;background:#fff;color:var(--navy);font-weight:700;font-size:15px;border-radius:20px;padding:3px 16px;margin-bottom:10px}
+.tower h1{font-size:36px;font-weight:900;line-height:1.25}
+.tower p{font-size:14.5px;margin-top:10px;opacity:.9;line-height:1.5}
+.vline{width:3px;height:22px;background:var(--line)}
+.dong{width:100%;border:2px solid var(--navy);border-radius:12px;overflow:hidden}
+.dong .t{background:var(--navy);color:#fff;text-align:center;padding:8px;font-weight:700;font-size:19px}
+.dong .t small{display:block;font-size:13px;font-weight:500;opacity:.9}
+.dongs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:10px;background:var(--sky2)}
+.dongs span{background:var(--sky);border-radius:8px;text-align:center;font-weight:700;font-size:16px;padding:8px 0;color:var(--navy)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 10px 12px;background:var(--sky2)}
+.pair div{background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 8px;font-size:14px;text-align:center;line-height:1.45}
+.pair b{color:var(--navy);display:block;font-size:15px}
+.new{display:inline-block;background:var(--accent);color:#fff;font-size:11.5px;font-weight:700;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:2px}
+.side{display:grid;grid-template-columns:54px 1fr;gap:10px}
+.side .lab{background:var(--navy);color:#fff;border-radius:10px;writing-mode:vertical-rl;text-orientation:upright;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;letter-spacing:2px}
+.arrow{position:absolute;top:470px;width:60px;font-size:13.5px;font-weight:700;color:#43607e;text-align:center;line-height:1.3}
+.arrow i{display:block;font-style:normal;font-size:30px;line-height:1;color:var(--line)}
+.legend{margin-top:12px;font-size:13px;color:#56708a;text-align:right}
+</style></head><body>
+<div class="wrap">
+  <!-- LEFT -->
+  <div class="col">
+    <div class="hd">전문기관</div>
+    <div class="bx">
+      <div class="grp">국민건강보험공단 의왕지사</div>
+      <ul><li>노인 통합판정조사</li><li>빅데이터 대상자 리스트 제공(반기 1회)</li></ul>
+      <div class="grp">국민연금공단 군포의왕지사</div>
+      <ul><li>장애인 통합판정조사</li></ul>
+      <div class="grp">교육·컨설팅 지원</div>
+      <ul><li>경기복지재단(돌봄통합지원단)</li><li>한국보건복지인재원 · 한국장애인개발원</li></ul>
+    </div>
+    <div class="hd">서비스 제공기관</div>
+    <div class="bx">
+      <div class="grp">의왕살핌 · 특화서비스</div>
+      <ul>
+        <li>(사)한국커뮤니티연구원 <span style="color:#43607e">생활·동행, 건강돌봄가</span></li>
+        <li>의왕시니어클럽 <span style="color:#43607e">맞춤형 영양식</span></li>
+        <li>미소나눔 <span style="color:#43607e">주거환경개선</span></li>
+        <li>대한물리치료사협회 <span style="color:#43607e">방문재활</span></li>
+        <li>아름채노인복지관 <span style="color:#43607e">동고동락</span></li>
+      </ul>
+      <div class="grp">재가의료</div>
+      <ul>
+        <li>방문진료 참여의원 14개소 <span style="color:#43607e">의과 2·한의 12</span></li>
+        <li>서울홈케어내과 <span style="color:#43607e">가정간호</span></li>
+        <li>한센복지협회 부설의원 <span style="color:#43607e">재택의료센터</span></li>
+      </ul>
+      <div class="grp">퇴원환자 협약병원<span class="new">’26.7.</span></div>
+      <ul><li>한림대성심병원 · 서울와이즈요양병원 · 계요병원</li></ul>
+      <div class="grp">연계 자원</div>
+      <ul><li>사랑채·아름채노인복지관, 희망나래장애인복지관</li><li>정신건강복지센터, 누구나돌봄 제공기관</li><li>경기주택도시공사, 대한주택건설협회 경기도회,<br>(사협)비지땀 등 주거 자원</li></ul>
+    </div>
+  </div>
+
+  <!-- CENTER -->
+  <div class="center">
+    <div class="toprow">
+      <div>통합지원회의<small>월 2회 이상 · 계획 심의·조정</small></div>
+      <div>통합지원협의체<small>연 2회 · 지역계획 심의</small></div>
+    </div>
+    <div class="vline"></div>
+    <div class="tower">
+      <span class="tag">컨트롤타워</span>
+      <h1>복지정책과<br>통합돌봄팀</h1>
+      <p>사업 총괄 · 지역계획 · 통합지원회의 운영<br>지원계획 확정 · 서비스 연계·조정 · 모니터링 총괄<br>복지·간호·통합사례관리사 다직렬 배치</p>
+    </div>
+    <div class="vline"></div>
+    <div class="dong">
+      <div class="t">6개 동 주민센터<small>통합지원창구</small></div>
+      <div class="dongs"><span>고천동</span><span>부곡동</span><span>오전동</span><span>내손1동</span><span>내손2동</span><span>청계동</span></div>
+      <div class="pair">
+        <div><b>전담인력(복지) 1명<span class="new">’26.11.30.</span></b>발굴·신청·조사<br>지원계획 수립·서비스 연계</div>
+        <div><b>겸직인력(간호) 1명</b>최초·정기·집중 모니터링<br>의료 필요 확인·변경 제안</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="col">
+    <div class="side"><div class="lab">보건소</div>
+      <div class="bx"><ul>
+        <li><b>지역보건팀</b><br>재택의료센터 관리, 방문건강관리, AI·IoT 건강관리</li>
+        <li><b>치매안심센터</b><br>치매환자 사례관리·통합돌봄 연계</li>
+        <li><b>정신건강팀 · 정신건강복지센터</b><br>중증정신질환자 사례관리</li>
+      </ul></div></div>
+    <div class="side"><div class="lab">복지정책과</div>
+      <div class="bx"><ul>
+        <li><b>복지지원팀</b><br>누구나돌봄, 가사간병 방문지원</li>
+        <li><b>생활보장팀</b><br>재가의료급여, 깔끄미</li>
+      </ul></div></div>
+    <div class="side"><div class="lab">노인장애인과</div>
+      <div class="bx"><ul>
+        <li><b>노인지원팀</b><br>노인맞춤돌봄, 응급안전안심, 식사배달</li>
+        <li><b>장애인복지팀</b><br>장애인활동지원, 맞춤형 지원사</li>
+      </ul></div></div>
+    <div class="side"><div class="lab">건축과</div>
+      <div class="bx"><ul>
+        <li><b>공동주택팀</b><br>어르신 안전하우징, 햇살하우징, 주거든든</li>
+      </ul></div></div>
+    <div class="bx" style="background:#fff;border:2px dashed var(--line);margin-top:6px">
+      <div class="grp">연계 원칙</div>
+      <ul><li>국가돌봄서비스 우선 연계, 공백은 의왕살핌으로 보완</li>
+      <li>제공기록 월 1회 취합 → 행복e음 입력(시)</li>
+      <li>변경 필요 시 간호직 제안 → 전담인력 변경안 → 통합지원회의 재상정</li></ul>
+    </div>
+  </div>
+
+  <div class="arrow" style="left:426px">협업<br>연계<i>⇄</i></div>
+  <div class="arrow" style="right:496px">협력<br>지원<i>⇄</i></div>
+</div>
+<div class="legend" style="width:1560px"><span class="new">’26.</span> 2026년 신규·변경 사항</div>
+</body></html>
