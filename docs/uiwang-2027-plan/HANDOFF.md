@@ -124,7 +124,7 @@
 ## 7. 이 폴더의 파일
 
 - `figures/` 계획서용 그림(PNG): 추진체계도(가로·세로), 서비스 제공 절차, 통합지원회의 진행절차, 대상자 발굴 추진체계, 연간 발굴 로드맵, 비전 체계도, 퇴원환자 의뢰 경로 이원화, 퇴원 후 돌봄 연계 흐름
-- `figures/src/` 그림 원본(HTML). 수정 후 `node shot.js <html> <png>`로 다시 그림(Playwright, Noto Sans KR)
+- `figures/src/` 그림 원본(HTML). 수정 후 `node shot.js <html> <png> [폭]`로 다시 그림(추진체계도 가로형은 폭 1640)(Playwright, Noto Sans KR)
 - `files/2027_사업별설명서_통합돌봄.hwpx` 사업별 설명서(안) — python-hwpx로 생성, 한글에서 열리는지 사용자 확인 필요
 - `files/2027_지역계획_협의체심의_발표자료.pptx` 협의체 심의 발표자료(14장). `slides/build.js`로 생성(pptxgenjs, `APPLY_THEME`에 pptx 스킬의 apply_theme.js 경로 지정)
 - 발표자료 확인 필요: 근거 조문(제6조·제20조), 동별 지표는 기초연금·기초생활만 차트화, 비전 체계도 목표2 "재가 의료 확충" 문구가 '확충하지 않음' 결정과 어긋남, 향후 절차 날짜
