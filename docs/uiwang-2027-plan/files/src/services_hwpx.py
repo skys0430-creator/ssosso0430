@@ -81,8 +81,34 @@ def setp(p, runs, pp=None):
     for t, s in runs:
         p.add_run(t, char_pr_id_ref=s)
 
+# ---- 간지 ----
+st_c1 = doc.ensure_run_style(bold=True, size=30, color="#1B3A5C", font=F)
+st_c2 = doc.ensure_run_style(bold=True, size=22, color="#1B3A5C", font=F)
+st_c3 = doc.ensure_run_style(size=13, color="#4D6680", font=F)
+st_c3b = doc.ensure_run_style(bold=True, size=13, color="#E58A1F", font=F)
+pp_cover = doc.styles.ensure_paragraph_format(alignment="CENTER", line_spacing_percent=160)
+first_para = doc.paragraphs[0]
+setp(first_para, [("", st_c3)], pp_cover)
+for _ in range(11):
+    setp(doc.add_paragraph(""), [("", st_c3)], pp_cover)
+setp(doc.add_paragraph(""), [("부  록", st_c1)], pp_cover)
+setp(doc.add_paragraph(""), [("", st_c3)], pp_cover)
+setp(doc.add_paragraph(""), [("통합돌봄 서비스 상세 내역", st_c2)], pp_cover)
+for _ in range(3):
+    setp(doc.add_paragraph(""), [("", st_c3)], pp_cover)
+for t1, t2 in [("통합돌봄 서비스 한눈에 보기", ""), ("1. 지역특화서비스", "  12개"),
+               ("2. 연계서비스(국가돌봄)", "  17개"), ("3. 연계서비스(도·지자체)", "  13개")]:
+    setp(doc.add_paragraph(""), [(t1, st_c3), (t2, st_c3b)], pp_cover)
+
+# ---- 한눈에 보기 ----
+pp_break = doc.styles.ensure_paragraph_format(line_spacing_percent=120, break_setting={"pageBreakBefore": True})
 p = doc.add_paragraph("")
-setp(p, [("통합돌봄 서비스 한눈에 보기", st_title), ("   지역특화 12 · 국가돌봄 17 · 도·지자체 13 (총 42개)", st_note)])
+p.para_pr_id_ref = pp_break
+p.element.set("pageBreak", "1")   # 간지 다음 쪽에서 시작
+p.section.mark_dirty() if hasattr(p.section, "mark_dirty") else None
+p.clear_text()
+for _t, _s in [("통합돌봄 서비스 한눈에 보기", st_title), ("   지역특화 12 · 국가돌봄 17 · 도·지자체 13 (총 42개)", st_note)]:
+    p.add_run(_t, char_pr_id_ref=_s)
 
 t = doc.add_table(6, 4, width=51000)
 t.set_column_widths([8, 31, 31, 30])
