@@ -140,9 +140,7 @@ for i, a in enumerate(AREAS, start=1):
         cell_lines(i, j+1, lines)
 
 p = doc.add_paragraph("")
-setp(p, [("※ 지역특화서비스 한도 ", st_noteb), ("건강살핌 1인 60만원(방문진료·가정간호·방문재활 합산), 일상살핌 1인 200만원(생활·동행·식사 합산), 내집살핌 생애 200만원", st_note)])
-p = doc.add_paragraph("")
-setp(p, [("※ 재원 ", st_noteb), ("국 50% · 도 5% · 시 45%, 중위소득별 본인부담 차등   ", st_note), ("※ 연계 원칙 ", st_noteb), ("국가돌봄서비스 우선 연계, 공백은 지역특화서비스로 보완", st_note)])
+setp(p, [("※ ’26. 10. 기준 운영 중인 서비스이며, ’27년 신규·개편 서비스는 세부 내용 확정 후 반영 예정", st_note)])
 
 doc.save_to_path(sys.argv[1])
 print("saved", sys.argv[1])
