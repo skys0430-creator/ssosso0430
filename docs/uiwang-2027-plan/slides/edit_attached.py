@@ -83,16 +83,76 @@ for cx, top, bottom, col in nodes:
 # 7) 17 제목: 88%는 신규 3종 포함 금액이므로 표현 정정
 shp(p.slides[16], 8).text_frame.paragraphs[0].runs[2].text = ", 의왕살핌·신규서비스에 88%를 씁니다"
 
-# 8) 표지 제목: 디자인 레터링 이미지(글꼴 미설치 PC에서도 동일하게 보임)
-import os
+# 8) 레터링 규칙(①성격에 맞는 글꼴 ②대비되는 두 말은 다른 글꼴 ③강조는 낱말 하나) — 표지·간지·닫는 슬라이드
+import os, re
+from copy import deepcopy
+from PIL import Image
+LET = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "figures", "lettering")
+def letter(name):
+    src_png = os.path.join(LET, f"lettering_{name}.png")
+    im = Image.open(src_png); b = im.getchannel("A").getbbox()
+    pad = 12; im = im.crop((max(b[0]-pad,0), max(b[1]-pad,0), min(b[2]+pad,im.width), min(b[3]+pad,im.height)))
+    outp = os.path.join(LET, f"crop_{name}.png"); im.save(outp); return outp, im.width / im.height
+def put(slide, name, x, y, h=None, w=None, center=False, descr=""):
+    path_, r = letter(name)
+    if w is None: w = h * r
+    if center: x = (13.333 - w) / 2
+    pic = slide.shapes.add_picture(path_, Inches(x), Inches(y), width=Inches(w))
+    pic._element.nvPicPr.cNvPr.set("descr", descr); return pic
+
+# 표지
 cov = p.slides[0]
-t = shp(cov, 6)
-alt = t.text_frame.text.replace("\n", " ")
-t._element.getparent().remove(t._element)
-img = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "figures", "표지_제목_레터링.png")
-pic = cov.shapes.add_picture(img, Inches(0.83), Inches(2.85), width=Inches(9.0))
+t = shp(cov, 6); t._element.getparent().remove(t._element)
+put(cov, "cover", 0.83, 2.85, w=9.4, descr="2027년도 통합지원 지역계획 — 살던 곳에서 건강하게, 함께 살피는 의왕")
 shp(cov, 7).top = Inches(4.95)
-pic.name = "표지 제목"
-pic._element.nvPicPr.cNvPr.set("descr", "2027년도 통합지원 지역계획 — 살던 곳에서 건강하게, 함께 살피는 의왕")
+
+# 닫는 슬라이드
+cl = p.slides[17]
+t = shp(cl, 8); t._element.getparent().remove(t._element)
+shp(cl, 6).top = Inches(1.35); shp(cl, 7).top = Inches(1.39)
+put(cl, "closing", 0, 1.78, h=1.3, center=True, descr="2027년도 통합지원 지역계획(안)을 심의해 주십시오")
+for sid in range(9, 24):                      # 카드 묶음을 조금 내려 제목과 간격 확보
+    shp(cl, sid).top = shp(cl, sid).top + Inches(0.32)
+
+# 간지 5장: 목차 단원 앞에 삽입(원래 쪽 3, 5, 8, 10, 16 앞)
+blank = p.slide_layouts[6]
+hdr_src = p.slides[2]
+plan = [("div01", 3, "2026 성과"), ("div02", 5, "지역 진단"), ("div03", 8, "목표·체계"), ("div04", 10, "세부 추진"), ("div05", 16, "지표·예산")]
+orig = list(p.slides)
+dividers = {}
+for name, before, title in plan:
+    ns = p.slides.add_slide(blank)
+    sec_src = orig[before - 1]
+    for sh in list(hdr_src.shapes):          # 상단 머리글
+        if sh.top / EMU < 0.5: ns.shapes._spTree.append(deepcopy(sh._element))
+    for sh in list(sec_src.shapes):          # 하단 단원 막대(현재 단원 강조 포함)·쪽 번호
+        if sh.top / EMU > 7.0: ns.shapes._spTree.append(deepcopy(sh._element))
+    put(ns, name, 0.83, 2.35, h=2.45, descr=f"{name[-2:]} {title}")
+    dividers[before] = ns
+# 순서 재배치
+lst = p.slides._sldIdLst
+ids = list(lst)
+n0 = len(orig)
+orig_ids, new_ids = ids[:n0], ids[n0:]
+order = []
+k = 0
+for i, el in enumerate(orig_ids, start=1):
+    for (name, before, _), nid in zip(plan, new_ids):
+        if before == i: order.append(nid)
+    order.append(el)
+for el in ids: lst.remove(el)
+for el in order: lst.append(el)
+
+# 쪽 번호 다시 매기기
+for idx, sl in enumerate(p.slides, start=1):
+    for sh in sl.shapes:
+        if sh.has_text_frame and abs(sh.left / EMU - 12.11) < 0.05 and abs(sh.top / EMU - 7.13) < 0.05 and re.fullmatch(r"\d\d", sh.text_frame.text.strip()):
+            sh.text_frame.paragraphs[0].runs[0].text = f"{idx:02d}"
+# 목차 쪽 번호(원래 번호 → 새 번호)
+def newno(o): return o + sum(1 for _, b, _ in plan if b <= o)
+toc = p.slides[1]
+for sh in toc.shapes:
+    if sh.has_text_frame and re.fullmatch(r"\d\d", sh.text_frame.text.strip()) and sh.left / EMU > 8.5 and 1.7 < sh.top / EMU < 6.5:
+        r = sh.text_frame.paragraphs[0].runs[0]; r.text = f"{newno(int(r.text)):02d}"
 
 p.save(out); print("saved", out)
