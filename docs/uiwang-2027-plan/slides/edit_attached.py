@@ -83,4 +83,16 @@ for cx, top, bottom, col in nodes:
 # 7) 17 제목: 88%는 신규 3종 포함 금액이므로 표현 정정
 shp(p.slides[16], 8).text_frame.paragraphs[0].runs[2].text = ", 의왕살핌·신규서비스에 88%를 씁니다"
 
+# 8) 표지 제목: 디자인 레터링 이미지(글꼴 미설치 PC에서도 동일하게 보임)
+import os
+cov = p.slides[0]
+t = shp(cov, 6)
+alt = t.text_frame.text.replace("\n", " ")
+t._element.getparent().remove(t._element)
+img = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "figures", "표지_제목_레터링.png")
+pic = cov.shapes.add_picture(img, Inches(0.83), Inches(2.85), width=Inches(9.0))
+shp(cov, 7).top = Inches(4.95)
+pic.name = "표지 제목"
+pic._element.nvPicPr.cNvPr.set("descr", "2027년도 통합지원 지역계획 — 살던 곳에서 건강하게, 함께 살피는 의왕")
+
 p.save(out); print("saved", out)
