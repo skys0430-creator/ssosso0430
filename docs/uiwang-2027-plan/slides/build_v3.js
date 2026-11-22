@@ -40,6 +40,11 @@ async function ic(s, name, x, y, d, color = BLUE, bg = PALE) {
   C(s, x, y, d, bg);
   s.addImage({ data: await icon(name, color), x: x + d * 0.24, y: y + d * 0.24, w: d * 0.52, h: d * 0.52, altText: "", objectName: nm("i") });
 }
+async function lett(s, name, x, y, w, alt, center = false) { // 레터링 이미지(비율 자동)
+  const m = await sharp(path.join(V3, name + ".png")).metadata();
+  const h = w * m.height / m.width; if (center) x = (W - w) / 2;
+  s.addImage({ path: path.join(V3, name + ".png"), x, y, w, h, altText: alt, objectName: nm("title") }); return h;
+}
 const bg = (s, f) => s.addImage({ path: path.join(V3, f), x: 0, y: 0, w: W, h: 7.5, altText: "", objectName: nm("bg") });
 function head(s, no, kicker, title) {
   bg(s, "bg_content.png");
@@ -73,15 +78,15 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     s.addImage({ data: await icon("LuHeartHandshake", NAVY), x: MX, y: 0.45, w: 0.32, h: 0.32, objectName: nm("i") });
     T(s, "의왕시 복지정책과 통합돌봄팀", MX + 0.42, 0.45, 5, 0.32, { fontSize: 12, bold: true, color: NAVY, valign: "middle" });
     T(s, "의왕시 2027년도 통합지원 지역계획(안)", MX, 2.0, 8, 0.45, { fontSize: 20, color: INK, bold: true });
-    s.addImage({ path: path.join(V3, "L_cover.png"), x: MX - 0.05, y: 2.55, w: 7.6, h: 7.6 / (2850 / 732), altText: "살던 곳에서 건강하게, 함께 살피는 의왕", objectName: nm("title") });
+    await lett(s, "L_cover", MX - 0.05, 2.5, 7.9, "살던 곳에서 건강하게, 함께 살피는 의왕");
     T(s, "제2차 통합지원협의체 심의  |  2026. 11. 26.", MX, 5.45, 7, 0.4, { fontSize: 14, color: GRAY });
     s.addNotes("2027년도 의왕시 통합지원 지역계획(안)을 보고드리고 심의를 요청드립니다.");
   }
   // 2 ───────── 2026 성과 (레퍼런스 2쪽형: 3단 패널)
   {
     const s = pres.addSlide(); bg(s, "bg_content.png");
-    T(s, "법 시행 첫해", 0, 0.42, W, 0.4, { fontSize: 16, color: INK, align: "center" });
-    T(s, [{ text: "먼저 찾고 ", options: { color: INK } }, { text: "연결", options: { color: BLUE } }, { text: "한 2026년", options: { color: INK } }], 0, 0.8, W, 0.7, { fontSize: 32, bold: true, align: "center" });
+    await lett(s, "L_s2", 0, 0.32, 5.6, "법 시행 첫해, 먼저 찾고 연결한 2026년", true);
+
     const cols = [
       ["대상자 발굴·연계", [["LuUsers", "신청 390 → 대상자 276명", "우선발굴필요군 비중 80.4%"], ["LuTrendingUp", "10월 신청 147명", "1~9월 월평균의 5배"], ["LuNetwork", "서비스 연계 740건", "대상자 1인당 2.7건"]]],
       ["재가돌봄 인프라", [["LuStethoscope", "방문진료 참여의원 12개소", "무공급 → 의과 3·한의 9"], ["LuHospital", "재택의료센터 2개소", "관내 1 · 관외(안양) 1"], ["LuHouse", "의왕살핌 340명 이용", "일상 138 · 건강 103 · 내집 99"]]],
@@ -103,7 +108,7 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     }
     s.addShape(pres.ShapeType.line, { x: MX, y: 6.42, w: 1.6, h: 0, line: { color: NAVY, width: 1 }, objectName: nm("l") });
     s.addShape(pres.ShapeType.line, { x: W - MX - 1.6, y: 6.42, w: 1.6, h: 0, line: { color: NAVY, width: 1 }, objectName: nm("l") });
-    T(s, [{ text: "기반을 토대로 ", options: { color: INK } }, { text: "2027년", options: { color: BLUE } }, { text: "에는 ", options: { color: INK } }, { text: "끝까지 살피는 체계", options: { color: BLUE } }, { text: "로", options: { color: INK } }], MX + 1.7, 6.15, CW - 3.4, 0.55, { fontSize: 19, bold: true, align: "center", valign: "middle" });
+    T(s, [{ text: "기반을 토대로 2027년에는 ", options: { color: INK } }, { text: "끝까지", options: { color: BLUE } }, { text: " 살피는 체계로", options: { color: INK } }], MX + 1.7, 6.15, CW - 3.4, 0.55, { fontSize: 19, bold: true, align: "center", valign: "middle" });
     s.addNotes("법 시행 첫해, 390명이 신청해 276명을 지원했고 740건을 연계했습니다. 없던 방문진료·재택의료를 확보하고, 통합돌봄팀과 조례, 동 전담인력까지 운영 기반을 갖췄습니다.");
   }
   // 3 ───────── 지역 진단
@@ -128,8 +133,8 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
   // 4 ───────── 비전과 3대 목표 (레퍼런스 3쪽형: 원 3개)
   {
     const s = pres.addSlide(); bg(s, "bg_mid.png");
-    T(s, "살던 곳에서 건강하게, 함께 살피는 의왕", 0, 0.95, W, 0.5, { fontSize: 22, color: INK, align: "center" });
-    T(s, [{ text: "의왕을 위한 ", options: { color: INK } }, { text: "2027년 3대 목표", options: { color: BLUE } }], 0, 1.5, W, 0.75, { fontSize: 34, bold: true, align: "center" });
+    await lett(s, "L_s4", 0, 0.8, 8.4, "살던 곳에서 건강하게, 함께 살피는 의왕 — 의왕을 위한 2027년 3대 목표", true);
+
     const g = [["01", "먼저 찾고 끝까지 살피는\n대상자 관리체계 확립", "1D3FB8"], ["02", "재가의료 이용 확대와\n의왕살핌 고도화로\n재가돌봄 공백 해소", "2F5BEA"], ["03", "보건·복지·민간이 함께하는\n수요자 중심 운영기반 강화", "4F78F5"]];
     const d = 4.0, ov = 0.45, x0 = (W - (3 * d - 2 * ov)) / 2;
     g.forEach((v, i) => {
@@ -375,7 +380,7 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
   // 15 ───────── 닫는 슬라이드
   {
     const s = pres.addSlide(); bg(s, "bg_mid.png");
-    s.addImage({ path: path.join(V3, "L_closing.png"), x: (W - 6.4) / 2, y: 1.15, w: 6.4, h: 6.4 / (2358 / 648), altText: "2027년도 통합지원 지역계획(안)을 심의해 주십시오", objectName: nm("title") });
+    await lett(s, "L_closing", 0, 1.05, 6.6, "2027년도 통합지원 지역계획(안)을 심의해 주십시오", true);
     const it = [["LuTarget", "목표 대상자", "통합지원 대상자 541명"], ["LuChartBar", "성과지표", "발굴률 20% 등 중앙 8개"], ["LuListChecks", "추진과제", "4대 과업 · 12개 핵심사업"], ["LuWallet", "예산", "706,636천원"]];
     const cw = (CW - 0.6) / 4;
     for (let i = 0; i < 4; i++) { const x = MX + i * (cw + 0.2); R(s, x, 3.35, cw, 2.0, WHITE, { round: true, r: 0.12, tr: 10 }); await ic(s, it[i][0], x + cw / 2 - 0.4, 3.55, 0.8); T(s, it[i][1], x, 4.45, cw, 0.4, { fontSize: 17, bold: true, color: INK, align: "center" }); T(s, it[i][2], x + 0.15, 4.85, cw - 0.3, 0.4, { fontSize: 12, color: GRAY, align: "center" }); }
