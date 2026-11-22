@@ -126,8 +126,10 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     });
     tab(s, "동별 85세 이상 1인세대(세대)", 6.15, 1.95, W - MX - 6.15);
     s.addChart(pres.charts.BAR, [{ name: "85세 이상 1인세대", labels: ["부곡동", "청계동", "내손1동", "오전동", "내손2동", "고천동"], values: [292, 211, 177, 156, 114, 96] }],
-      { x: 6.1, y: 2.45, w: W - MX - 6.1, h: 3.15, barDir: "col", barGapWidthPct: 45, chartColors: [H.accent1, H.accent3, H.accent3, H.accent3, H.accent3, H.accent3], invertedColors: [H.accent1],
-        showValue: true, dataLabelPosition: "outEnd", valAxisMaxVal: 340, ...chartTxt, objectName: nm("ch") });
+      { x: 6.1, y: 2.4, w: W - MX - 6.1, h: 3.35, barDir: "col", barGapWidthPct: 35, chartColors: [H.accent1, "6F8FE8", "6F8FE8", "6F8FE8", "6F8FE8", "6F8FE8"], invertedColors: [H.accent1],
+        showValue: true, dataLabelPosition: "outEnd", valAxisMaxVal: 345, ...chartTxt,
+        catAxisLabelFontSize: 16, catAxisLabelFontBold: true, catAxisLabelColor: H.dk1, catAxisLineShow: true, catAxisLineColor: "9FB0D8",
+        dataLabelFontSize: 18, dataLabelFontBold: true, dataLabelColor: H.dk2, objectName: nm("ch") });
     band(s, "핵심 진단", ["방문의료 수요 대비 이용 10.5%", "퇴원환자 협약병원 의뢰 0건", "돌봄 인지 52.9% → 이용 6.4%"]);
     s.addNotes("노인은 3만 3,930명으로 5년 새 43.5% 늘었습니다. 85세 이상 1인세대 1,046세대 중 부곡동이 292세대로 가장 많습니다. 방문의료 이용, 퇴원환자 연계, 주민 인지도가 핵심 과제입니다.");
   }
