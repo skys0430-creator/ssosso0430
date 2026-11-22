@@ -11,7 +11,7 @@ const { applyTheme } = require(process.env.APPLY_THEME);
 const OUT = process.argv[2] || "deck_v3.pptx";
 const V3 = path.join(__dirname, "..", "figures", "v3");
 const FONT = process.env.DECK_FONT || "Pretendard"; // 본문 글꼴(제목은 TITLE_FONT)
-const TITLE_FONT = "맑은 고딕"; // 제목은 유지, 본문 글꼴만 비교·교체
+const TITLE_FONT = process.env.DECK_TITLE_FONT || "Pretendard ExtraBold"; // 제목 글꼴
 const THEME = { name: "Uiwang Care 2027 v3", headFontFace: FONT, bodyFontFace: FONT,
   colors: { dk1: "111B3D", lt1: "FFFFFF", dk2: "13277A", lt2: "EEF3FF", accent1: "2F5BEA", accent2: "F08A24", accent3: "8FAEFF",
     accent4: "DCE6FF", accent5: "5B6785", accent6: "0E1F5B", hlink: "2F5BEA", folHlink: "5B6785" } };
