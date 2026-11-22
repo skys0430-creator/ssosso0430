@@ -363,11 +363,18 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     T(s, "우선발굴필요군 421", MX + 0.35, 4.3, a, 0.45, { fontSize: 12, bold: true, color: WHITE, align: "center", valign: "middle" });
     T(s, "기타 120", MX + 0.39 + a, 4.3, 3.56 - a, 0.45, { fontSize: 11, bold: true, color: WHITE, align: "center", valign: "middle" });
     T(s, "우선발굴필요군 6,506명 중 6.5%", MX + 0.35, 4.95, 3.6, 0.4, { fontSize: 13, color: "C9D7FF" });
-    T(s, "재가급여 145 · 고령장애인 107 · 퇴원환자 60 · 등급외 50 · 기각 40 · 중증장애인 17 · 시설퇴소 2", MX + 0.35, 5.4, 3.6, 0.9, { fontSize: 11, color: "C9D7FF" });
+    T(s, "재가급여 145 · 고령장애인 107 · 퇴원환자 60 · 등급외 50 · 기각 40 · 중증장애인 17 · 시설퇴소 2", MX + 0.35, 5.4, 3.6, 0.9, { fontSize: 12, color: "C9D7FF" });
     tab(s, "중앙 성과지표", 5.2, 1.95, W - MX - 5.2);
     const k = [["20%", "직권·자체발굴 발굴률"], ["6%", "지원계획 수립률"], ["80%", "모니터링 수행률"], ["25%", "보건소 서비스 이용률"], ["70%", "대상자 중 우선발굴필요군"], ["100%", "전담인력 배치율"], ["90%", "보건소 회의 참석률"], ["월 2회", "통합지원회의 개최"]];
     const kw = (W - MX - 5.2 - 0.45) / 4;
-    k.forEach((v, i) => { const x = 5.2 + (i % 4) * (kw + 0.15), y = 2.5 + Math.floor(i / 4) * 2.05; R(s, x, y, kw, 1.85, i === 0 ? BLUE : WHITE, { round: true, r: 0.1, line: i === 0 ? null : PALE }); T(s, v[0], x, y + 0.25, kw, 0.85, { fontSize: 32, bold: true, color: i === 0 ? WHITE : NAVY, align: "center", valign: "middle" }); T(s, v[1], x + 0.1, y + 1.15, kw - 0.2, 0.55, { fontSize: 12.5, bold: true, color: i === 0 ? "EEF3FF" : GRAY, align: "center" }); });
+    k.forEach((v, i) => {
+      const x = 5.2 + (i % 4) * (kw + 0.15), y = 2.5 + Math.floor(i / 4) * 2.05, hi = i === 0;
+      R(s, x, y, kw, 1.85, hi ? BLUE : WHITE, { round: true, r: 0.1, line: hi ? null : "C9D5F2", lw: 1.25 });
+      const num = v[0].startsWith("월 ") ? [{ text: "월 ", options: { fontSize: 20 } }, { text: v[0].slice(2), options: { fontSize: 38 } }] : [{ text: v[0], options: { fontSize: v[0].length >= 4 ? 33 : 38 } }];
+      T(s, num, x, y + 0.18, kw, 0.95, { bold: true, fontFace: TITLE_FONT, color: hi ? WHITE : NAVY, align: "center", valign: "middle" });
+      s.addShape(pres.ShapeType.line, { x: x + kw / 2 - 0.25, y: y + 1.17, w: 0.5, h: 0, line: { color: hi ? "C9D7FF" : "C9D5F2", width: 1.25 }, objectName: nm("l") });
+      T(s, v[1], x + 0.08, y + 1.25, kw - 0.16, 0.55, { fontSize: 13.5, bold: true, color: hi ? WHITE : INK, align: "center", valign: "top" });
+    });
     s.addNotes("목표 대상자는 541명입니다. 합동평가 핵심인 직권·자체발굴 발굴률 20%를 비롯해 중앙 지표 8개를 관리합니다.");
   }
   // 14 ───────── 예산
