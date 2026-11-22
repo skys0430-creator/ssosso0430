@@ -135,14 +135,23 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     const s = pres.addSlide(); bg(s, "bg_mid.png");
     await lett(s, "L_s4", 0, 0.8, 8.4, "살던 곳에서 건강하게, 함께 살피는 의왕 — 의왕을 위한 2027년 3대 목표", true);
 
-    const g = [["01", "먼저 찾고 끝까지 살피는\n대상자 관리체계 확립", "1D3FB8"], ["02", "재가의료 이용 확대와\n의왕살핌 고도화로\n재가돌봄 공백 해소", "2F5BEA"], ["03", "보건·복지·민간이 함께하는\n수요자 중심 운영기반 강화", "4F78F5"]];
-    const d = 4.0, ov = 0.45, x0 = (W - (3 * d - 2 * ov)) / 2;
-    g.forEach((v, i) => {
-      const x = x0 + i * (d - ov);
-      C(s, x, 2.75, d, v[2], { tr: 8 });
-      T(s, v[0], x, 3.4, d, 0.6, { fontSize: 30, bold: true, color: "C9D7FF", align: "center" });
-      T(s, v[1], x + 0.5, 4.05, d - 1.0, 1.5, { fontSize: 17, bold: true, color: WHITE, align: "center", valign: "top" });
-    });
+    // 3대 목표: 아이콘 + 핵심어(크게) + 목표 문장(작게) + 연결 과업
+    const g = [["01", "LuSearch", "끝까지 살피는\n대상자 관리", "먼저 찾고 끝까지 살피는\n대상자 관리체계 확립", "13277A", "과업 01  대상자 발굴·관리"],
+      ["02", "LuHouse", "재가돌봄\n공백 해소", "재가의료 이용 확대와\n의왕살핌 고도화", "2F5BEA", "과업 02  서비스 확충·품질향상"],
+      ["03", "LuHandshake", "함께하는\n운영기반", "보건·복지·민간이 함께하는\n수요자 중심 운영기반 강화", "5A82F5", "과업 03·04  운영기반·교육홍보"]];
+    const d = 3.85, ov = 0.25, x0 = (W - (3 * d - 2 * ov)) / 2, y0 = 2.55;
+    for (let i = 0; i < 3; i++) {
+      const v = g[i], x = x0 + i * (d - ov), cx = x + d / 2;
+      s.addShape(pres.ShapeType.ellipse, { x, y: y0, w: d, h: d, fill: { color: v[4] }, line: { color: "FFFFFF", width: 3 }, shadow: { type: "outer", color: "1B2F7A", opacity: 0.25, blur: 10, offset: 4, angle: 90 }, objectName: nm("c") });
+      R(s, cx - 0.42, y0 + 0.38, 0.84, 0.34, "FFFFFF", { round: true, r: 0.17 });
+      T(s, v[0], cx - 0.42, y0 + 0.38, 0.84, 0.34, { fontSize: 14, bold: true, color: v[4], align: "center", valign: "middle" });
+      s.addImage({ data: await icon(v[1], "FFFFFF"), x: cx - 0.3, y: y0 + 0.88, w: 0.6, h: 0.6, objectName: nm("i") });
+      T(s, v[2], x + 0.3, y0 + 1.58, d - 0.6, 1.05, { fontSize: 25, bold: true, color: WHITE, align: "center", valign: "middle", lineSpacingMultiple: 0.95 });
+      s.addShape(pres.ShapeType.line, { x: cx - 0.45, y: y0 + 2.72, w: 0.9, h: 0, line: { color: "FFFFFF", width: 1.25, transparency: 40 }, objectName: nm("l") });
+      T(s, v[3], x + 0.45, y0 + 2.82, d - 0.9, 0.62, { fontSize: 12.5, color: "E3EAFF", align: "center" });
+      R(s, cx - 1.6, y0 + d + 0.1, 3.2, 0.38, "FFFFFF", { round: true, r: 0.19, line: PALE });
+      T(s, v[5], cx - 1.6, y0 + d + 0.1, 3.2, 0.38, { fontSize: 12.5, bold: true, color: i === 2 ? "3C63E0" : v[4], align: "center", valign: "middle" });
+    }
     s.addNotes("비전 아래 3대 목표입니다. 먼저 찾고 끝까지 살피는 관리체계, 재가의료 이용 확대와 의왕살핌 고도화, 보건·복지·민간이 함께하는 운영기반입니다.");
   }
   // 5 ───────── 4대 과업·12개 핵심사업
