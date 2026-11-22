@@ -109,7 +109,7 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     }
     s.addShape(pres.ShapeType.line, { x: MX, y: 6.42, w: 1.6, h: 0, line: { color: NAVY, width: 1 }, objectName: nm("l") });
     s.addShape(pres.ShapeType.line, { x: W - MX - 1.6, y: 6.42, w: 1.6, h: 0, line: { color: NAVY, width: 1 }, objectName: nm("l") });
-    T(s, [{ text: "기반을 토대로 2027년에는 ", options: { color: INK } }, { text: "끝까지", options: { color: BLUE } }, { text: " 살피는 체계로", options: { color: INK } }], MX + 1.7, 6.15, CW - 3.4, 0.55, { fontSize: 19, bold: true, align: "center", valign: "middle" });
+    T(s, [{ text: "기반을 토대로 2027년에는 ", options: { color: INK } }, { text: "끝까지", options: { color: "C8157F" } }, { text: " 살피는 체계로", options: { color: INK } }], MX + 1.7, 6.15, CW - 3.4, 0.55, { fontSize: 19, bold: true, align: "center", valign: "middle" });
     s.addNotes("법 시행 첫해, 390명이 신청해 276명을 지원했고 740건을 연계했습니다. 없던 방문진료·재택의료를 확보하고, 통합돌봄팀과 조례, 동 전담인력까지 운영 기반을 갖췄습니다.");
   }
   // 3 ───────── 지역 진단
