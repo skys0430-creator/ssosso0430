@@ -283,7 +283,7 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     head(s, "03", "운영기반 및 민관협력", "보건·복지·민간의 돌봄 역량을\n통합지원회의로 하나로 모으겠습니다.");
     const cx = W / 2, cy = 4.05, d = 2.5;
     const left = [["LuLandmark", "건보공단 의왕지사", "통합판정 · 빅데이터"], ["LuAccessibility", "연금공단 군포의왕지사", "장애인 종합판정"], ["LuHeartPulse", "보건소", "방문건강 · 치매 · 정신건강"]];
-    const right = [["LuBuilding2", "협업부서", "노인장애인 · 생활보장 · 건축"], ["LuHeartHandshake", "서비스 제공기관", "의왕살핌 협약 18개소"], ["LuStethoscope", "의료기관", "방문진료 12 · 퇴원 협약병원"]];
+    const right = [["LuBuilding2", "협업부서", "노인장애인과 · 건축과 등"], ["LuHeartHandshake", "서비스 제공기관", "의왕살핌 협약 18개소"], ["LuStethoscope", "의료기관", "방문진료 12 · 퇴원 협약병원"]];
     const nw = 3.0, nh = 0.86, ys = [2.2, 3.62, 5.04];
     for (const [arr, x] of [[left, MX + 0.2], [right, W - MX - 0.2 - nw]]) {
       for (let i = 0; i < 3; i++) {
