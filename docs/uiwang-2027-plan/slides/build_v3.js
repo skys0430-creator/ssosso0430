@@ -10,7 +10,8 @@ const { applyTheme } = require(process.env.APPLY_THEME);
 
 const OUT = process.argv[2] || "deck_v3.pptx";
 const V3 = path.join(__dirname, "..", "figures", "v3");
-const FONT = "맑은 고딕";
+const FONT = process.env.DECK_FONT || "맑은 고딕";
+const TITLE_FONT = "맑은 고딕"; // 제목은 유지, 본문 글꼴만 비교·교체
 const THEME = { name: "Uiwang Care 2027 v3", headFontFace: FONT, bodyFontFace: FONT,
   colors: { dk1: "111B3D", lt1: "FFFFFF", dk2: "13277A", lt2: "EEF3FF", accent1: "2F5BEA", accent2: "F08A24", accent3: "8FAEFF",
     accent4: "DCE6FF", accent5: "5B6785", accent6: "0E1F5B", hlink: "2F5BEA", folHlink: "5B6785" } };
@@ -49,7 +50,7 @@ const bg = (s, f) => s.addImage({ path: path.join(V3, f), x: 0, y: 0, w: W, h: 7
 function head(s, no, kicker, title) {
   bg(s, "bg_content.png");
   T(s, [{ text: no + "  ", options: { bold: true, color: BLUE } }, { text: "—  " + kicker, options: { color: GRAY } }], MX, 0.42, 10, 0.32, { fontSize: 13 });
-  T(s, title, MX, 0.78, CW, 1.05, { fontSize: 27, bold: true, color: INK, valign: "top", lineSpacingMultiple: 1.05 });
+  T(s, title, MX, 0.78, CW, 1.05, { fontFace: TITLE_FONT, fontSize: 27, bold: true, color: INK, valign: "top", lineSpacingMultiple: 1.05 });
 }
 function tab(s, text, x, y, w) { // 남색 머리띠 + 아래 가는 선
   R(s, x, y, Math.min(w, Math.max(2.2, text.length * 0.2 + 0.6)), 0.36, NAVY);
