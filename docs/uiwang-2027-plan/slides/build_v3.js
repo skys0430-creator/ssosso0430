@@ -415,6 +415,8 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     for (let i = 0; i < 4; i++) { const x = MX + i * (cw + 0.2); R(s, x, 3.35, cw, 2.0, WHITE, { round: true, r: 0.12, tr: 10 }); await ic(s, it[i][0], x + cw / 2 - 0.4, 3.55, 0.8); T(s, it[i][1], x, 4.45, cw, 0.4, { fontSize: 17, bold: true, color: INK, align: "center" }); T(s, it[i][2], x + 0.15, 4.85, cw - 0.3, 0.4, { fontSize: 12, color: GRAY, align: "center" }); }
     const fl = ["협의체 심의 11. 26.", "의견 반영", "지역계획 확정·제출", "2027. 1. 시행"];
     const fw = (CW - 3 * 0.4) / 4;
+    s.addImage({ data: await icon("LuLandmark", NAVY), x: MX, y: 6.68, w: 0.3, h: 0.3, objectName: nm("i") });
+    T(s, [{ text: "통합지원협의체 ", options: { bold: true, color: NAVY } }, { text: "의료·복지·공단·학계·시의회 위원 · 연 2회 · 지역계획 심의와 기관 연계·협력 자문", options: { color: GRAY } }], MX + 0.4, 6.6, CW - 0.4, 0.45, { fontSize: 13, valign: "middle" });
     fl.forEach((f, i) => { const x = MX + i * (fw + 0.4); R(s, x, 5.85, fw, 0.6, i === 0 ? BLUE : NAVY, { round: true, r: 0.3 }); T(s, f, x, 5.85, fw, 0.6, { fontSize: 14, bold: true, color: WHITE, align: "center", valign: "middle" }); if (i < 3) arrowR(s, x + fw + 0.07, 6.0, 0.26, 0.3, NAVY); });
     s.addNotes("이상 네 가지에 대해 심의와 의견을 부탁드립니다.");
   }
