@@ -383,18 +383,25 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     head(s, "예산", "2027년 재원 조달 및 운용", "총 706,636천원을\n국가서비스가 채우지 못한 공백에 쓰겠습니다.");
     tab(s, "재원 구성", MX, 1.95, 4.6);
     s.addChart(pres.charts.DOUGHNUT, [{ name: "재원", labels: ["국비 50%", "시비 45%", "도비 5%"], values: [353318, 317986, 35332] }],
-      { x: MX, y: 2.4, w: 4.6, h: 3.9, holeSize: 62, chartColors: [H.dk2, H.accent3, H.accent2], showPercent: false, showValue: false, showLegend: true, legendPos: "b", legendFontSize: 13, legendColor: H.dk1, legendFontFace: "+mn-lt", dataBorder: { pt: 1, color: "FFFFFF" }, objectName: nm("ch") });
-    T(s, "706,636\n천원", MX + 1.55, 3.5, 1.5, 0.9, { fontSize: 17, bold: true, color: NAVY, align: "center", valign: "middle" });
+      { x: MX + 0.6, y: 2.42, w: 3.4, h: 2.85, holeSize: 64, chartColors: [H.dk2, "6F8FE8", H.accent2], showPercent: false, showValue: false, showLegend: false, dataBorder: { pt: 1.5, color: "FFFFFF" }, objectName: nm("ch") });
+    T(s, [{ text: "706,636", options: { fontSize: 18, fontFace: TITLE_FONT } }, { text: "\n천원", options: { fontSize: 13 } }], MX + 1.55, 3.35, 1.5, 1.0, { bold: true, color: NAVY, align: "center", valign: "middle" });
+    const src = [["국비", "50%", "353,318", H.dk2], ["시비", "45%", "317,986", "6F8FE8"], ["도비", "5%", "35,332", H.accent2]];
+    src.forEach((r, i) => {
+      const y = 5.33 + i * 0.44;
+      C(s, MX + 0.1, y + 0.12, 0.2, r[3]);
+      T(s, [{ text: r[0] + " ", options: { bold: true, color: INK } }, { text: r[1], options: { bold: true, color: GRAY } }], MX + 0.42, y, 1.6, 0.44, { fontSize: 15, valign: "middle" });
+      T(s, [{ text: r[2], options: { fontSize: 17, bold: true, fontFace: TITLE_FONT, color: NAVY } }, { text: " 천원", options: { fontSize: 12, color: GRAY } }], MX + 1.9, y, 2.7, 0.44, { align: "right", valign: "middle" });
+    });
     tab(s, "사업별(천원)", 5.6, 1.95, W - MX - 5.6);
-    const items = [["LuHouse", "의왕살핌(일상·건강·내집)", 514136], ["LuBot", "신규 3종(AI로봇·이동지원·회복살핌)", 110000], ["LuHeartHandshake", "신규특화사업(보조)", 60000], ["LuFileText", "운영비(회의·홍보·교육)", 17000], ["LuHospital", "재택의료센터 운영지원", 5000], ["LuWallet", "퇴원환자 연계수당", 500]];
-    const maxw = W - MX - 5.6 - 4.6;
+    const items = [["LuHouse", "의왕살핌(일상·건강·내집)", 514136], ["LuBot", "신규 3종(AI로봇·이동·회복)", 110000], ["LuHeartHandshake", "신규특화사업(보조)", 60000], ["LuFileText", "운영비(회의·홍보·교육)", 17000], ["LuHospital", "재택의료센터 운영지원", 5000], ["LuWallet", "퇴원환자 연계수당", 500]];
+    const bx = 9.5, ax = W - MX - 1.5, maxw = ax - bx - 0.15;
     for (let i = 0; i < items.length; i++) {
-      const y = 2.5 + i * 0.66;
-      await ic(s, items[i][0], 5.6, y, 0.48);
-      T(s, items[i][1], 6.2, y, 3.3, 0.48, { fontSize: 13, color: INK, valign: "middle" });
-      const bw = Math.max(0.05, maxw * items[i][2] / 514136);
-      R(s, 9.55, y + 0.1, bw, 0.28, i === 0 ? BLUE : SKY);
-      T(s, items[i][2].toLocaleString("en-US"), 9.6 + bw, y, 1.2, 0.48, { fontSize: 12.5, bold: true, color: NAVY, valign: "middle" });
+      const y = 2.48 + i * 0.68;
+      await ic(s, items[i][0], 5.6, y, 0.52);
+      T(s, items[i][1], 6.25, y, 3.2, 0.52, { fontSize: 14, bold: i < 2, color: INK, valign: "middle" });
+      const bw = Math.max(0.06, maxw * items[i][2] / 514136);
+      R(s, bx, y + 0.1, bw, 0.32, i === 0 ? BLUE : "6F8FE8");
+      T(s, items[i][2].toLocaleString("en-US"), ax, y, 1.5, 0.52, { fontSize: 17, bold: true, fontFace: TITLE_FONT, color: NAVY, align: "right", valign: "middle" });
     }
     band(s, "집행 원칙", ["국가서비스 우선, 공백 영역에만 투입", "기존 제도 단가 준용·소득별 차등", "현금성 급여·본인부담 전액지원 배제"]);
     s.addNotes("총 7억 664만원, 국비 50, 도비 5, 시비 45퍼센트입니다. 사업비의 대부분이 의왕살핌과 신규서비스입니다.");
