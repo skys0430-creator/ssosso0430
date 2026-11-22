@@ -83,6 +83,41 @@ for cx, top, bottom, col in nodes:
 # 7) 17 제목: 88%는 신규 3종 포함 금액이므로 표현 정정
 shp(p.slides[16], 8).text_frame.paragraphs[0].runs[2].text = ", 의왕살핌·신규서비스에 88%를 씁니다"
 
+# 7-2) 핵심사업 표(원래 9쪽): 괄호 분류 → 색 배지(신규 주황·확대 파랑·개선 초록)
+import re as _re
+TAG = {"신규": ("EA580C", "FFEDD5"), "확대": ("2563EB", "DBEAFE"), "개선": ("059669", "D1FAE5")}
+s9 = p.slides[8]
+rows = {1: (18, 19, 20, 21), 2: (23, 24, 25, 26), 3: (28, 29, 30, 31)}
+row_top = {1: 2.38, 2: 3.64, 3: 4.63}
+for rno, sids in rows.items():
+    for sid in sids:
+        sh = shp(s9, sid)
+        full = sh.text_frame.text
+        m = _re.search(r"\((신규|확대|개선)\)", full); tag = m.group(1)
+        for para in sh.text_frame.paragraphs:
+            for r in para.runs:
+                r.text = _re.sub(r"\s*\((신규|확대|개선)\)", "", r.text)
+        # 배지
+        col, tint = TAG[tag]
+        b = s9.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, sh.left, Inches(row_top[rno]), Inches(0.62), Inches(0.27))
+        b.adjustments[0] = 0.5
+        b.fill.solid(); b.fill.fore_color.rgb = RGBColor.from_string(col); b.line.fill.background()
+        tf = b.text_frame; tf.margin_left = tf.margin_right = tf.margin_top = tf.margin_bottom = 0
+        tf.vertical_anchor = MSO_ANCHOR.MIDDLE
+        pr = tf.paragraphs[0]; pr.alignment = PP_ALIGN.CENTER
+        rr = pr.add_run(); rr.text = tag; rr.font.size = Pt(11.5); rr.font.bold = True
+        rr.font.name = "Pretendard"; rr.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
+        # 사업명은 배지 아래로
+        lines = len(sh.text_frame.paragraphs)
+        sh.top = Inches(row_top[rno] + 0.35); sh.height = Inches(0.3 * lines)
+# 하단 범례 카드도 같은 색
+for card_id, text_id, tag in ((32, 33, "신규"), (34, 35, "확대"), (36, 37, "개선")):
+    col, tint = TAG[tag]
+    c = shp(s9, card_id); c.fill.solid(); c.fill.fore_color.rgb = RGBColor.from_string(tint)
+    c.line.color.rgb = RGBColor.from_string(col)
+    for r in shp(s9, text_id).text_frame.paragraphs[0].runs:
+        r.font.color.rgb = RGBColor.from_string(col)
+
 # 8) 레터링 규칙(①성격에 맞는 글꼴 ②대비되는 두 말은 다른 글꼴 ③강조는 낱말 하나) — 표지·간지·닫는 슬라이드
 import os, re
 from copy import deepcopy
