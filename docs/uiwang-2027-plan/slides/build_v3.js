@@ -112,6 +112,54 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     T(s, [{ text: "기반을 토대로 2027년에는 ", options: { color: INK } }, { text: "끝까지", options: { color: "C8157F" } }, { text: " 살피는 체계로", options: { color: INK } }], MX + 1.7, 6.15, CW - 3.4, 0.55, { fontSize: 19, bold: true, align: "center", valign: "middle" });
     s.addNotes("법 시행 첫해, 390명이 신청해 276명을 지원했고 740건을 연계했습니다. 없던 방문진료·재택의료를 확보하고, 통합돌봄팀과 조례, 동 전담인력까지 운영 기반을 갖췄습니다.");
   }
+  // 2-1 ───────── 의왕살핌 3대 패키지(사진 자리)
+  async function photo(s, x, y, w, h, label) {
+    s.addShape(pres.ShapeType.roundRect, { x, y, w, h, fill: { color: "F3F5FC" }, line: { color: "AEB9D8", width: 1.25, dashType: "dash" }, rectRadius: 0.1, objectName: nm("photo") });
+    s.addImage({ data: await icon("LuCamera", "9AA6C8"), x: x + w / 2 - 0.22, y: y + h / 2 - 0.42, w: 0.44, h: 0.44, objectName: nm("i") });
+    T(s, label, x + 0.1, y + h / 2 + 0.08, w - 0.2, 0.5, { fontSize: 12, color: "7A86A8", align: "center" });
+  }
+  {
+    const s = pres.addSlide();
+    head(s, "성과", "2026년 지역특화서비스", "국가서비스가 닿지 않는 공백을\n의왕살핌으로 메웠습니다.");
+    const cards = [["LuHouse", "일상살핌", "생활·동행돌봄, 식사지원", "138명", "1인 200만원 한도", "사진: 병원 동행 · 식사 배달"],
+      ["LuStethoscope", "건강살핌", "방문진료 · 방문재활 · 가정간호", "103명", "1인 60만원 한도", "사진: 방문재활 · 방문진료"],
+      ["LuShieldCheck", "내집살핌", "안전손잡이 · 미끄럼방지 · 문턱제거", "99명", "생애 200만원 한도", "사진: 주거개선 시공 전 → 후"]];
+    const cw = (CW - 0.6) / 3;
+    for (let i = 0; i < 3; i++) {
+      const x = MX + i * (cw + 0.3), y = 1.95, c = cards[i];
+      R(s, x, y, cw, 4.7, WHITE, { round: true, r: 0.1, line: PALE });
+      await photo(s, x + 0.18, y + 0.18, cw - 0.36, 2.15, c[5]);
+      await ic(s, c[0], x + 0.22, y + 2.55, 0.62);
+      T(s, c[1], x + 0.98, y + 2.52, cw - 1.1, 0.4, { fontSize: 19, bold: true, color: INK, fontFace: TITLE_FONT });
+      T(s, c[2], x + 0.98, y + 2.92, cw - 1.1, 0.35, { fontSize: 12.5, color: GRAY });
+      s.addShape(pres.ShapeType.line, { x: x + 0.22, y: y + 3.5, w: cw - 0.44, h: 0, line: { color: PALE, width: 1 }, objectName: nm("l") });
+      T(s, c[3], x + 0.22, y + 3.62, cw / 2, 0.85, { fontSize: 34, bold: true, color: i === 1 ? "C8157F" : NAVY, fontFace: TITLE_FONT, valign: "middle" });
+      T(s, ["’26 이용", c[4]].join("\n"), x + cw / 2, y + 3.68, cw / 2 - 0.22, 0.75, { fontSize: 12, color: GRAY, align: "right", valign: "middle" });
+    }
+    band(s, "운영 원칙", ["국가돌봄서비스 우선, 공백만 의왕살핌", "소득 무관 신청 · 중위소득별 본인부담 차등", "방문진료 의원 12개소 실제 진료 시작"]);
+    s.addNotes("의왕살핌은 장기요양이나 노인맞춤돌봄 같은 국가서비스를 먼저 연계하고, 그래도 남는 공백을 메우는 우리 시 서비스입니다. 일상살핌은 생활·동행돌봄과 식사, 건강살핌은 집으로 찾아가는 진료·재활·간호, 내집살핌은 낙상을 막는 주거 개선입니다. 올해 340명이 이용했습니다.");
+  }
+  // 2-2 ───────── 공백보완 특화사업(사진 자리)
+  {
+    const s = pres.addSlide();
+    head(s, "성과", "2026년 지역특화서비스", "운영하며 찾은 공백은\n3개월 만에 새 서비스로 메웠습니다.");
+    const cards = [["LuUtensils", "맞춤형 영양식", "저작완화식 · 만성질환식 · 유동식\n주 2회 배달, 안부 확인", "55명", "사진: 영양식 도시락 구성"],
+      ["LuHeartPulse", "건강돌봄가", "방문 스트레칭, 건강·영양 모니터링\n복약 지원", "50명", "사진: 건강돌봄가 방문 활동"],
+      ["LuPuzzle", "동고동락", "치매 대상 방문형 프로그램\n인지·운동·만들기(주 2회, 14회기)", "22명", "사진: 인지활동 · 만들기"]];
+    const cw = (CW - 0.6) / 3;
+    for (let i = 0; i < 3; i++) {
+      const x = MX + i * (cw + 0.3), y = 1.95, c = cards[i];
+      R(s, x, y, cw, 4.7, WHITE, { round: true, r: 0.1, line: PALE });
+      await photo(s, x + 0.18, y + 0.18, cw - 0.36, 2.15, c[4]);
+      badge(s, "신규", x + cw - 0.82, y + 2.58);
+      await ic(s, c[0], x + 0.22, y + 2.55, 0.62);
+      T(s, c[1], x + 0.98, y + 2.52, cw - 1.9, 0.4, { fontSize: 19, bold: true, color: INK, fontFace: TITLE_FONT });
+      T(s, c[2], x + 0.22, y + 3.25, cw - 0.44, 0.65, { fontSize: 12.5, color: GRAY });
+      T(s, c[3], x + 0.22, y + 3.85, cw - 0.44, 0.7, { fontSize: 30, bold: true, color: NAVY, fontFace: TITLE_FONT, align: "right", valign: "middle" });
+    }
+    band(s, "추진 경과", ["상반기 운영 중 치매·영양·건강 공백 확인", "’26. 8. 공모로 3개 사업 개시", "이용 127명(’26. 10.)"]);
+    s.addNotes("상반기에 운영해 보니 치매, 영양, 건강 모니터링 공백이 보였습니다. 그래서 8월에 맞춤형 영양식, 건강돌봄가, 방문형 치매 프로그램 동고동락을 시작했고, 10월까지 127명이 이용했습니다.");
+  }
   // 3 ───────── 지역 진단
   {
     const s = pres.addSlide();
