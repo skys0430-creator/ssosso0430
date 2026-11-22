@@ -260,9 +260,12 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     const s = pres.addSlide();
     head(s, "02", "서비스 확충 및 품질향상", "집에서 진료받는 재가의료를 넓히고,\n의왕살핌을 고도화하겠습니다.");
     tab(s, "방문의료(건강살핌) 이용 확대", MX, 1.95, 5.6);
-    s.addChart(pres.charts.BAR, [{ name: "이용자", labels: ["’26", "’27", "’30"], values: [70, 91, 199] }],
-      { x: MX, y: 2.45, w: 5.6, h: 3.2, barDir: "col", barGapWidthPct: 60, chartColors: [H.accent3, H.accent1, H.dk2], invertedColors: [H.accent3], showValue: true, dataLabelPosition: "outEnd", valAxisMaxVal: 230, ...chartTxt, objectName: nm("ch") });
-    T(s, "매년 +30% (명)", MX + 0.1, 2.5, 1.7, 0.3, { fontSize: 12, bold: true, color: BLUE, align: "right" });
+    s.addChart(pres.charts.BAR, [{ name: "이용자", labels: ["2026년", "2027년", "2030년"], values: [70, 91, 199] }],
+      { x: MX, y: 2.4, w: 5.6, h: 3.35, barDir: "col", barGapWidthPct: 45, chartColors: ["6F8FE8", H.accent1, H.dk2], invertedColors: ["6F8FE8"], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: '0"명"', valAxisMaxVal: 235, ...chartTxt,
+        catAxisLabelFontSize: 16, catAxisLabelFontBold: true, catAxisLabelColor: H.dk1, catAxisLineShow: true, catAxisLineColor: "9FB0D8",
+        dataLabelFontSize: 18, dataLabelFontBold: true, dataLabelColor: H.dk2, objectName: nm("ch") });
+    R(s, MX + 0.15, 2.5, 1.45, 0.36, ORG, { round: true, r: 0.18 });
+    T(s, "매년 +30%", MX + 0.15, 2.5, 1.45, 0.36, { fontSize: 13, bold: true, color: WHITE, align: "center", valign: "middle" });
     tab(s, "재가의료 기반 · 의왕살핌", 6.55, 1.95, W - MX - 6.55);
     const it = [["LuStethoscope", "방문진료 참여의원 12개소", "등록만 돼 있던 의원이 실제 진료 · 대상자 집중 발굴로 이용 활성화"], ["LuHospital", "재택의료센터 관내 1 · 관외 1", "추가 확충보다 연계 유지 · 이용 확대"], ["LuUtensils", "식사지원 개편", "일반식은 기존 서비스로 연계, 퇴원·급성기 치료식 맞춤형 영양식으로"], ["LuHouse", "의왕살핌 3대 패키지", "일상·건강·내집살핌 이용자 전년 대비 30% 확대"]];
     for (let i = 0; i < 4; i++) {
