@@ -181,6 +181,37 @@ const chartTxt = { catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt
     band(s, "핵심 진단", ["방문의료 수요 대비 이용 10.5%", "퇴원환자 협약병원 의뢰 0건", "돌봄 인지 52.9% → 이용 6.4%"]);
     s.addNotes("노인은 3만 3,930명으로 5년 새 43.5% 늘었습니다. 85세 이상 1인세대 1,046세대 중 부곡동이 292세대로 가장 많습니다. 방문의료 이용, 퇴원환자 연계, 주민 인지도가 핵심 과제입니다.");
   }
+  // 3-1 ───────── 잠재군·핵심군
+  {
+    const s = pres.addSlide();
+    head(s, "진단", "통합돌봄 수요 구조", "도움이 필요할 수 있는 9천 명 중\n먼저 도와야 할 핵심군은 2,192명입니다.");
+    tab(s, "통합돌봄 수요 피라미드", MX, 1.95, 6.6);
+    const tiers = [["대상자", "276명", "핵심군의 12.6%", "C8157F", 1.9],
+      ["핵심군", "2,192명", "복합 욕구 · 노인 1,905 + 장애인 287", NAVY, 3.5],
+      ["잠재군", "9,049명", "도움 필요 가능성 · 노인 7,744 + 장애인 1,305", BLUE, 4.9],
+      ["전체", "33,442명", "실태조사 기준 노인 30,801 + 65세 미만 장애인 2,641", "6F8FE8", 6.5]];
+    const cx = MX + 3.3;
+    tiers.forEach((t, i) => {
+      const y = 2.5 + i * 1.0, w = t[4];
+      R(s, cx - w / 2, y, w, 0.86, t[3], { round: true, r: 0.08 });
+      T(s, [{ text: t[0] + "  ", options: { fontSize: 13, bold: true } }, { text: t[1], options: { fontSize: i === 1 ? 24 : 20, bold: true, fontFace: TITLE_FONT } }], cx - w / 2, y + 0.02, w, 0.5, { color: WHITE, align: "center", valign: "middle" });
+      T(s, t[2], cx - w / 2 + 0.05, y + 0.5, w - 0.1, 0.32, { fontSize: 11, color: "EEF3FF", align: "center", valign: "middle" });
+    });
+    tab(s, "의왕시 핵심군의 특징", 7.55, 1.95, W - MX - 7.55);
+    const ft = [["LuUsers", "48.6%", "85세 이상 비중", "경기 31개 시군 중 3위 (경기 42.8%)"],
+      ["LuHospital", "68.1%", "입원위험 재가급여자", "1,298명 · 집에서 받는 의료 수요 집중"],
+      ["LuHouse", "30.9%", "독거 비중", "경기 39.2%보다 낮아 기존 독거 중심 발굴로는 놓침"]];
+    for (let i = 0; i < 3; i++) {
+      const y = 2.5 + i * 1.32, x = 7.55, w = W - MX - 7.55;
+      R(s, x, y, w, 1.18, WHITE, { round: true, r: 0.08, line: PALE });
+      await ic(s, ft[i][0], x + 0.2, y + 0.25, 0.68);
+      T(s, ft[i][1], x + 1.05, y + 0.1, 1.7, 0.6, { fontSize: 26, bold: true, fontFace: TITLE_FONT, color: i === 0 ? "C8157F" : NAVY, valign: "middle" });
+      T(s, ft[i][2], x + 2.75, y + 0.12, w - 2.9, 0.55, { fontSize: 14, bold: true, color: INK, valign: "middle" });
+      T(s, ft[i][3], x + 1.05, y + 0.7, w - 1.2, 0.38, { fontSize: 11.5, color: GRAY, valign: "middle" });
+    }
+    band(s, "참고", ["출처: 통합돌봄 실태조사(2026)", "성과지표 분모 ‘우선발굴필요군 6,506명’은 건보공단 명단 기준"]);
+    s.addNotes("잠재군은 의료나 돌봄이 필요할 가능성이 있는 분들로 약 9천 명입니다. 그중 의료·요양·돌봄이 한꺼번에 필요해 먼저 도와야 할 분들이 핵심군 2,192명입니다. 우리 시 핵심군은 절반 가까이가 85세 이상이고, 70% 가까이가 집에서 요양을 받으며 입원 위험이 높은 분들입니다. 독거 비중은 낮아서 기존 독거 중심 발굴로는 잡히지 않습니다. 참고로 성과지표에 쓰는 우선발굴필요군 6,506명은 건보공단 명단 기준이라 숫자가 다릅니다.");
+  }
   // 4 ───────── 비전과 3대 목표 (레퍼런스 3쪽형: 원 3개)
   {
     const s = pres.addSlide(); bg(s, "bg_mid.png");
