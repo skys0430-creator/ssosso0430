@@ -23,7 +23,7 @@ const EM=(w,c='#C8157F')=>`<span class="em" style="color:${c}">${w}${SW(c)}</spa
 const letters={
  // 표지: 성격(공공 계획의 단단함=굵은 고딕 / 돌봄의 따뜻함=명조), 대비되는 두 말=두 글꼴, 강조=‘건강하게’ 하나
  L_cover:`<div class="sans" style="font-weight:900;font-size:100px;letter-spacing:-3px;color:#13277A;line-height:1.12">살던 곳에서 ${EM('건강하게')},</div>
-  <div style="display:flex;align-items:center;gap:22px;margin-top:14px">${HH}<span class="serif" style="font-size:94px;letter-spacing:-2px;color:#13277A;line-height:1.15">함께 살피는 의왕</span></div>`,
+  <div style="display:flex;align-items:center;gap:22px;margin-top:14px">${HH}<span class="sans" style="font-weight:900;font-size:100px;letter-spacing:-3px;color:#13277A;line-height:1.12">함께 살피는 의왕</span></div>`,
  // 2쪽(단원 시작): ‘법 시행 첫해’(명조) ↔ ‘먼저 찾고 연결한 2026년’(고딕), 강조=‘연결’
  L_s2:`<div style="text-align:center"><div class="serif" style="font-size:40px;color:#5B6785;letter-spacing:-.5px">법 시행 첫해,</div>
   <div class="sans" style="font-weight:900;font-size:76px;letter-spacing:-2.5px;color:#111B3D;margin-top:4px">먼저 찾고 ${EM('연결')}한 2026년</div></div>`,
