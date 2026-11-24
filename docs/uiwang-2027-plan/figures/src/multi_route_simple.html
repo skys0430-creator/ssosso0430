@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{word-break:keep-all;font-family:'Pretendard',sans-serif;color:#1d2b3a;background:#fff;padding:12px 10px;width:1000px}
+.why{display:flex;align-items:center;justify-content:center;gap:16px;background:#f3f6f9;border-radius:12px;padding:12px 16px;font-size:18px;font-weight:700}
+.why b{font-size:24px;font-weight:800;color:#c86a12}
+.why b.n{color:#1b3a5c}
+.why .to{color:#8fa6bd;font-size:22px}
+.why .msg{background:#1b3a5c;color:#fff;border-radius:22px;padding:6px 16px;font-size:17px}
+.routes{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.r{border-radius:14px;background:var(--c);color:#fff;padding:16px 10px;text-align:center}
+.r i{font-style:normal;display:inline-flex;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--c);font-size:18px;font-weight:800;align-items:center;justify-content:center}
+.r b{display:block;font-size:22px;font-weight:800;margin-top:8px}
+.r span{display:block;font-size:15.5px;margin-top:4px;opacity:.92}
+.conv{height:46px}
+.flow{display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr;align-items:stretch}
+.f{border:2.5px solid #1b3a5c;color:#1b3a5c;border-radius:12px;padding:14px 8px;text-align:center;font-size:19px;font-weight:800;background:#fff}
+.f.last{background:#e58a1f;border-color:#e58a1f;color:#fff}
+.ar{display:flex;align-items:center;justify-content:center;color:#8fa6bd;font-size:24px}
+</style></head><body>
+<div class="why">핵심군 85세 이상 <b>48.6%</b><span>·</span>독거 <b class="n">30.9%</b><span class="to">→</span><span class="msg">독거 밖 초고령 가구까지 발굴</span></div>
+
+<div class="routes">
+  <div class="r" style="--c:#1b3a5c"><i>1</i><b>명단 기반</b><span>85세 이상 1인·고령부부 가구</span></div>
+  <div class="r" style="--c:#24507d"><i>2</i><b>데이터 기반</b><span>건보 빅데이터 · 위기정보</span></div>
+  <div class="r" style="--c:#3f6c96"><i>3</i><b>기관 의뢰</b><span>생활지원사 · 장기요양·의료기관</span></div>
+  <div class="r" style="--c:#3a8fb7"><i>4</i><b>가족·주민</b><span>보호자 · 설명회 · 통장</span></div>
+</div>
+
+<div class="conv"><svg width="980" height="46" viewBox="0 0 980 46">
+  <g stroke="#8fa6bd" stroke-width="3" fill="none">
+    <path d="M117 0 V16 H863 V0"/><path d="M365 0 V16"/><path d="M614 0 V16"/><path d="M151 16 V34"/>
+  </g>
+  <path d="M140 32 L162 32 L151 46 Z" fill="#8fa6bd"/>
+</svg></div>
+
+<div class="flow">
+  <div class="f">동 전담인력 방문조사</div>
+  <div class="ar">▶</div>
+  <div class="f">통합돌봄 신청·직권신청</div>
+  <div class="ar">▶</div>
+  <div class="f last">발굴경로별 월별 관리</div>
+</div>
+</body></html>
