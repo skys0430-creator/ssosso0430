@@ -4,83 +4,92 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{word-break:keep-all;font-family:'Noto Sans KR',sans-serif;color:#1d2b3a;background:#fff;padding:12px 10px;width:1000px}
-.wrap{display:grid;grid-template-columns:470px 1fr;gap:22px;align-items:start}
+.wrap{display:grid;grid-template-columns:440px 1fr;gap:20px;align-items:stretch}
 svg text{font-family:'Noto Sans KR',sans-serif}
-.cards{display:flex;flex-direction:column;gap:12px}
-.card{border-radius:10px;border:1.5px solid var(--c);overflow:hidden}
-.ch{background:var(--c);color:#fff;padding:7px 14px;display:flex;align-items:baseline;gap:10px}
-.ch b{font-size:19px;font-weight:900}
-.ch span{font-size:16px;font-weight:700;opacity:.95}
-.cb{padding:8px 14px 10px;background:var(--bg)}
-.ev{font-size:15px;color:#4a5a6b;line-height:1.45}
+.cards{display:flex;flex-direction:column;gap:9px}
+.card{border-radius:9px;border-left:6px solid var(--c);background:var(--bg);padding:8px 13px 9px}
+.ch{display:flex;align-items:baseline;gap:9px}
+.ch b{font-size:18px;font-weight:900;color:var(--c)}
+.ch span{font-size:16px;font-weight:900;color:#1d2b3a}
+.ev{font-size:14.5px;color:#4a5a6b;line-height:1.45;margin-top:2px}
 .ev em{font-style:normal;font-weight:700;color:#1d2b3a}
-.dir{margin-top:6px;font-size:16px;line-height:1.45}
-.dir b{color:var(--t);font-weight:900;margin-right:4px}
-.foot{margin-top:10px;font-size:13.5px;color:#6b7f95}
+.dir{margin-top:4px;font-size:15.5px;line-height:1.45}
+.dir:before{content:"→ ";color:var(--c);font-weight:900}
+.dir i{font-style:normal;font-weight:900;color:var(--c)}
+.ratio{display:flex;gap:6px;margin-top:5px}
+.ratio div{flex:1;background:#fff;border-radius:6px;text-align:center;padding:2px 0 3px;border:1px solid #f0cfae}
+.ratio small{display:block;font-size:12px;color:#6b7f95;line-height:1.3}
+.ratio b{font-size:17px;font-weight:900;color:#c0611a}
+.common{margin-top:10px;border-radius:9px;background:#f1f4f7;padding:8px 14px;display:flex;gap:14px;align-items:center;font-size:15.5px}
+.common b{font-size:16.5px;font-weight:900;color:#33475b;white-space:nowrap}
+.foot{margin-top:8px;font-size:13px;color:#6b7f95}
 </style></head><body>
 <div class="wrap">
-<svg viewBox="0 0 470 470" width="470" height="470">
-  <!-- plot area x:60-455 (고령화율 14~24%), y:20-410 (15~50세대) -->
-  <rect x="60" y="20" width="395" height="390" fill="#fff" stroke="#c9d3de"/>
-  <!-- 평균 기준: x=20.3 -> 60+(6.3/10)*395=308.9 ; y=30.8 -> 410-(15.8/35)*390=233.9 -->
-  <rect x="60" y="20" width="248.9" height="390" fill="#eaf5fa"/>
-  <rect x="308.9" y="20" width="146.1" height="213.9" fill="#fdf0e3"/>
-  <rect x="308.9" y="233.9" width="146.1" height="176.1" fill="#edf2f8"/>
-  <line x1="308.9" y1="20" x2="308.9" y2="410" stroke="#8a9aab" stroke-dasharray="5 4" stroke-width="1.5"/>
-  <line x1="308.9" y1="233.9" x2="455" y2="233.9" stroke="#8a9aab" stroke-dasharray="5 4" stroke-width="1.5"/>
-  <text x="312" y="402" font-size="12" fill="#6b7f95">시 평균 20.3%</text>
-  <text x="451" y="228" font-size="12" fill="#6b7f95" text-anchor="end">시 평균 31세대</text>
-  <!-- zone labels -->
-  <text x="70" y="42" font-size="14" font-weight="700" fill="#2b8ab0">③ 예방 중심형</text>
-  <text x="70" y="59" font-size="12.5" fill="#5a8aa0">상대적으로 젊은 노인층</text>
-  <text x="318" y="165" font-size="14" font-weight="700" fill="#c0611a">① 고령·독거 밀집형</text>
-  <text x="318" y="257" font-size="14" font-weight="700" fill="#2f5f95">② 고령인구 다수형</text>
-  <!-- axes ticks -->
+<svg viewBox="0 0 440 500" width="440" height="500">
+  <rect x="55" y="15" width="375" height="415" fill="#fff" stroke="#c9d3de"/>
+  <rect x="55" y="15" width="236.3" height="415" fill="#f2f8fd"/>
+  <rect x="291.3" y="15" width="138.7" height="227.7" fill="#fdf3ea"/>
+  <rect x="291.3" y="242.7" width="138.7" height="187.3" fill="#f1f4f8"/>
+  <line x1="291.3" y1="15" x2="291.3" y2="430" stroke="#8a9aab" stroke-dasharray="5 4" stroke-width="1.5"/>
+  <line x1="291.3" y1="242.7" x2="430" y2="242.7" stroke="#8a9aab" stroke-dasharray="5 4" stroke-width="1.5"/>
+  <text x="295" y="423" font-size="12" fill="#6b7f95">시 평균 20.3%</text>
+  <text x="426" y="236" font-size="12" fill="#6b7f95" text-anchor="end">시 평균 31세대</text>
+  <g font-size="13" font-weight="700" fill="#7a8a9b">
+    <text x="64" y="35">상대적으로 젊은 노인층</text>
+    <text x="300" y="190">초고령 독거 많음</text>
+    <text x="300" y="262">노인 인구 많음</text>
+  </g>
   <g font-size="12.5" fill="#6b7f95" text-anchor="middle">
-    <text x="60" y="428">14%</text><text x="139" y="428">16%</text><text x="218" y="428">18%</text><text x="297" y="428">20%</text><text x="376" y="428">22%</text><text x="455" y="428">24%</text>
+    <text x="55" y="448">14%</text><text x="130" y="448">16%</text><text x="205" y="448">18%</text><text x="280" y="448">20%</text><text x="355" y="448">22%</text><text x="430" y="448" text-anchor="end">24%</text>
   </g>
   <g font-size="12.5" fill="#6b7f95" text-anchor="end">
-    <text x="54" y="414">15</text><text x="54" y="302.6">25</text><text x="54" y="191.1">35</text><text x="54" y="79.7">45</text>
+    <text x="49" y="434">15</text><text x="49" y="315.4">25</text><text x="49" y="196.9">35</text><text x="49" y="78.3">45</text>
   </g>
-  <text x="257" y="452" font-size="14" font-weight="700" fill="#33475b" text-anchor="middle">고령화율 →</text>
-  <text x="16" y="215" font-size="14" font-weight="700" fill="#33475b" text-anchor="middle" transform="rotate(-90 16 215)">85세 이상 1인세대 (노인 1,000명당) →</text>
-  <!-- bubbles: r = sqrt(pop)/3.2 ; x=60+(v-14)*39.5 ; y=410-(v-15)*11.143 -->
-  <!-- 부곡 21.9, 46.8, 6239 -->
+  <text x="242" y="474" font-size="14" font-weight="700" fill="#33475b" text-anchor="middle">고령화율 →</text>
+  <text x="15" y="222" font-size="14" font-weight="700" fill="#33475b" text-anchor="middle" transform="rotate(-90 15 222)">85세 이상 1인세대 (노인 1,000명당) →</text>
   <g stroke="#fff" stroke-width="2">
-    <circle cx="372.1" cy="55.6" r="24.7" fill="#d9711a"/>
-    <circle cx="352.3" cy="103.5" r="20.2" fill="#d9711a"/>
-    <circle cx="376" cy="293" r="28.4" fill="#2f5f95"/>
-    <circle cx="391.8" cy="338.7" r="26.7" fill="#2f5f95"/>
-    <circle cx="123.2" cy="317.5" r="21.9" fill="#3fa3c9"/>
-    <circle cx="182.5" cy="230.6" r="17.4" fill="#3fa3c9"/>
+    <circle cx="351.3" cy="52.9" r="23.9" fill="#d9711a"/>
+    <circle cx="332.5" cy="104" r="19.5" fill="#2e9e6e"/>
+    <circle cx="355" cy="306" r="27.5" fill="#2f5f95"/>
+    <circle cx="370" cy="355" r="25.9" fill="#2f5f95"/>
+    <circle cx="115" cy="333.6" r="21.2" fill="#4b9fe0"/>
+    <circle cx="171.3" cy="239.2" r="16.8" fill="#4b9fe0"/>
   </g>
   <g font-size="14.5" font-weight="900" fill="#1d2b3a">
-    <text x="400" y="60">부곡동</text>
-    <text x="376" y="108">내손1동</text>
-    <text x="343" y="298" text-anchor="end">청계동</text>
-    <text x="391.8" y="384" text-anchor="middle">오전동</text>
-    <text x="149" y="323">내손2동</text>
-    <text x="204" y="236">고천동</text>
+    <text x="378" y="58">부곡동</text>
+    <text x="356" y="109">내손1동</text>
+    <text x="324" y="311" text-anchor="end">청계동</text>
+    <text x="370" y="400" text-anchor="middle">오전동</text>
+    <text x="140" y="339">내손2동</text>
+    <text x="192" y="244">고천동</text>
   </g>
+  <text x="55" y="494" font-size="12" fill="#6b7f95">※ 원 크기: 동별 65세 이상 인구</text>
 </svg>
 
 <div class="cards">
-  <div class="card" style="--c:#d9711a;--bg:#fdf3e7;--t:#c0611a">
-    <div class="ch"><b>① 고령·독거 밀집형</b><span>부곡동 · 내손1동</span></div>
-    <div class="cb"><div class="ev">85세 이상 1인세대 노인 1,000명당 <em>47·43세대</em>(시 평균 31)<br>부곡동은 기초연금 <em>70.4%</em>·기초생활 <em>12%</em>·다세대 <em>32.8%</em> 시 최고</div>
-      <div class="dir"><b>집중 발굴·연계</b>초고령 독거 우선 방문, 안부·모니터링 강화, 주거환경개선(내집살핌) 우선 연계</div></div>
+  <div class="card" style="--c:#d9711a;--bg:#fdf3e7">
+    <div class="ch"><b>① 복합취약 집중관리</b><span>부곡동</span></div>
+    <div class="ev">고령화율은 중간이나 초고령 독거·저소득·저층주택이 함께 높음 <span style="color:#8a9aab">(시 평균 대비)</span></div>
+    <div class="ratio"><div><small>고령화율</small><b>108%</b></div><div><small>85세↑ 1인세대</small><b>152%</b></div><div><small>노인 기초생활</small><b>174%</b></div><div><small>단독·연립·다세대</small><b>220%</b></div></div>
+    <div class="dir">선제발굴 <i>우선 착수</i>, 승강기 없는 주택 거동불편자 <i>이동살핌</i>·내집살핌 우선 연계</div>
   </div>
-  <div class="card" style="--c:#2f5f95;--bg:#eef3f8;--t:#2f5f95">
-    <div class="ch"><b>② 고령인구 다수형</b><span>청계동 · 오전동</span></div>
-    <div class="cb"><div class="ev">노인 <em>8,263·7,279명</em>(시 노인의 <em>46%</em>)<br>고령화율 <em>22.0·22.4%</em>로 시 평균보다 높음</div>
-      <div class="dir"><b>발굴 물량 확대·연계</b>동 전담인력·동 협의체 중심 상시 발굴, 퇴원환자·장기요양 등급외자 연계</div></div>
+  <div class="card" style="--c:#2f5f95;--bg:#eef3f8">
+    <div class="ch"><b>② 고령인구 다수</b><span>청계동 · 오전동</span></div>
+    <div class="ev">노인 <em>15,542명</em>(시 노인의 <em>46%</em>), 고령화율 <em>22.0·22.4%</em></div>
+    <div class="dir">동 전담인력·동 협의체 중심 <i>상시 발굴</i>, 방문의료 참여 의원 확대</div>
   </div>
-  <div class="card" style="--c:#3fa3c9;--bg:#eef7fb;--t:#2b8ab0">
-    <div class="ch"><b>③ 예방 중심형</b><span>내손2동 · 고천동</span></div>
-    <div class="cb"><div class="ev">고령화율 <em>15.6·17.1%</em>로 시 최저 1·2위<br>고천동은 기초연금 수급률 <em>54.8%</em>로 경제적 취약층 다수</div>
-      <div class="dir"><b>예방적 발굴·서비스</b>건강관리·노쇠 예방 프로그램, 통합돌봄 사전 안내·홍보, 고천동은 저소득 노인 선별 발굴</div></div>
+  <div class="card" style="--c:#2e9e6e;--bg:#edf7f2">
+    <div class="ch"><b>③ 초고령 독거 점검</b><span>내손1동</span></div>
+    <div class="ev">85세 이상 1인세대 노인 1,000명당 <em>43세대</em>(시 2위, 평균 31)</div>
+    <div class="dir">85세 이상 1인세대 <i>안부·모니터링</i> 강화</div>
+  </div>
+  <div class="card" style="--c:#4b9fe0;--bg:#eef6fd">
+    <div class="ch"><b>④ 예방 중심</b><span>내손2동 · 고천동</span></div>
+    <div class="ev">고령화율 <em>15.6·17.1%</em>로 시 최저 1·2위</div>
+    <div class="dir">건강관리·노쇠 <i>예방</i> 서비스, 통합돌봄 사전 안내·홍보</div>
   </div>
 </div>
 </div>
-<div class="foot">※ 원 크기: 동별 65세 이상 인구 &nbsp;|&nbsp; 자료: 주민등록 인구통계('26.10.31.), 기초연금·기초생활보장 수급 현황('26.10.), 통계청 주택총조사(2025)</div>
+<div class="common"><b>6개 동 공통</b><span>퇴원환자 연계(퇴원환자 999명 중 사회적 입원 224명·재입원 고위험 90명), 장기요양 등급외·기각자(385명) 사각지대 발굴은 전 동 같은 기준으로 운영</span></div>
+<div class="foot">자료: 주민등록 인구통계('26.10.31.), 기초연금·기초생활보장 수급 현황(행복e음 '26.10.), 통계청 주택총조사(2025), 통합돌봄 실태조사</div>
 </body></html>
