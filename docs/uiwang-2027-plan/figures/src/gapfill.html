@@ -2,14 +2,14 @@
 <html lang="ko"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1b3a5c;--sub:#4d6680;--line:#d6dfea;--red:#d94b4b;--redbg:#fdecec;--amber:#c27a12;--ambg:#fff4e2}
+:root{--navy:#1b3a5c;--sub:#4d6680;--line:#d6dfea;--red:#c0571a;--redbg:#fdeedd;--amber:#4d6680;--ambg:#e8eef5}
 *{box-sizing:border-box;margin:0;padding:0}
 body{word-break:keep-all;font-family:'Noto Sans KR',sans-serif;color:#1d2b3a;background:#fff;padding:18px 20px;width:1240px}
 .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .top h1{font-size:23px;font-weight:900;color:var(--navy)}
-.top h1 b{color:#c8157f}
+.top h1 b{color:#24507d}
 .tot{display:flex;gap:10px}
-.tot div{background:var(--navy);color:#fff;border-radius:10px;padding:6px 14px;font-size:14px;font-weight:500}
+.tot div{background:#24507d;color:#fff;border-radius:10px;padding:6px 14px;font-size:14px;font-weight:500}
 .tot div b{font-size:20px;font-weight:900;margin-left:6px}
 .head{display:grid;grid-template-columns:330px 44px 1fr 150px;gap:0;margin-bottom:6px;font-size:13.5px;font-weight:700;color:var(--sub);text-align:center}
 .grp{border-radius:14px;padding:10px 12px 10px 0;margin-bottom:10px;display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:stretch}
@@ -18,7 +18,8 @@ body{word-break:keep-all;font-family:'Noto Sans KR',sans-serif;color:#1d2b3a;bac
 .tag small{display:block;font-size:12px;font-weight:500;opacity:.9;margin-top:3px}
 .rows{display:flex;flex-direction:column;gap:7px}
 .row{display:grid;grid-template-columns:224px 44px 1fr 150px;align-items:center}
-.gap{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;font-size:13.5px;line-height:1.35;min-height:54px;display:flex;flex-direction:column;justify-content:center}
+.gap{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;font-size:13.5px;line-height:1.35;min-height:54px;display:block}
+.gap .st{display:table!important}
 .gap .st{display:inline-block;font-size:11.5px;font-weight:700;border-radius:5px;padding:1px 6px;margin-bottom:3px;width:max-content}
 .gap .st.r{background:var(--redbg);color:var(--red)} .gap .st.a{background:var(--ambg);color:var(--amber)}
 .gap b{font-weight:700}
@@ -38,60 +39,60 @@ body{word-break:keep-all;font-family:'Noto Sans KR',sans-serif;color:#1d2b3a;bac
 </style></head><body>
 <div class="top">
   <h1>의왕살핌으로 메운 <b>공적서비스 공백</b></h1>
-  <div class="tot"><div>의왕살핌<b>340명</b></div><div>공백보완 특화사업<b>127명</b></div></div>
+  <div class="tot"><div>의왕살핌<b>340명</b></div><div>특화공모사업<b>127명</b></div></div>
 </div>
 <div class="head"><div>공적서비스 공백 (실태조사 ’25.12.)</div><div></div><div>의왕시 대응</div><div>’26 성과</div></div>
 
 <!-- 건강살핌 -->
-<div class="grp" style="background:#eaf1fc;--c:#2f5bea">
-  <div class="tag" style="background:#2f5bea">건강살핌<small>방문의료·재활·간호</small><b class="tn">103명</b></div>
+<div class="grp" style="background:#eef5fb;--c:#1b3a5c">
+  <div class="tag" style="background:#1b3a5c">건강살핌<small>방문의료·재활·간호</small><b class="tn">103명</b></div>
   <div class="rows">
-    <div class="row"><div class="gap"><span class="st r">무공급</span><b>방문진료</b> 충족률 0% · 수요 668명</div><div class="arr"></div>
+    <div class="row"><div class="gap"><span class="st r">무공급</span><b>방문진료</b><br>충족률 0% · 수요 668명</div><div class="arr"></div>
       <div class="svc"><b>방문의료</b><span>본인부담 80% 지원 → 등록만 된 의원 참여</span></div>
-      <div class="res"><b>79건</b><span>의원 12개소 실제 진료</span></div></div>
-    <div class="row"><div class="gap"><span class="st r">무공급→1개소</span><b>방문간호</b> 등급자로 한정</div><div class="arr"></div>
+      <div class="res"><b>65명</b><span>의원 12개소(의과 3·한의 9)</span></div></div>
+    <div class="row"><div class="gap"><span class="st r">무공급→1개소</span><b>방문간호</b><br>등급자로 한정</div><div class="arr"></div>
       <div class="svc"><b>가정간호</b><span>등급 무관 · 퇴원환자 수액·주사·욕창치료</span></div>
-      <div class="res"><b>70명</b><span>방문의료·가정간호 연계</span></div></div>
-    <div class="row"><div class="gap"><span class="st a">저충족</span><b>지역사회중심재활</b> 12.1% (전국 33.7%)</div><div class="arr"></div>
+      <div class="res"><b>5명</b><span>서울홈케어내과</span></div></div>
+    <div class="row"><div class="gap"><span class="st a">저충족</span><b>지역사회중심재활</b><br>충족률 12.1% (전국 33.7%)</div><div class="arr"></div>
       <div class="svc"><b>방문재활</b><span>물리치료사 가정 방문 재활운동</span></div>
-      <div class="res m"><b>건강살핌</b><span>103명에 포함</span></div></div>
+      <div class="res"><b>33명</b><span>물리치료사협회</span></div></div>
   </div>
 </div>
 
 <!-- 일상살핌 / 내집살핌 -->
-<div class="grp" style="background:#e8f6f1;--c:#0e9f6e">
-  <div class="tag" style="background:#0e9f6e">일상살핌<small>생활·동행·식사</small></div>
+<div class="grp" style="background:#eef5fb;--c:#24507d">
+  <div class="tag" style="background:#24507d">일상살핌<small>생활·동행·식사</small><b class="tn">138명</b></div>
   <div class="rows">
-    <div class="row"><div class="gap"><span class="st r">무공급</span><b>단기보호</b>, 판정 전·등급외 돌봄공백</div><div class="arr"></div>
+    <div class="row"><div class="gap"><span class="st r">무공급</span><b>단기보호</b><br>판정 전·등급외 돌봄공백</div><div class="arr"></div>
       <div class="svc"><b>생활·동행돌봄, 식사지원</b><span>퇴원 직후·판정 대기 기간 단기 집중돌봄</span></div>
-      <div class="res"><b>138명</b><span>1인 200만원 한도</span></div></div>
+      <div class="res"><b>138명</b><span>생활 62 · 동행 8 · 식사 68</span></div></div>
   </div>
 </div>
-<div class="grp" style="background:#fff3e4;--c:#e58a1f">
-  <div class="tag" style="background:#e58a1f">내집살핌<small>주거환경개선</small></div>
+<div class="grp" style="background:#eef5fb;--c:#3f6c96">
+  <div class="tag" style="background:#3f6c96">내집살핌<small>주거환경개선</small><b class="tn">99명</b></div>
   <div class="rows">
-    <div class="row"><div class="gap"><span class="st a">저충족</span><b>낙상 위험 주거</b>, 방문목욕 14.1%</div><div class="arr"></div>
+    <div class="row"><div class="gap"><span class="st a">저충족</span><b>낙상 위험 주거</b><br>방문목욕 충족률 14.1%</div><div class="arr"></div>
       <div class="svc"><b>안전손잡이·미끄럼방지·문턱제거</b><span>욕실 안전설비로 낙상 예방</span></div>
-      <div class="res"><b>99명</b><span>생애 200만원 한도</span></div></div>
+      <div class="res"><b>99명</b><span>미소나눔</span></div></div>
   </div>
 </div>
 
 <!-- 공백보완 특화사업 -->
-<div class="grp" style="background:#fbe9f3;--c:#c8157f">
-  <div class="tag" style="background:#c8157f">공백보완<small>’26.8. 신규</small></div>
+<div class="grp" style="background:#fff4e6;--c:#d9771a">
+  <div class="tag" style="background:#e58a1f">특화공모<small>’26.8. 신규</small><b class="tn">127명</b></div>
   <div class="rows">
-    <div class="row"><div class="gap"><span class="st a">저충족</span><b>저영양·결식</b>, 노인맞춤돌봄 28.7%</div><div class="arr"></div>
+    <div class="row"><div class="gap"><span class="st a">저충족</span><b>저영양·결식</b><br>노인맞춤돌봄 충족률 28.7%</div><div class="arr"></div>
       <div class="svc"><b>맞춤형 영양식</b><span>저작완화·만성질환·유동식 주 2회</span></div>
-      <div class="res"><b>55명</b></div></div>
-    <div class="row"><div class="gap"><span class="st a">공백</span><b>거동불편 치매</b> 방문형 프로그램 부재</div><div class="arr"></div>
+      <div class="res"><b>55명</b><span>의왕시니어클럽</span></div></div>
+    <div class="row"><div class="gap"><span class="st a">공백</span><b>거동불편 치매</b><br>방문형 프로그램 부재</div><div class="arr"></div>
       <div class="svc"><b>동고동락</b><span>방문형 치매 인지·운동 프로그램</span></div>
-      <div class="res"><b>22명</b></div></div>
-    <div class="row"><div class="gap"><span class="st a">공백</span><b>건강 모니터링</b> 만성질환·노쇠</div><div class="arr"></div>
+      <div class="res"><b>22명</b><span>아름채노인복지관</span></div></div>
+    <div class="row"><div class="gap"><span class="st a">공백</span><b>건강 모니터링</b><br>만성질환·노쇠</div><div class="arr"></div>
       <div class="svc"><b>건강돌봄가</b><span>방문 스트레칭·건강·영양 모니터링·복약</span></div>
-      <div class="res"><b>50명</b></div></div>
+      <div class="res"><b>50명</b><span>한국커뮤니티연구원</span></div></div>
   </div>
 </div>
 
 <div class="note"><span><i>운영 원칙</i> 국가돌봄서비스를 먼저 연계하고, 남는 공백에만 지역특화서비스 지원</span>
-  <span class="lg"><em style="background:#fdecec;color:#d94b4b">무공급</em><em style="background:#fff4e2;color:#c27a12">저충족·공백</em> 실태조사 판정</span></div>
+  <span class="lg"><em style="background:#fdeedd;color:#c0571a">무공급</em><em style="background:#e8eef5;color:#4d6680">저충족·공백</em> 실태조사 판정</span></div>
 </body></html>
