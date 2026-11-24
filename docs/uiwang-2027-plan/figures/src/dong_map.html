@@ -2,12 +2,12 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{word-break:keep-all;font-family:'Pretendard',sans-serif;color:#1d2b3a;background:#fff;padding:10px;width:900px}
 svg text{font-family:'Pretendard',sans-serif}
-.wrap{display:grid;grid-template-columns:560px 1fr;gap:22px;align-items:center}
-.lg{display:flex;flex-direction:column;gap:14px}
-.it{border-left:6px solid var(--c);padding:6px 0 6px 12px}
-.it b{display:block;font-size:20px;font-weight:800;color:var(--c)}
-.it span{font-size:17px;font-weight:700}
-.note{font-size:14px;color:#6b7f95;line-height:1.5;margin-top:6px}
+.wrap{display:grid;grid-template-columns:560px 1fr;gap:22px;align-items:stretch}
+.lg{display:flex;flex-direction:column;gap:12px;padding:15px 0 50px}
+.it{flex:1;border-left:7px solid var(--c);background:var(--bg);border-radius:0 10px 10px 0;padding:0 16px;display:flex;flex-direction:column;justify-content:center}
+.it b{display:block;font-size:23px;font-weight:800;color:var(--c)}
+.it span{font-size:19px;font-weight:700;margin-top:4px}
+.note{font-size:14.5px;color:#6b7f95;line-height:1.5}
 </style></head><body><div class="wrap"><svg viewBox="0 0 440 500" width="560" height="636">
   <rect x="55" y="15" width="375" height="415" fill="#fff" stroke="#c9d3de"/>
   <rect x="55" y="15" width="236.3" height="415" fill="#f2f8fd"/>
@@ -49,9 +49,9 @@ svg text{font-family:'Pretendard',sans-serif}
 </svg>
 
 <div class="lg">
-<div class="it" style="--c:#d9711a"><b>복합취약 집중관리</b><span>부곡동</span></div>
-<div class="it" style="--c:#2f5f95"><b>고령인구 다수</b><span>청계동 · 오전동</span></div>
-<div class="it" style="--c:#2e9e6e"><b>초고령 독거 점검</b><span>내손1동</span></div>
-<div class="it" style="--c:#4b9fe0"><b>사전 안내 중심</b><span>내손2동 · 고천동</span></div>
+<div class="it" style="--c:#d9711a;--bg:#fdf3e7"><b>복합취약 집중관리</b><span>부곡동</span></div>
+<div class="it" style="--c:#2f5f95;--bg:#eef3f8"><b>고령인구 다수</b><span>청계동 · 오전동</span></div>
+<div class="it" style="--c:#2e9e6e;--bg:#edf7f2"><b>초고령 독거 점검</b><span>내손1동</span></div>
+<div class="it" style="--c:#4b9fe0;--bg:#eef6fd"><b>사전 안내 중심</b><span>내손2동 · 고천동</span></div>
 <div class="note">※ 원 크기: 동별 65세 이상 인구<br>※ 점선: 시 평균</div>
 </div></div></body></html>
