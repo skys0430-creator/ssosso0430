@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{word-break:keep-all;font-family:'Pretendard',sans-serif;color:#1d2b3a;background:#fff;padding:12px 10px;width:1000px}
+.grid{display:grid;grid-template-columns:150px 1fr 1fr 1fr;column-gap:0;row-gap:8px}
+.h{font-size:16px;font-weight:800;text-align:center;padding:9px 0;color:#fff}
+.h.s0{background:#7d8ea0;border-radius:8px 0 0 8px;margin-left:8px}
+.h.s1{background:#3f6c96}
+.h.s2{background:#1b3a5c;border-radius:0 8px 8px 0}
+.h small{display:block;font-size:12.5px;font-weight:500;opacity:.85}
+.hd{}
+.sv{display:flex;flex-direction:column;justify-content:center;padding:0 10px;border-left:5px solid #1b3a5c;background:#f3f6f9;border-radius:0 6px 6px 0}
+.sv b{font-size:17px;font-weight:800}
+.sv span{font-size:13px;color:#6b7f95}
+.c{position:relative;padding:8px 22px 8px 26px;font-size:14.5px;line-height:1.4;display:flex;flex-direction:column;justify-content:center;min-height:62px}
+.c b{font-weight:800}
+.c0{background:#f1f3f5;margin-left:8px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%);padding-left:14px}
+.c1{background:#e3ecf5;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%,16px 50%)}
+.c2{background:#1b3a5c;color:#fff;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,16px 50%)}
+.c2 b{color:#ffd29a}
+.chip{display:inline-block;font-size:12.5px;font-weight:800;border-radius:4px;padding:0 6px;margin-right:5px;vertical-align:1px}
+.r{background:#fdeedd;color:#c0571a}.g{background:#dfe6ee;color:#4d6680}
+.grp{grid-column:1/-1;font-size:14px;font-weight:800;color:#6b7f95;padding:6px 0 0 2px;border-bottom:1px solid #d6dfea}
+.foot{margin-top:10px;font-size:13px;color:#6b7f95}
+</style></head><body>
+<div class="grid">
+  <div class="hd"></div>
+  <div class="h s0">’25.12. 진단<small>실태조사 충족률</small></div>
+  <div class="h s1">’26. 대응<small>의왕살핌·특화사업 등</small></div>
+  <div class="h s2">’27. 계획</div>
+
+  <div class="grp">보건의료</div>
+  <div class="sv"><b>방문진료</b><span>수요 668명</span></div>
+  <div class="c c0"><div><span class="chip r">무공급</span>충족률 0%</div></div>
+  <div class="c c1"><div>방문의료 본인부담 지원<br>참여 의원 <b>12개소</b> · <b>65명</b> 이용</div></div>
+  <div class="c c2"><div>방문의료 이용 <b>91명</b><br>(’30. 199명)</div></div>
+
+  <div class="sv"><b>재택의료</b><span>수요 570명</span></div>
+  <div class="c c0"><div><span class="chip r">무공급</span>충족률 0%</div></div>
+  <div class="c c1"><div>재택의료센터 <b>2개소 협약</b><br>(관내 1 · 관외 1)</div></div>
+  <div class="c c2"><div>장기요양 재가수급자<br>재택의료 <b>이용 연계</b></div></div>
+
+  <div class="sv"><b>장애인주치의</b><span>수요 231명</span></div>
+  <div class="c c0"><div><span class="chip r">무공급</span>등록 1개소, 이용 0명</div></div>
+  <div class="c c1"><div style="color:#8a9aab">－</div></div>
+  <div class="c c2"><div>참여 의원 <b>1개소 이상</b> 발굴<br>보건소 재활 연계</div></div>
+
+  <div class="grp">건강관리</div>
+  <div class="sv"><b>지역사회중심재활</b><span>수요 365명</span></div>
+  <div class="c c0"><div><span class="chip g">저충족</span>12.1% (전국 33.7%)</div></div>
+  <div class="c c1"><div>건강살핌 <b>방문재활</b><br>물리치료사 가정 방문 <b>33명</b></div></div>
+  <div class="c c2"><div>건강살핌 방문재활 <b>지속</b></div></div>
+
+  <div class="grp">장기요양</div>
+  <div class="sv"><b>방문간호</b><span>수요 172명</span></div>
+  <div class="c c0"><div><span class="chip r">무공급</span>충족률 0%</div></div>
+  <div class="c c1"><div>관내 <b>1개소 개소</b>(등급자 한정)<br>건강살핌 <b>가정간호</b> 5명(등급 무관)</div></div>
+  <div class="c c2"><div>건강살핌 가정간호 <b>지속</b></div></div>
+
+  <div class="sv"><b>방문목욕</b><span>수요 469명</span></div>
+  <div class="c c0"><div><span class="chip g">저충족</span>14.1% (전국 54.4%)</div></div>
+  <div class="c c1"><div>내집살핌 <b>욕실 안전설비</b><br>(안전손잡이·미끄럼방지)</div></div>
+  <div class="c c2"><div>급여 <b>안내·연계 강화</b><br>+ 내집살핌 욕실 안전설비</div></div>
+
+  <div class="sv"><b>단기보호</b><span>수요 362명</span></div>
+  <div class="c c0"><div><span class="chip r">무공급</span>관내 시설 없음</div></div>
+  <div class="c c1"><div>일상살핌 <b>단기 집중돌봄</b><br>퇴원·돌봄공백 초기 대응</div></div>
+  <div class="c c2"><div><b>회복살핌 꾸러미</b>(신규)<br>+ 노인맞춤돌봄 퇴원환자 단기집중</div></div>
+
+  <div class="grp">일상생활돌봄</div>
+  <div class="sv"><b>노인맞춤돌봄</b><span>수요 143명</span></div>
+  <div class="c c0"><div><span class="chip g">저충족</span>28.7% (전국 38.5%)</div></div>
+  <div class="c c1"><div>특화공모 <b>맞춤형 영양식</b> 55명<br>(저영양·결식 보완)</div></div>
+  <div class="c c2"><div>국가서비스 <b>우선 연계</b><br>남는 공백만 지역특화 보완</div></div>
+</div>
+<div class="foot">※ ’25.12. 진단: 실태조사 기준 충족률(괄호 안 전국) &nbsp;|&nbsp; ’26. 대응: ’26.10. 기준 실적</div>
+</body></html>
