@@ -13,6 +13,8 @@ const bgs={
   ${msph(1460,180,170)}${sphere(1290,470,90)}${msph(1650,640,240,0,.95)}${sphere(1180,860,60,1)}${sphere(1730,90,50,1)}${sphere(980,740,36,2,.8)}`,
  bg_content:`<div style="position:absolute;inset:0;background:linear-gradient(180deg,#FDEEF5 0%,#FFF6FA 45%,#FFFBFD 100%)"></div>
   ${ring(1500,-380,900,50,.08)}${ribbon(-160,10,520,70,-20,.55)}${msph(-24,-20,74,0,.9)}${sphere(40,40,30,1,.9)}`,
+ bg_mid_clean:`<div style="position:absolute;inset:0;background:linear-gradient(160deg,#FFF4F9 0%,#FDE7F1 60%,#FAD9E9 100%)"></div>
+  ${ring(-300,520,900,60,.10)}${ring(1400,-300,800,50,.10)}${ribbon(1250,820,900,130,-18,.7)}${msph(1660,760,180)}${sphere(1560,930,60,1)}${msph(1180,40,46,0,.9)}${sphere(1250,110,24,1,.8)}`,
  bg_mid:`<div style="position:absolute;inset:0;background:linear-gradient(160deg,#FFF4F9 0%,#FDE7F1 60%,#FAD9E9 100%)"></div>
   ${ring(-300,520,900,60,.10)}${ring(1400,-300,800,50,.10)}${ribbon(1250,820,900,130,-18,.7)}${msph(1660,760,180)}${sphere(1560,930,60,1)}${msph(90,120,70,0,.9)}${sphere(40,60,30,1,.8)}`,
 };
